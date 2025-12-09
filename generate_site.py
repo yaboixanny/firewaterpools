@@ -1,0 +1,1048 @@
+import json
+import os
+import shutil
+from datetime import datetime
+
+# Configuration
+JSON_FILE = 'pool-service-website-structure.json'
+CONTENT_JSON_FILE = 'all-service-pages-content.json'
+LOCATION_CONTENT_JSON_FILE = 'location-pages-content.json'
+OUTPUT_DIR = 'site'
+COMPANY_NAME = "Firewater Pools"
+PHONE = "(772) 555-0123"
+EMAIL = "hello@firewaterpools.com"
+ADDRESS = "123 Ocean Drive, Vero Beach, FL 32960"
+
+# HTML Template
+HTML_TEMPLATE = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{seo_title}</title>
+    <meta name="description" content="{meta_description}">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {{
+            theme: {{
+                extend: {{
+                    colors: {{
+                        primary: '#0ea5e9',   // Sky 500
+                        secondary: '#0284c7', // Sky 600
+                        accent: '#0369a1',    // Sky 700
+                        dark: '#0f172a',      // Slate 900
+                    }},
+                    fontFamily: {{
+                        sans: ['Outfit', 'sans-serif'],
+                    }}
+                }}
+            }}
+        }}
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    {schema_markup}
+    
+    <style>
+        body {{ font-family: 'Outfit', sans-serif; }}
+        .hero-pattern {{
+            background-color: #334155; 
+            background-image: url("https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
+            background-blend-mode: multiply;
+            background-size: cover;
+            background-position: center;
+        }}
+        .group:hover .group-hover\:visible {{ visibility: visible; }}
+        .group:hover .group-hover\:opacity-100 {{ opacity: 1; }}
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-primary tracking-tight">
+                Firewater<span class="text-dark">Pools</span>
+            </a>
+            
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="/" class="text-slate-600 hover:text-primary font-medium transition-colors">Home</a>
+                <div class="relative group">
+                    <button class="text-slate-600 hover:text-primary font-medium transition-colors flex items-center gap-1 py-4">
+                        Services 
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="absolute left-0 mt-0 w-64 bg-white border border-slate-100 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left z-50 top-full">
+                        <div class="py-1">
+                            {services_dropdown}
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <button class="text-slate-600 hover:text-primary font-medium transition-colors flex items-center gap-1 py-4">
+                        Locations 
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="absolute left-0 mt-0 w-64 bg-white border border-slate-100 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left z-50 top-full max-h-[80vh] overflow-y-auto">
+                        <div class="py-1">
+                            <a href="/service-areas/" class="block px-4 py-2 text-sm font-semibold text-slate-800 bg-slate-50 hover:bg-slate-100">All Locations</a>
+                            {locations_dropdown}
+                        </div>
+                    </div>
+                </div>
+
+                <a href="/pool-care-guide/" class="text-slate-600 hover:text-primary font-medium transition-colors">Guide</a>
+                <a href="/about/" class="text-slate-600 hover:text-primary font-medium transition-colors">About</a>
+                <a href="/contact/" class="text-slate-600 hover:text-primary font-medium transition-colors">Contact</a>
+            </nav>
+            
+            <a href="/free-estimate/" class="hidden md:inline-flex items-center justify-center px-6 py-2.5 border border-transparent text-sm font-semibold rounded-full text-white bg-primary hover:bg-secondary transition-all shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                Get Free Estimate
+            </a>
+            
+             <button class="md:hidden text-slate-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="hero-pattern text-white py-32 md:py-48 relative">
+            <div class="bg-gradient-to-t from-slate-900/60 to-transparent absolute inset-0"></div>
+            <div class="container mx-auto px-4 relative z-10 text-center max-w-5xl mx-auto">
+                <span class="inline-block py-1.5 px-4 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm font-medium mb-8 animate-fade-in-up uppercase tracking-wider">
+                    Serving Vero Beach & Indian River County
+                </span>
+                <h1 class="text-5xl md:text-7xl font-bold mb-8 leading-tight tracking-tight drop-shadow-sm">{h1}</h1>
+                <p class="text-xl md:text-2xl text-slate-100 mb-12 max-w-2xl mx-auto font-light leading-relaxed drop-shadow-sm">
+                    {subheadline}
+                </p>
+                <div class="flex flex-col sm:flex-row gap-5 justify-center">
+                    <a href="/free-estimate/" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-lg text-white bg-primary hover:bg-primary/90 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
+                        Get Your Free Quote
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        {custom_content}
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-slate-300 py-16 border-t border-slate-800">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <a href="/" class="text-2xl font-bold text-white mb-6 block">Firewater<span class="text-primary">Pools</span></a>
+                    <p class="text-slate-400 mb-6 leading-relaxed">Premier pool service and maintenance for Vero Beach and Indian River County. Locally owned and operated.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-semibold text-lg mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        {services_footer_list}
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-semibold text-lg mb-6">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/about/" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="/service-areas/" class="hover:text-primary transition-colors">Service Areas</a></li>
+                        <li><a href="/pool-care-guide/" class="hover:text-primary transition-colors">Pool Care Guide</a></li>
+                        <li><a href="/contact/" class="hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-semibold text-lg mb-6">Contact Us</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-primary mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            <span>{address}</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-primary mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <a href="tel:7725550123" class="hover:text-white transition-colors">{phone}</a>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-primary mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <a href="mailto:{email}" class="hover:text-white transition-colors">{email}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
+                <p>&copy; {year} {company_name}. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+"""
+
+def generate_schema_markup(page_data, is_home=False):
+    if not is_home:
+        return ""
+        
+    schema = {
+        "@context": "https://schema.org",
+        "@type": "PoolService",
+        "name": COMPANY_NAME,
+        "image": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?ixlib=rb-1.2.1",
+        "telephone": PHONE,
+        "email": EMAIL,
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Ocean Drive",
+            "addressLocality": "Vero Beach",
+            "addressRegion": "FL",
+            "postalCode": "32960",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "27.6386",
+            "longitude": "-80.3973"
+        },
+        "url": "https://www.firewaterpools.com",
+        "priceRange": "$$",
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "08:00",
+                "closes": "18:00"
+            }
+        ]
+    }
+    return f'<script type="application/ld+json">\n{json.dumps(schema, indent=2)}\n</script>'
+
+def generate_detailed_service_content(content_data):
+    html = ""
+    
+    # 1. Problem Statement
+    if 'problemStatement' in content_data:
+        html += f"""
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 max-w-4xl text-center">
+                <p class="text-xl md:text-2xl text-slate-700 leading-relaxed font-light">
+                    "{content_data['problemStatement']}"
+                </p>
+                <div class="w-16 h-1 bg-primary mx-auto mt-8 rounded-full"></div>
+            </div>
+        </section>
+        """
+
+    # 2. Service Details (What's Included)
+    if 'serviceDetails' in content_data:
+        includes = content_data['serviceDetails'].get('includes', [])
+        includes_html = "".join([f'<li class="flex items-start"><svg class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span class="text-slate-700 text-lg">{item}</span></li>' for item in includes])
+        
+        html += f"""
+        <section class="py-20 bg-slate-50">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row gap-12 items-center">
+                    <div class="md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1572331165267-854da2b00dc1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Pool Service Details" class="rounded-2xl shadow-xl">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-bold text-slate-900 mb-4">{content_data['serviceDetails'].get('h2', 'What is included')}</h2>
+                        <p class="text-lg text-slate-600 mb-8">{content_data['serviceDetails'].get('intro', '')}</p>
+                        <ul class="space-y-4">
+                            {includes_html}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        """
+
+    # 3. Service Options (Pricing/Plans)
+    if 'serviceOptions' in content_data:
+        options = content_data['serviceOptions'].get('options', [])
+        options_cards = ""
+        for opt in options:
+            options_cards += f"""
+            <div class="bg-white p-8 rounded-xl shadow-md border border-slate-100 hover:shadow-xl transition-all hover:border-primary group">
+                <h3 class="text-2xl font-bold text-slate-900 mb-2">{opt['name']}</h3>
+                <div class="text-primary font-semibold text-lg mb-4 bg-blue-50 inline-block px-3 py-1 rounded-full">{opt['frequency']}</div>
+                <p class="text-slate-600 mb-6">Best for: <span class="font-medium text-slate-800">{opt['bestFor']}</span></p>
+                <a href="/free-estimate/" class="block w-full py-3 px-6 bg-slate-100 hover:bg-primary hover:text-white text-slate-700 font-bold rounded-lg text-center transition-colors">Get Quote</a>
+            </div>
+            """
+            
+        html += f"""
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4">{content_data['serviceOptions'].get('h2', 'Our Plans')}</h2>
+                    <p class="text-lg text-slate-600">{content_data['serviceOptions'].get('intro', '')}</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {options_cards}
+                </div>
+                <p class="text-center text-slate-500 mt-8 italic text-sm">{content_data['serviceOptions'].get('pricingNote', '')}</p>
+            </div>
+        </section>
+        """
+
+    # 4. Local Proof
+    if 'localProof' in content_data:
+        html += f"""
+        <section class="py-20 bg-dark text-white relative overflow-hidden">
+            <div class="absolute inset-0 bg-primary/10"></div>
+            <div class="container mx-auto px-4 relative z-10 text-center max-w-3xl">
+                <h2 class="text-3xl font-bold mb-6">{content_data['localProof'].get('h2', 'Serving Vero Beach')}</h2>
+                <p class="text-xl text-slate-300 leading-relaxed">
+                    {content_data['localProof'].get('content', '')}
+                </p>
+            </div>
+        </section>
+        """
+
+    # 5. Testimonials
+    if 'testimonials' in content_data:
+        testimonials = content_data.get('testimonials', [])
+        test_cards = ""
+        for t in testimonials:
+            test_cards += f"""
+            <div class="bg-slate-50 p-8 rounded-xl relative">
+                <div class="text-yellow-400 text-2xl mb-4">★★★★★</div>
+                <p class="text-slate-600 mb-6 italic">"{t['quote']}"</p>
+                <div>
+                    <p class="font-bold text-slate-900">{t['author']}</p>
+                    <p class="text-sm text-slate-500">{t['location']}</p>
+                </div>
+            </div>
+            """
+            
+        html += f"""
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                 <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">What Your Neighbors Say</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {test_cards}
+                </div>
+            </div>
+        </section>
+        """
+
+    # 6. FAQ
+    if 'faq' in content_data:
+        questions = content_data['faq'].get('questions', [])
+        faq_items = ""
+        for q in questions:
+            faq_items += f"""
+            <div class="border-b border-slate-200 py-6">
+                <h3 class="text-lg font-bold text-slate-900 mb-2">{q['question']}</h3>
+                <p class="text-slate-600 leading-relaxed">{q['answer']}</p>
+            </div>
+            """
+            
+        html += f"""
+        <section class="py-20 bg-slate-50">
+            <div class="container mx-auto px-4 max-w-3xl">
+                <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">{content_data['faq'].get('h2', 'Frequently Asked Questions')}</h2>
+                <div class="bg-white rounded-2xl p-8 shadow-sm">
+                    {faq_items}
+                </div>
+            </div>
+        </section>
+        """
+
+    # 7. Final CTA
+    if 'finalCTA' in content_data:
+        html += f"""
+        <section class="py-24 bg-primary text-white text-center">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">{content_data['finalCTA'].get('h2', 'Ready to get started?')}</h2>
+                <p class="text-xl text-white/90 mb-10 max-w-2xl mx-auto">{content_data['finalCTA'].get('content', '')}</p>
+                <a href="/free-estimate/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary text-lg font-bold rounded-lg hover:bg-slate-100 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
+                    Get Free Estimate
+                </a>
+            </div>
+        </section>
+        """
+
+    return html
+
+def generate_location_content(content_data, page_type='location'):
+    html = ""
+    
+    # Hero is handled by the template, but we can access custom hero fields if needed
+    
+    # 1. Local Intro
+    if 'localIntro' in content_data:
+        intro_text = content_data['localIntro']
+        if isinstance(intro_text, dict):
+            intro_text = intro_text.get('content', '')
+            
+        paragraphs = intro_text.split('\n\n')
+        p_html = "".join([f'<p class="text-lg text-slate-600 mb-6 leading-relaxed">{p}</p>' for p in paragraphs])
+        
+        html += f"""
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 max-w-4xl">
+                {p_html}
+            </div>
+        </section>
+        """
+
+    # 2. Services in Area
+    if 'servicesInArea' in content_data:
+        section_data = content_data['servicesInArea']
+        services = section_data.get('services', [])
+        
+        services_html = ""
+        for s in services:
+            services_html += f"""
+            <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 hover:shadow-md transition-shadow">
+                <h3 class="text-xl font-bold text-slate-900 mb-2">{s['name']}</h3>
+                <p class="text-slate-600 mb-4 text-sm">{s['description']}</p>
+                <a href="{s['url']}" class="text-primary font-medium hover:text-secondary text-sm inline-flex items-center">
+                    Learn more <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </a>
+            </div>
+            """
+            
+        html += f"""
+        <section class="py-20 bg-white border-t border-slate-100">
+            <div class="container mx-auto px-4">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4">{section_data.get('h2', 'Services in Your Area')}</h2>
+                    <p class="text-lg text-slate-600">{section_data.get('intro', '')}</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {services_html}
+                </div>
+            </div>
+        </section>
+        """
+
+    # 3. Local Knowledge / Why Choose Us
+    if 'localKnowledge' in content_data:
+        lk = content_data['localKnowledge']
+        bullets = lk.get('bullets', [])
+        bullets_html = "".join([f'<li class="flex items-center text-slate-700"><svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>{b}</li>' for b in bullets])
+        
+        html += f"""
+        <section class="py-20 bg-slate-50">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row gap-12 items-center">
+                    <div class="md:w-1/2 order-2 md:order-1">
+                         <div class="relative">
+                            <div class="absolute -top-4 -left-4 w-24 h-24 bg-primary/10 rounded-full z-0"></div>
+                            <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Local Pool Service" class="rounded-2xl shadow-xl relative z-10 w-full">
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 order-1 md:order-2">
+                        <h2 class="text-3xl font-bold text-slate-900 mb-6">{lk.get('h2', 'Why Choose Us')}</h2>
+                        <p class="text-lg text-slate-600 mb-8 leading-relaxed">{lk.get('content', '')}</p>
+                        <ul class="space-y-4">
+                            {bullets_html}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        """
+
+    # 4. Neighborhoods
+    if 'neighborhoodsServed' in content_data:
+        ns = content_data['neighborhoodsServed']
+        hoods = ns.get('neighborhoods', [])
+        # Split into columns
+        mid = (len(hoods) + 1) // 2
+        col1 = hoods[:mid]
+        col2 = hoods[mid:]
+        
+        def make_list(items):
+            return "".join([f'<li class="flex items-center text-slate-600 mb-2"><span class="w-1.5 h-1.5 bg-primary rounded-full mr-2"></span>{item}</li>' for item in items])
+            
+        html += f"""
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <div class="bg-blue-50 rounded-2xl p-8 md:p-12">
+                    <div class="text-center mb-10">
+                        <h2 class="text-3xl font-bold text-slate-900 mb-4">{ns.get('h2', 'Neighborhoods We Serve')}</h2>
+                        <p class="text-lg text-slate-600">{ns.get('content', '')}</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <ul class="space-y-1">
+                            {make_list(col1)}
+                        </ul>
+                        <ul class="space-y-1">
+                            {make_list(col2)}
+                        </ul>
+                    </div>
+                    <p class="text-center text-slate-500 mt-8 text-sm italic">{ns.get('closingNote', '')}</p>
+                </div>
+            </div>
+        </section>
+        """
+
+    # 5. Primary Service Area (for Hub page)
+    if 'primaryServiceArea' in content_data:
+        psa = content_data['primaryServiceArea']
+        hoods = psa.get('neighborhoods', [])
+        hoods_html = ", ".join(hoods)
+        
+        html += f"""
+        <section class="py-20 bg-white">
+             <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row gap-12 items-center">
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-bold text-slate-900 mb-6">{psa.get('h2', '')}</h2>
+                        <p class="text-lg text-slate-600 mb-6 leading-relaxed">{psa.get('content', '')}</p>
+                        <a href="{psa.get('link', {}).get('url', '/')}" class="text-primary font-bold hover:text-secondary inline-flex items-center">
+                            {psa.get('link', {}).get('text', 'Learn More')}
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+                    <div class="md:w-1/2">
+                        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+                            <h3 class="font-bold text-slate-900 mb-4">Neighborhoods</h3>
+                            <div class="flex flex-wrap gap-2">
+                                {"".join([f'<span class="px-3 py-1 bg-white border border-slate-200 rounded-full text-sm text-slate-600">{h}</span>' for h in hoods])}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        """
+
+    # 6. Service Areas List (for Hub page)
+    if 'serviceAreas' in content_data:
+        sa = content_data['serviceAreas']
+        areas_html = ""
+        for area in sa.get('areas', []):
+            areas_html += f"""
+            <a href="{area['url']}" class="group block relative overflow-hidden rounded-2xl aspect-[4/3]">
+                <img src="{area.get('image', '').replace('[location-slug]', 'demo')}" alt="{area['name']}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-6">
+                    <h3 class="text-2xl font-bold text-white mb-1 group-hover:text-primary transition-colors">{area['name']}</h3>
+                    <p class="text-white/90 text-sm">{area['description']}</p>
+                </div>
+            </a>
+            """
+            
+        html += f"""
+        <section class="py-20 bg-slate-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4">{sa.get('h2', 'Communities We Serve')}</h2>
+                    <p class="text-lg text-slate-600">{sa.get('intro', '')}</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {areas_html}
+                </div>
+            </div>
+        </section>
+        """
+
+    # 7. Services Offered (for Hub page)
+    if 'servicesOffered' in content_data:
+        so = content_data['servicesOffered']
+        # similar to regular services grid but maybe simpler
+        s_html = ""
+        for s in so.get('services', []):
+             s_html += f"""
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                <h3 class="font-bold text-slate-900 mb-2">{s['name']}</h3>
+                <p class="text-slate-600 text-sm mb-3">{s['description']}</p>
+                <a href="{s['url']}" class="text-primary text-sm font-medium hover:underline">Learn more</a>
+            </div>
+            """
+            
+        html += f"""
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                 <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">{so.get('h2', 'Services Available')}</h2>
+                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {s_html}
+                 </div>
+            </div>
+        </section>
+        """
+
+
+    # 8. Testimonials
+    if 'testimonials' in content_data:
+        testimonials = content_data.get('testimonials', [])
+        if isinstance(testimonials, dict): # Handle object structure in hub page if any, though usually list
+            testimonials = [] 
+
+        test_cards = ""
+        for t in testimonials:
+            test_cards += f"""
+            <div class="bg-slate-50 p-8 rounded-xl relative">
+                <div class="text-yellow-400 text-2xl mb-4">★★★★★</div>
+                <p class="text-slate-600 mb-6 italic">"{t['quote']}"</p>
+                <div>
+                    <p class="font-bold text-slate-900">{t['author']}</p>
+                    <p class="text-sm text-slate-500">{t['location']}</p>
+                </div>
+            </div>
+            """
+            
+        if test_cards:
+            html += f"""
+            <section class="py-20 bg-white">
+                <div class="container mx-auto px-4">
+                     <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">What {content_data['seo']['title'].split('|')[0].replace('Pool Service', '').strip()} Homeowners Say</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        {test_cards}
+                    </div>
+                </div>
+            </section>
+            """
+
+    # 9. FAQ
+    if 'faq' in content_data:
+        questions = content_data['faq'].get('questions', [])
+        faq_items = ""
+        for q in questions:
+            faq_items += f"""
+            <div class="border-b border-slate-200 py-6">
+                <h3 class="text-lg font-bold text-slate-900 mb-2">{q['question']}</h3>
+                <p class="text-slate-600 leading-relaxed">{q['answer']}</p>
+            </div>
+            """
+            
+        html += f"""
+        <section class="py-20 bg-slate-50">
+            <div class="container mx-auto px-4 max-w-3xl">
+                <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">{content_data['faq'].get('h2', 'Frequently Asked Questions')}</h2>
+                <div class="bg-white rounded-2xl p-8 shadow-sm">
+                    {faq_items}
+                </div>
+            </div>
+        </section>
+        """
+
+    # 10. Final CTA
+    if 'finalCTA' in content_data:
+        cta = content_data['finalCTA']
+        html += f"""
+        <section class="py-24 bg-primary text-white text-center">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">{cta.get('h2', 'Ready to get started?')}</h2>
+                <p class="text-xl text-white/90 mb-10 max-w-2xl mx-auto">{cta.get('content', '')}</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/free-estimate/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary text-lg font-bold rounded-lg hover:bg-slate-100 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
+                        {cta.get('primaryCTA', {}).get('text', 'Get Your Free Estimate')}
+                    </a>
+                     <a href="tel:{PHONE.replace('(','').replace(')','').replace(' ','').replace('-','')}" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white text-lg font-bold rounded-lg hover:bg-white/10 transition-all">
+                        {cta.get('secondaryCTA', {}).get('text', 'Call Us')}
+                    </a>
+                </div>
+            </div>
+        </section>
+        """
+        
+    # 11. Nearby Areas
+    if 'nearbyAreas' in content_data:
+        links = content_data['nearbyAreas']
+        if isinstance(links, list):
+            links_html = " | ".join([f'<a href="{l["url"]}" class="text-slate-500 hover:text-primary transition-colors">{l["text"]}</a>' for l in links])
+            html += f"""
+            <section class="py-12 bg-white border-t border-slate-100">
+                <div class="container mx-auto px-4 text-center">
+                    <p class="text-sm text-slate-400 mb-4 uppercase tracking-wider font-semibold">Nearby Service Areas</p>
+                    <div class="flex flex-wrap gap-4 justify-center text-sm">
+                        {links_html}
+                    </div>
+                </div>
+            </section>
+            """
+
+    return html
+
+def generate_content_for_page(page_type, data, extra_data={}):
+    if page_type == 'home':
+        services_grid = extra_data.get('services_grid', '')
+        
+        return f"""
+        <!-- Trusted Info Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-4xl font-bold text-slate-900 mb-6 leading-tight">Professional Pool Care in Vero Beach You Can Trust</h2>
+                        <div class="w-20 h-1 bg-primary rounded-full mb-8"></div>
+                        <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                            Keeping your pool crystal clear in Vero Beach requires more than just skimming the surface. It requires consistent care, precise chemical balancing, and expert equipment knowledge.
+                        </p>
+                        <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                            At Firewater Pools, we take the hassle out of pool ownership. We are a locally owned, full-service company dedicated to providing reliable, high-quality, and affordable pool care to our neighbors in Indian River County.
+                        </p>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center text-slate-700 font-medium">
+                                <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Licensed & Insured Professionals
+                            </li>
+                            <li class="flex items-center text-slate-700 font-medium">
+                                <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                No Contracts Required
+                            </li>
+                            <li class="flex items-center text-slate-700 font-medium">
+                                <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Detailed Weekly Digital Reports
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute -top-4 -left-4 w-24 h-24 bg-blue-100 rounded-full z-0 opacity-50"></div>
+                        <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-primary/10 rounded-full z-0"></div>
+                        <img src="https://images.unsplash.com/photo-1562778612-e1e0cda9915c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Sparkling blue pool" class="rounded-2xl shadow-2xl relative z-10 w-full object-cover h-[500px]">
+                        <div class="absolute bottom-8 left-8 bg-white p-6 rounded-lg shadow-xl z-20 max-w-xs hidden md:block">
+                            <p class="text-4xl font-bold text-primary mb-1">5★</p>
+                            <p class="font-bold text-slate-900">Top Rated Service</p>
+                            <p class="text-sm text-slate-500">Voted best in Vero Beach</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Grid -->
+        <section class="py-20 bg-slate-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Comprehensive Pool Solutions</h2>
+                    <p class="text-lg text-slate-600">From routine cleaning to major repairs, we have the expertise to handle it all.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {services_grid}
+                </div>
+            </div>
+        </section>
+
+        <!-- About Kevin Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="order-2 lg:order-1 relative">
+                        <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Kevin owner of Firewater Pools" class="rounded-2xl shadow-2xl w-full object-cover h-[600px]">
+                        <div class="absolute -bottom-6 -right-6 bg-secondary text-white p-8 rounded-xl shadow-xl z-20 hidden lg:block">
+                            <p class="text-2xl font-bold mb-1">Kevin</p>
+                            <p class="opacity-90">Owner & Operator</p>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">Thanks for Choosing Firewater Pools</h2>
+                        <div class="w-20 h-1 bg-primary rounded-full mb-8"></div>
+                        <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                            Hi, I'm Kevin, the owner and operator of Firewater Pools. I started this company right here in Vero Beach with a simple mission: to provide pool service that homeowners can actually rely on.
+                        </p>
+                        <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                            After years of hearing complaints about pool guys who never showed up, skipped steps, or overcharged for simple fixes, I knew there was a better way. I built Firewater Pools on the values of transparency, communication, and genuine craftsmanship.
+                        </p>
+                         <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                            When you hire us, you're not just getting a "pool guy"—you're getting a dedicated partner who cares about the safety and beauty of your backyard oasis as much as you do.
+                        </p>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Signature_sample.svg" alt="Kevin's Signature" class="h-16 opacity-70">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-white border-t border-slate-200 py-20 relative overflow-hidden">
+            <div class="bg-primary/5 absolute inset-0 transform -skew-y-2 scale-110 z-0"></div>
+            <div class="container mx-auto px-4 text-center relative z-10">
+                <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Ready for a Crystal Clear Pool?</h2>
+                <p class="text-xl text-slate-600 mb-10 max-w-2xl mx-auto">Join hundreds of happy homeowners in Vero Beach. Professional, reliable, and affordable pool care is just a click away.</p>
+                <a href="/free-estimate/" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-lg text-white bg-secondary hover:bg-accent transition-all shadow-xl hover:shadow-2xl hover:scale-105">
+                    Schedule Your Free Estimate
+                </a>
+            </div>
+        </section>
+        """
+
+    # Base content with some typography for simple pages
+    content = f"""
+        <div class="prose prose-lg prose-slate max-w-none">
+            <p class="lead text-xl text-slate-600 mb-8">
+                {data.get('metaDescription', '')}
+            </p>
+            <h3>Service Overview</h3>
+            <p>At {COMPANY_NAME}, we pride ourselves on delivering top-tier pool services to the Vero Beach community. Whether you need weekly maintenance, equipment repairs, or a complete green pool cleanup, our team of certified professionals is here to help.</p>
+            
+            <ul>
+                <li>Licensed and Insured Professionals</li>
+                <li>Reliable Weekly Schedules</li>
+                <li>Transparent Pricing & No Hidden Fees</li>
+                <li>Locally Owned in Vero Beach</li>
+            </ul>
+            
+            <h3>Why Choose Us?</h3>
+            <p>We understand that your pool is a major investment. That's why we treat every pool as if it were our own, ensuring the water is balanced, the equipment is functioning efficiently, and the surface is spotless.</p>
+        </div>
+    """
+
+    # Customize Form for Contact/Free Estimate
+    if page_type == 'contact' or page_type == 'free-estimate':
+        form_title = "Send us a Message" if page_type == 'contact' else "Request Your Free Estimate"
+        content = f"""
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+                <h3 class="text-2xl font-bold mb-6 text-slate-900">Get In Touch</h3>
+                <p class="text-slate-600 mb-8">Have questions? We're here to help. Fill out the form or give us a call directly.</p>
+                
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center text-primary flex-shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-semibold text-slate-900">Phone</h4>
+                            <p class="text-slate-600">{PHONE}</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                         <div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center text-primary flex-shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-semibold text-slate-900">Email</h4>
+                            <p class="text-slate-600">{EMAIL}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100">
+                <h3 class="text-2xl font-bold mb-6 text-slate-900">{form_title}</h3>
+                <form class="space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">First Name</label>
+                            <input type="text" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="John">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Last Name</label>
+                            <input type="text" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Doe">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Email Address</label>
+                        <input type="email" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="john@example.com">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Phone Number</label>
+                        <input type="tel" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="(772) 555-0123">
+                    </div>
+                     <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Service Needed</label>
+                        <select class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all">
+                            <option>Pool Cleaning</option>
+                            <option>Repair</option>
+                            <option>Green Pool Cleanup</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Message</label>
+                        <textarea rows="4" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Tell us about your pool..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3 px-6 bg-primary hover:bg-secondary text-white font-bold rounded-lg transition-colors shadow-md">
+                        Submit Request
+                    </button>
+                </form>
+            </div>
+        </div>
+        """
+    return content
+
+def create_page(path, data, extra_data, page_type="generic", content_data=None):
+    # Ensure directory exists
+    clean_path = path.strip('/')
+    if clean_path:
+        dir_path = os.path.join(OUTPUT_DIR, clean_path)
+    else:
+        dir_path = OUTPUT_DIR
+    
+    os.makedirs(dir_path, exist_ok=True)
+    
+    file_path = os.path.join(dir_path, 'index.html')
+    
+    # Placeholders replacement
+    seo_title = data.get('seoTitle', 'Pool Service Vero Beach').replace('[Company Name]', COMPANY_NAME)
+    meta_desc = data.get('metaDescription', '').replace('[Company Name]', COMPANY_NAME)
+    h1 = data.get('h1', 'Pool Services').replace('[Company Name]', COMPANY_NAME)
+    
+    # Use subheadline from content data if available, else default to meta desc
+    subheadline = meta_desc
+    if content_data and 'hero' in content_data and 'subheadline' in content_data['hero']:
+        subheadline = content_data['hero']['subheadline']
+    
+    schema = generate_schema_markup(data, is_home=(path == '/'))
+    
+    
+    if content_data:
+        if page_type in ['location', 'location_hub']:
+            content = generate_location_content(content_data, page_type)
+        else:
+            content = generate_detailed_service_content(content_data)
+    else:
+        content = generate_content_for_page(page_type, data, extra_data)
+    
+    html = HTML_TEMPLATE.format(
+        seo_title=seo_title,
+        meta_description=meta_desc,
+        h1=h1,
+        subheadline=subheadline,
+        company_name=COMPANY_NAME,
+        phone=PHONE,
+        email=EMAIL,
+        address=ADDRESS,
+        year=datetime.now().year,
+        schema_markup=schema,
+        custom_content=content,
+        locations_dropdown=extra_data.get('locations_dropdown', ''),
+        services_dropdown=extra_data.get('services_dropdown', ''),
+        services_footer_list=extra_data.get('services_footer_list', '')
+    )
+    
+    with open(file_path, 'w') as f:
+        f.write(html)
+    print(f"Created: {file_path}")
+
+def main():
+    # Clean output dir
+    if os.path.exists(OUTPUT_DIR):
+        shutil.rmtree(OUTPUT_DIR)
+    os.makedirs(OUTPUT_DIR)
+
+    # Read Structure JSON
+    with open(JSON_FILE, 'r') as f:
+        site_data = json.load(f)
+        
+    # Read Content JSON (Optional)
+    detailed_content = {}
+    if os.path.exists(CONTENT_JSON_FILE):
+        with open(CONTENT_JSON_FILE, 'r') as f:
+            content_json = json.load(f)
+            # Create map of id -> content
+            for item in content_json.get('servicePages', []):
+                detailed_content[item['id']] = item
+
+    # Read Location Content JSON
+    location_content = {}
+    if os.path.exists(LOCATION_CONTENT_JSON_FILE):
+        with open(LOCATION_CONTENT_JSON_FILE, 'r') as f:
+            loc_json = json.load(f)
+            location_content['overview'] = loc_json.get('locationsOverviewPage')
+            for item in loc_json.get('locationPages', []):
+                location_content[item['id']] = item
+
+    pages = site_data.get('pages', {})
+    
+    # Pre-calculate Locations Dropdown HTML
+    loc_pages = pages.get('locationPages', {})
+    locations_html = ""
+    if 'locations' in loc_pages:
+        for loc in loc_pages['locations']:
+            locations_html += f'<a href="{loc["url"]}" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-primary">{loc["name"]}</a>\n'
+
+    # Pre-calculate Services HTML and Dropdown
+    service_pages = pages.get('servicePages', [])
+    
+    services_dropdown_html = ""
+    services_footer_html = ""
+    services_grid_html = ""
+    
+    for s in service_pages:
+        # Dropdown
+        services_dropdown_html += f'<a href="{s["url"]}" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-primary">{s["name"]}</a>\n'
+        # Footer
+        services_footer_html += f'<li><a href="{s["url"]}" class="hover:text-primary transition-colors">{s["name"]}</a></li>\n'
+        # Grid Card
+        services_grid_html += f"""
+        <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-all hover:-translate-y-1 group border border-slate-100 flex flex-col h-full">
+            <div class="w-14 h-14 bg-blue-50 rounded-lg flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors flex-shrink-0">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">{s['name']}</h3>
+            <p class="text-slate-600 mb-6 flex-grow">{s['metaDescription'][:100]}...</p>
+            <a href="{s['url']}" class="text-primary font-semibold hover:text-secondary mt-auto inline-flex items-center">
+                Learn more 
+                <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+        </div>
+        """
+
+    extra_data = {
+        'locations_dropdown': locations_html,
+        'services_dropdown': services_dropdown_html,
+        'services_footer_list': services_footer_html,
+        'services_grid': services_grid_html
+        
+    }
+
+    # Homepage
+    create_page(pages['homepage']['url'], pages['homepage'], extra_data, 'home')
+    
+    # Service Pages
+    for page in service_pages:
+        # Determine if we have detailed content
+        # Map URL to ID? 
+        # /pool-cleaning/ -> pool-cleaning
+        page_id = page['url'].strip('/').split('/')[-1] # simple heuristic
+        if page_id == "": page_id = page['url'].strip('/').split('/')[-2] # handle trail slash
+        
+        # Override for specific known pages if needed, simple logic for now
+        c_data = detailed_content.get(page_id)
+        
+        create_page(page['url'], page, extra_data, 'service', content_data=c_data)
+        
+    # Location Pages
+    if 'overview' in loc_pages:
+        c_data = location_content.get('overview')
+        create_page(loc_pages['overview']['url'], loc_pages['overview'], extra_data, 'location_hub', content_data=c_data)
+        
+    for page in loc_pages.get('locations', []):
+        # Match by ID logic: /service-areas/sebastian-fl/ -> sebastian-fl
+        page_id = page['url'].strip('/').split('/')[-1]
+        c_data = location_content.get(page_id)
+        create_page(page['url'], page, extra_data, 'location', content_data=c_data)
+        
+    # Blog Pages
+    blog_pages = pages.get('blogPages', {})
+    if 'hub' in blog_pages:
+        create_page(blog_pages['hub']['url'], blog_pages['hub'], extra_data, 'blog_hub')
+    for page in blog_pages.get('posts', []):
+        create_page(page['url'], page, extra_data, 'blog_post')
+        
+    # Business Pages
+    for page in pages.get('businessPages', []):
+        p_type = 'generic'
+        if 'contact' in page['url']: p_type = 'contact'
+        if 'free-estimate' in page['url']: p_type = 'free-estimate'
+        create_page(page['url'], page, extra_data, p_type)
+
+    print("Site generation complete.")
+
+if __name__ == "__main__":
+    main()

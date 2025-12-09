@@ -1,0 +1,1160 @@
+  {
+    "locationsOverviewPage": {
+      "seo": {
+        "title": "Service Areas | Pool Service in Indian River County, FL",
+        "metaDescription": "Serving Vero Beach, Sebastian, Indian River Shores, Orchid Island, and surrounding communities. Find professional pool service in your neighborhood.",
+        "url": "/service-areas/"
+      },
+      "hero": {
+        "h1": "Areas We Serve in Indian River County",
+        "subheadline": "Professional pool service throughout the Treasure Coast. Find your community below.",
+        "heroImage": {
+          "src": "/images/indian-river-county-map.jpg",
+          "alt": "Map of Indian River County Florida showing pool service areas"
+        }
+      },
+      "intro": {
+        "content": "We provide pool cleaning, maintenance, repair, and renovation services throughout Indian River County. Whether you're in a beachside community, a gated neighborhood, or a rural property, we've got you covered. Same-day estimates available in all service areas."
+      },
+      "primaryServiceArea": {
+        "h2": "Vero Beach – Our Home Base",
+        "content": "Based in Vero Beach, we serve the entire city and surrounding areas. From the Barrier Island to the mainland, South Beach to North Vero, we know this community inside and out.",
+        "link": {
+          "text": "Vero Beach Pool Service",
+          "url": "/"
+        },
+        "neighborhoods": [
+          "Barrier Island",
+          "Central Beach",
+          "South Beach",
+          "Riomar",
+          "Sea Oaks",
+          "Castaway Cove",
+          "Vista Royale",
+          "Vero Lake Estates",
+          "Timber Ridge",
+          "Laurel Oak Estates",
+          "Grand Harbor",
+          "Vista Plantation"
+        ]
+      },
+      "serviceAreas": {
+        "h2": "Communities We Serve",
+        "intro": "Click on your community to learn more about our services in your area.",
+        "areas": [
+          {
+            "name": "Sebastian",
+            "url": "/service-areas/sebastian-fl/",
+            "description": "Pool service for Sebastian homeowners from Roseland to the waterfront.",
+            "image": "/images/sebastian-fl.jpg"
+          },
+          {
+            "name": "Indian River Shores",
+            "url": "/service-areas/indian-river-shores-fl/",
+            "description": "Premium pool care for this exclusive barrier island community.",
+            "image": "/images/indian-river-shores-fl.jpg"
+          },
+          {
+            "name": "Orchid Island",
+            "url": "/service-areas/orchid-island-fl/",
+            "description": "Trusted pool service for Orchid Island and the surrounding area.",
+            "image": "/images/orchid-island-fl.jpg"
+          },
+          {
+            "name": "Fellsmere",
+            "url": "/service-areas/fellsmere-fl/",
+            "description": "Affordable pool service for Fellsmere and surrounding rural properties.",
+            "image": "/images/fellsmere-fl.jpg"
+          },
+          {
+            "name": "Wabasso",
+            "url": "/service-areas/wabasso-fl/",
+            "description": "Reliable pool care for the Wabasso community.",
+            "image": "/images/wabasso-fl.jpg"
+          },
+          {
+            "name": "Gifford",
+            "url": "/service-areas/gifford-fl/",
+            "description": "Quality pool service at competitive prices in Gifford.",
+            "image": "/images/gifford-fl.jpg"
+          }
+        ]
+      },
+      "servicesOffered": {
+        "h2": "Services Available in All Areas",
+        "services": [
+          {
+            "name": "Pool Cleaning",
+            "url": "/pool-cleaning/",
+            "description": "Weekly and bi-weekly cleaning service"
+          },
+          {
+            "name": "Pool Maintenance",
+            "url": "/pool-maintenance/",
+            "description": "Complete pool care and chemistry management"
+          },
+          {
+            "name": "Pool Repair",
+            "url": "/pool-repair/",
+            "description": "Equipment repair and troubleshooting"
+          },
+          {
+            "name": "Pool Equipment Installation",
+            "url": "/pool-equipment-installation/",
+            "description": "Pumps, heaters, salt systems, and automation"
+          },
+          {
+            "name": "Pool Resurfacing",
+            "url": "/pool-resurfacing/",
+            "description": "Plaster, pebble, and quartz finishes"
+          },
+          {
+            "name": "Leak Detection",
+            "url": "/pool-leak-detection/",
+            "description": "Find and fix pool leaks"
+          }
+        ]
+      },
+      "finalCTA": {
+        "h2": "Not Sure If We Service Your Area?",
+        "content": "If you're in Indian River County or nearby, chances are we can help. Contact us with your address and we'll confirm service availability and provide a free estimate.",
+        "primaryCTA": {
+          "text": "Get Your Free Estimate",
+          "link": "/free-estimate/"
+        },
+        "secondaryCTA": {
+          "text": "Or call: (772) XXX-XXXX",
+          "link": "tel:+1772XXXXXXX"
+        }
+      }
+    },
+    "locationPageTemplate": {
+      "description": "Template structure for individual location pages. Each location page targets '[service] + [location]' keywords and provides locally relevant content.",
+      "sections": {
+        "seo": {
+          "title": "Pool Service [Location], FL | Cleaning, Maintenance & Repairs",
+          "metaDescription": "[150-160 characters describing pool service in this specific location with call to action]",
+          "url": "/service-areas/[location-slug]/"
+        },
+        "hero": {
+          "order": 1,
+          "h1": "Pool Service in [Location], FL",
+          "subheadline": "[One sentence about serving this community]",
+          "primaryCTA": {
+            "text": "Get Your Free Estimate",
+            "link": "/free-estimate/"
+          },
+          "trustSignals": [
+            "Licensed & Insured",
+            "5-Star Rated",
+            "Locally Owned"
+          ],
+          "heroImage": {
+            "src": "/images/[location-slug]-hero.jpg",
+            "alt": "Pool service in [Location], Florida"
+          }
+        },
+        "localIntro": {
+          "order": 2,
+          "content": "[2-3 paragraphs about serving this specific community. Mention local landmarks, neighborhoods, community characteristics, and why residents choose your service. Include natural mentions of the location name throughout.]"
+        },
+        "servicesInArea": {
+          "order": 3,
+          "h2": "Pool Services in [Location]",
+          "intro": "We offer the full range of pool services to [Location] homeowners.",
+          "services": [
+            {
+              "name": "Pool Cleaning",
+              "description": "Weekly and bi-weekly cleaning to keep your pool sparkling.",
+              "url": "/pool-cleaning/"
+            },
+            {
+              "name": "Pool Maintenance",
+              "description": "Complete care including chemistry, equipment checks, and filter cleaning.",
+              "url": "/pool-maintenance/"
+            },
+            {
+              "name": "Pool Repair",
+              "description": "Fast repairs for pumps, filters, heaters, and more.",
+              "url": "/pool-repair/"
+            },
+            {
+              "name": "Equipment Installation",
+              "description": "Upgrades and new installations done right.",
+              "url": "/pool-equipment-installation/"
+            },
+            {
+              "name": "Pool Resurfacing",
+              "description": "Restore your pool with plaster, pebble, or quartz finishes.",
+              "url": "/pool-resurfacing/"
+            },
+            {
+              "name": "Leak Detection",
+              "description": "Find and fix leaks before they cause damage.",
+              "url": "/pool-leak-detection/"
+            }
+          ]
+        },
+        "localKnowledge": {
+          "order": 4,
+          "h2": "Why [Location] Pool Owners Choose Us",
+          "content": "[Paragraph about understanding local conditions—water quality, common pool types in the area, weather patterns, HOA requirements if applicable, or other location-specific factors that affect pool care.]",
+          "bullets": [
+            "[Local-specific benefit 1]",
+            "[Local-specific benefit 2]",
+            "[Local-specific benefit 3]",
+            "[Local-specific benefit 4]"
+          ]
+        },
+        "neighborhoodsServed": {
+          "order": 5,
+          "h2": "Neighborhoods We Serve in [Location]",
+          "content": "We service pools throughout [Location], including:",
+          "neighborhoods": [
+            "[Neighborhood/Subdivision 1]",
+            "[Neighborhood/Subdivision 2]",
+            "[Neighborhood/Subdivision 3]",
+            "[Neighborhood/Subdivision 4]",
+            "[Neighborhood/Subdivision 5]",
+            "[Neighborhood/Subdivision 6]"
+          ],
+          "closingNote": "Don't see your neighborhood? We likely service it—contact us to confirm."
+        },
+        "testimonials": {
+          "order": 6,
+          "h2": "What [Location] Customers Say",
+          "reviews": [
+            {
+              "quote": "[Location-specific testimonial]",
+              "author": "[First Name] [Last Initial].",
+              "location": "[Neighborhood or Location]",
+              "rating": 5
+            },
+            {
+              "quote": "[Location-specific testimonial]",
+              "author": "[First Name] [Last Initial].",
+              "location": "[Neighborhood or Location]",
+              "rating": 5
+            }
+          ]
+        },
+        "faq": {
+          "order": 7,
+          "h2": "Pool Service FAQs for [Location] Residents",
+          "questions": [
+            {
+              "question": "Do you service my area in [Location]?",
+              "answer": "[Answer confirming coverage and mentioning specific neighborhoods]"
+            },
+            {
+              "question": "How much does pool service cost in [Location]?",
+              "answer": "[Answer about pricing factors—pool size, service frequency, etc.]"
+            },
+            {
+              "question": "[Location-specific question about common local concern]",
+              "answer": "[Relevant answer]"
+            }
+          ]
+        },
+        "finalCTA": {
+          "order": 8,
+          "h2": "Ready for Reliable Pool Service in [Location]?",
+          "content": "Join your neighbors who trust us with their pool care. Get a free, no-obligation estimate today.",
+          "primaryCTA": {
+            "text": "Get Your Free Estimate",
+            "link": "/free-estimate/"
+          },
+          "secondaryCTA": {
+            "text": "Or call: (772) XXX-XXXX",
+            "link": "tel:+1772XXXXXXX"
+          }
+        },
+        "nearbyAreas": {
+          "order": 9,
+          "h2": "Nearby Service Areas",
+          "links": [
+            {
+              "text": "[Nearby Location 1]",
+              "url": "/service-areas/[nearby-1-slug]/"
+            },
+            {
+              "text": "[Nearby Location 2]",
+              "url": "/service-areas/[nearby-2-slug]/"
+            },
+            {
+              "text": "[Nearby Location 3]",
+              "url": "/service-areas/[nearby-3-slug]/"
+            }
+          ]
+        }
+      }
+    },
+    "locationPages": [
+      {
+        "id": "sebastian-fl",
+        "seo": {
+          "title": "Pool Service Sebastian, FL | Cleaning, Maintenance & Repairs",
+          "metaDescription": "Professional pool service in Sebastian, FL. Weekly cleaning, equipment repair, and maintenance plans. Serving Sebastian homeowners with reliable pool care.",
+          "url": "/service-areas/sebastian-fl/"
+        },
+        "hero": {
+          "h1": "Pool Service in Sebastian, FL",
+          "subheadline": "Trusted pool care for Sebastian homeowners—from Roseland to the riverfront.",
+          "heroImage": {
+            "src": "/images/sebastian-fl-hero.jpg",
+            "alt": "Residential pool in Sebastian, Florida"
+          }
+        },
+        "localIntro": "Sebastian offers the best of Florida living—close to the water, away from the crowds, and full of character. Whether you live near the Sebastian Inlet, along the Indian River, or in one of the established neighborhoods inland, your pool deserves care that matches the quality of life here.\n\nWe've been serving Sebastian pool owners for years, and we understand what makes this community unique. Many homes here have older pools that need experienced technicians who know vintage equipment. Others have newer builds with modern automation. We handle both with equal expertise.\n\nAs a Sebastian pool owner, you face the same Florida challenges—heat, humidity, afternoon storms—plus the salt air that comes with living near the coast. Our maintenance programs account for these local conditions to keep your pool clear and your equipment running longer.",
+        "servicesInArea": {
+          "h2": "Pool Services in Sebastian",
+          "intro": "We offer complete pool services to Sebastian homeowners, from basic cleaning to major renovations.",
+          "services": [
+            {
+              "name": "Pool Cleaning",
+              "description": "Weekly and bi-weekly cleaning to keep your Sebastian pool swim-ready.",
+              "url": "/pool-cleaning/"
+            },
+            {
+              "name": "Pool Maintenance",
+              "description": "Full-service care including chemistry management and equipment checks.",
+              "url": "/pool-maintenance/"
+            },
+            {
+              "name": "Pool Repair",
+              "description": "Fast, reliable repairs for all pool equipment brands.",
+              "url": "/pool-repair/"
+            },
+            {
+              "name": "Equipment Installation",
+              "description": "Pumps, heaters, salt systems, and automation upgrades.",
+              "url": "/pool-equipment-installation/"
+            },
+            {
+              "name": "Pool Resurfacing",
+              "description": "Bring your pool back to life with a new finish.",
+              "url": "/pool-resurfacing/"
+            },
+            {
+              "name": "Leak Detection",
+              "description": "Find and fix leaks with professional equipment.",
+              "url": "/pool-leak-detection/"
+            }
+          ]
+        },
+        "localKnowledge": {
+          "h2": "Why Sebastian Pool Owners Choose Us",
+          "content": "Sebastian has a mix of pool styles—from classic screened enclosures in established neighborhoods to open pools in newer developments. We've worked on them all and understand the specific challenges each presents.",
+          "bullets": [
+            "Experience with Sebastian's older pool equipment and plumbing",
+            "Understanding of coastal salt air effects on equipment",
+            "Flexible scheduling for seasonal residents",
+            "Fast response times—we're just down the road"
+          ]
+        },
+        "neighborhoodsServed": {
+          "h2": "Sebastian Neighborhoods We Serve",
+          "content": "We provide pool service throughout Sebastian, including:",
+          "neighborhoods": [
+            "Roseland",
+            "Sebastian Highlands",
+            "Collier Club",
+            "Riverview",
+            "Sebastian River Landings",
+            "Waterfront Estates",
+            "Whispering Palms",
+            "Pelican Island"
+          ],
+          "closingNote": "Don't see your neighborhood? We likely service it—contact us to confirm."
+        },
+        "testimonials": [
+          {
+            "quote": "Reliable and honest. They've been taking care of our pool in Sebastian Highlands for three years now. Never a missed visit.",
+            "author": "Tom S.",
+            "location": "Sebastian Highlands",
+            "rating": 5
+          },
+          {
+            "quote": "Our pool had issues from the previous owner's neglect. They got it back in shape and now it's crystal clear every week.",
+            "author": "Rachel M.",
+            "location": "Roseland",
+            "rating": 5
+          }
+        ],
+        "faq": {
+          "h2": "Pool Service FAQs for Sebastian Residents",
+          "questions": [
+            {
+              "question": "Do you service all of Sebastian?",
+              "answer": "Yes, we service all of Sebastian from Roseland in the north to CR 512 in the south, and from the river to the western developments. If you're in Sebastian city limits or nearby unincorporated areas, we've got you covered."
+            },
+            {
+              "question": "How much does pool service cost in Sebastian?",
+              "answer": "Pool service in Sebastian typically ranges from $120-200/month for weekly service depending on pool size and condition. We provide free quotes so you know exactly what to expect."
+            },
+            {
+              "question": "Do you work on older Sebastian pools with original equipment?",
+              "answer": "Absolutely. Many Sebastian pools were built in the 80s and 90s. Our technicians are experienced with older equipment and can help you decide when to repair vs. replace."
+            }
+          ]
+        },
+        "finalCTA": {
+          "h2": "Ready for Reliable Pool Service in Sebastian?",
+          "content": "Join your Sebastian neighbors who trust us with their pool care. Get a free, no-obligation estimate today."
+        },
+        "nearbyAreas": [
+          {
+            "text": "Vero Beach",
+            "url": "/"
+          },
+          {
+            "text": "Fellsmere",
+            "url": "/service-areas/fellsmere-fl/"
+          },
+          {
+            "text": "Wabasso",
+            "url": "/service-areas/wabasso-fl/"
+          }
+        ]
+      },
+      {
+        "id": "indian-river-shores-fl",
+        "seo": {
+          "title": "Pool Service Indian River Shores, FL | Premium Pool Care",
+          "metaDescription": "Premium pool service for Indian River Shores homes. Meticulous cleaning, chemical balancing, and equipment maintenance. Discreet, reliable service.",
+          "url": "/service-areas/indian-river-shores-fl/"
+        },
+        "hero": {
+          "h1": "Pool Service in Indian River Shores",
+          "subheadline": "Premium pool care for this exclusive barrier island community.",
+          "heroImage": {
+            "src": "/images/indian-river-shores-fl-hero.jpg",
+            "alt": "Luxury pool in Indian River Shores, Florida"
+          }
+        },
+        "localIntro": "Indian River Shores is one of the Treasure Coast's most desirable communities—known for its privacy, natural beauty, and exceptional quality of life. The pools here reflect that standard, and they deserve service that meets it.\n\nWe understand that Indian River Shores homeowners expect more than just basic pool cleaning. You expect consistency, discretion, attention to detail, and technicians who respect your property. That's exactly what we deliver.\n\nMany Indian River Shores homes have sophisticated pool systems—saltwater, automation, spa combinations, water features. Our technicians are trained on high-end equipment and know how to maintain these systems to manufacturer specifications.",
+        "servicesInArea": {
+          "h2": "Pool Services in Indian River Shores",
+          "intro": "We provide comprehensive pool services tailored to Indian River Shores' discerning homeowners.",
+          "services": [
+            {
+              "name": "Pool Cleaning",
+              "description": "Meticulous weekly cleaning with attention to every detail.",
+              "url": "/pool-cleaning/"
+            },
+            {
+              "name": "Pool Maintenance",
+              "description": "Complete care for pools, spas, and water features.",
+              "url": "/pool-maintenance/"
+            },
+            {
+              "name": "Pool Repair",
+              "description": "Expert repairs on high-end equipment and automation systems.",
+              "url": "/pool-repair/"
+            },
+            {
+              "name": "Equipment Installation",
+              "description": "Premium equipment upgrades and smart home integration.",
+              "url": "/pool-equipment-installation/"
+            },
+            {
+              "name": "Pool Resurfacing",
+              "description": "Premium finishes including PebbleTec and glass bead.",
+              "url": "/pool-resurfacing/"
+            },
+            {
+              "name": "Leak Detection",
+              "description": "Non-invasive leak detection to protect your landscaping.",
+              "url": "/pool-leak-detection/"
+            }
+          ]
+        },
+        "localKnowledge": {
+          "h2": "Why Indian River Shores Homeowners Choose Us",
+          "content": "We've earned the trust of homeowners in Indian River Shores' most exclusive communities. Our team understands the expectations here and consistently delivers service that exceeds them.",
+          "bullets": [
+            "Experience with high-end pool systems and automation",
+            "Discreet, professional technicians who respect your privacy",
+            "Coordination with property managers and house staff",
+            "Flexible scheduling for seasonal residents"
+          ]
+        },
+        "neighborhoodsServed": {
+          "h2": "Communities We Serve in Indian River Shores",
+          "content": "We provide pool service throughout Indian River Shores, including:",
+          "neighborhoods": [
+            "John's Island",
+            "Orchid Island Golf & Beach Club",
+            "Sea Oaks Beach & Tennis Club",
+            "Bermuda Bay",
+            "Seagrove",
+            "Ocean Pearl"
+          ],
+          "closingNote": "We work with homeowners directly as well as property managers and estate staff."
+        },
+        "testimonials": [
+          {
+            "quote": "We've used several pool companies over the years. These are the first ones who truly meet the standard we expect. Impeccable service.",
+            "author": "William H.",
+            "location": "John's Island",
+            "rating": 5
+          },
+          {
+            "quote": "They coordinate perfectly with our property manager when we're traveling. Pool is always perfect when we return.",
+            "author": "Margaret L.",
+            "location": "Indian River Shores",
+            "rating": 5
+          }
+        ],
+        "faq": {
+          "h2": "Pool Service FAQs for Indian River Shores Residents",
+          "questions": [
+            {
+              "question": "Do you have experience with the pools in John's Island and similar communities?",
+              "answer": "Yes. We service numerous pools in John's Island, Orchid Island Club, and other premier Indian River Shores communities. Our technicians are familiar with the pool systems, gate access procedures, and standards expected in these neighborhoods."
+            },
+            {
+              "question": "Can you work with our property manager or estate staff?",
+              "answer": "Absolutely. Many of our Indian River Shores clients are seasonal residents. We coordinate seamlessly with property managers, house managers, and estate staff to ensure your pool is maintained to your standards year-round."
+            },
+            {
+              "question": "Do you service pool-spa combinations and water features?",
+              "answer": "Yes. Many Indian River Shores pools include attached spas, fountains, and water features. We maintain all components as an integrated system."
+            }
+          ]
+        },
+        "finalCTA": {
+          "h2": "Experience Premium Pool Service in Indian River Shores",
+          "content": "Your pool deserves the same attention to detail as the rest of your home. Contact us for a private consultation."
+        },
+        "nearbyAreas": [
+          {
+            "text": "Vero Beach",
+            "url": "/"
+          },
+          {
+            "text": "Orchid Island",
+            "url": "/service-areas/orchid-island-fl/"
+          },
+          {
+            "text": "Wabasso",
+            "url": "/service-areas/wabasso-fl/"
+          }
+        ]
+      },
+      {
+        "id": "orchid-island-fl",
+        "seo": {
+          "title": "Pool Service Orchid Island, FL | Exclusive Pool Maintenance",
+          "metaDescription": "Trusted pool service for Orchid Island residents. Personalized maintenance plans, responsive repairs, and exceptional attention to detail.",
+          "url": "/service-areas/orchid-island-fl/"
+        },
+        "hero": {
+          "h1": "Pool Service in Orchid Island, FL",
+          "subheadline": "Dedicated pool care for Orchid and the surrounding barrier island community.",
+          "heroImage": {
+            "src": "/images/orchid-island-fl-hero.jpg",
+            "alt": "Pool overlooking the ocean in Orchid Island, Florida"
+          }
+        },
+        "localIntro": "Orchid is a small, exclusive town on Florida's barrier island—a community that values privacy, natural beauty, and exceptional quality. The pools here are no exception, and they require service providers who understand and share those values.\n\nWe provide pool service to Orchid Island homeowners who expect reliability, professionalism, and results. Our technicians arrive on time, work efficiently, and leave your pool area as clean as they found it.\n\nLiving on the barrier island means dealing with salt air, coastal weather, and the unique challenges that come with oceanfront and riverfront properties. Our maintenance approach accounts for these factors to extend equipment life and keep your pool pristine.",
+        "servicesInArea": {
+          "h2": "Pool Services in Orchid Island",
+          "intro": "Complete pool services for Orchid Island's discerning residents.",
+          "services": [
+            {
+              "name": "Pool Cleaning",
+              "description": "Thorough weekly service with attention to every detail.",
+              "url": "/pool-cleaning/"
+            },
+            {
+              "name": "Pool Maintenance",
+              "description": "Comprehensive care for pools, spas, and water features.",
+              "url": "/pool-maintenance/"
+            },
+            {
+              "name": "Pool Repair",
+              "description": "Responsive repairs from experienced technicians.",
+              "url": "/pool-repair/"
+            },
+            {
+              "name": "Equipment Installation",
+              "description": "High-end equipment and automation systems.",
+              "url": "/pool-equipment-installation/"
+            },
+            {
+              "name": "Pool Resurfacing",
+              "description": "Premium finishes that complement your property.",
+              "url": "/pool-resurfacing/"
+            },
+            {
+              "name": "Leak Detection",
+              "description": "Professional detection with minimal disruption.",
+              "url": "/pool-leak-detection/"
+            }
+          ]
+        },
+        "localKnowledge": {
+          "h2": "Why Orchid Island Residents Choose Us",
+          "content": "We've built our reputation in this community through consistent, exceptional service. Orchid Island homeowners recommend us because we deliver what we promise, every time.",
+          "bullets": [
+            "Understanding of barrier island environmental factors",
+            "Experience with high-end residential pool systems",
+            "Respectful, discreet service",
+            "Excellent communication with homeowners and staff"
+          ]
+        },
+        "neighborhoodsServed": {
+          "h2": "Areas We Serve in Orchid",
+          "content": "We provide pool service throughout the Town of Orchid and surrounding areas, including:",
+          "neighborhoods": [
+            "Orchid Island Golf & Beach Club",
+            "The Estuary",
+            "Oceanfront estates",
+            "Riverfront properties"
+          ],
+          "closingNote": "We coordinate with community gates and property managers for seamless access."
+        },
+        "testimonials": [
+          {
+            "quote": "Professional, punctual, and thorough. Exactly what we were looking for after a disappointing experience with another company.",
+            "author": "Charles R.",
+            "location": "Orchid Island",
+            "rating": 5
+          },
+          {
+            "quote": "They've maintained our pool for four years. Consistent quality, fair pricing, and they genuinely care about doing a good job.",
+            "author": "Elizabeth W.",
+            "location": "Orchid",
+            "rating": 5
+          }
+        ],
+        "faq": {
+          "h2": "Pool Service FAQs for Orchid Island Residents",
+          "questions": [
+            {
+              "question": "Are you familiar with Orchid Island community procedures?",
+              "answer": "Yes. We service multiple pools within Orchid Island and are familiar with gate access, community guidelines, and the expectations of residents here."
+            },
+            {
+              "question": "How do you handle the salt air effects on pool equipment?",
+              "answer": "Salt air accelerates corrosion on metal components. We inspect equipment for early signs of corrosion, recommend protective measures like sacrificial anodes, and advise on equipment choices that hold up better in coastal environments."
+            },
+            {
+              "question": "Can you service our pool while we're at our other residence?",
+              "answer": "Absolutely. Many Orchid Island clients are seasonal. We provide full-service maintenance year-round and can coordinate with your property manager or send you photos and reports after each visit."
+            }
+          ]
+        },
+        "finalCTA": {
+          "h2": "Ready for Exceptional Pool Service in Orchid Island?",
+          "content": "Experience the level of service your Orchid Island home deserves. Contact us for a personal consultation."
+        },
+        "nearbyAreas": [
+          {
+            "text": "Indian River Shores",
+            "url": "/service-areas/indian-river-shores-fl/"
+          },
+          {
+            "text": "Vero Beach",
+            "url": "/"
+          },
+          {
+            "text": "Wabasso",
+            "url": "/service-areas/wabasso-fl/"
+          }
+        ]
+      },
+      {
+        "id": "fellsmere-fl",
+        "seo": {
+          "title": "Pool Service Fellsmere, FL | Local Pool Cleaning & Repair",
+          "metaDescription": "Reliable pool cleaning and repair in Fellsmere, FL. Affordable weekly maintenance plans and fast equipment repairs. Call for your free quote.",
+          "url": "/service-areas/fellsmere-fl/"
+        },
+        "hero": {
+          "h1": "Pool Service in Fellsmere, FL",
+          "subheadline": "Honest, affordable pool care for Fellsmere homeowners.",
+          "heroImage": {
+            "src": "/images/fellsmere-fl-hero.jpg",
+            "alt": "Backyard pool in Fellsmere, Florida"
+          }
+        },
+        "localIntro": "Fellsmere offers a quieter pace of life—more space, more privacy, and a real sense of community. If you have a pool out here, you know it's a centerpiece of your property and deserves proper care.\n\nWe provide straightforward, reliable pool service to Fellsmere homeowners. No fancy sales pitches, no unnecessary upsells—just consistent, quality work at fair prices.\n\nFellsmere's inland location means different conditions than the coast. Less salt air, but the same Florida heat, humidity, and summer storms. We adjust our service approach accordingly to keep your pool balanced and equipment running smoothly.",
+        "servicesInArea": {
+          "h2": "Pool Services in Fellsmere",
+          "intro": "We offer the full range of pool services to Fellsmere residents.",
+          "services": [
+            {
+              "name": "Pool Cleaning",
+              "description": "Weekly and bi-weekly service at affordable rates.",
+              "url": "/pool-cleaning/"
+            },
+            {
+              "name": "Pool Maintenance",
+              "description": "Complete care to keep your pool healthy.",
+              "url": "/pool-maintenance/"
+            },
+            {
+              "name": "Pool Repair",
+              "description": "Fast, honest repairs when something breaks.",
+              "url": "/pool-repair/"
+            },
+            {
+              "name": "Equipment Installation",
+              "description": "New equipment installed right.",
+              "url": "/pool-equipment-installation/"
+            },
+            {
+              "name": "Pool Resurfacing",
+              "description": "Give your pool a fresh start.",
+              "url": "/pool-resurfacing/"
+            },
+            {
+              "name": "Leak Detection",
+              "description": "Find leaks before they become big problems.",
+              "url": "/pool-leak-detection/"
+            }
+          ]
+        },
+        "localKnowledge": {
+          "h2": "Why Fellsmere Pool Owners Choose Us",
+          "content": "We treat Fellsmere customers the way we'd want to be treated—with honesty, respect, and fair pricing. No pressure, no games.",
+          "bullets": [
+            "Competitive pricing for Fellsmere homeowners",
+            "Honest recommendations—we won't sell you what you don't need",
+            "Reliable scheduling you can count on",
+            "Local team that knows the area"
+          ]
+        },
+        "neighborhoodsServed": {
+          "h2": "Areas We Serve in Fellsmere",
+          "content": "We service pools throughout Fellsmere and surrounding areas, including:",
+          "neighborhoods": [
+            "Downtown Fellsmere",
+            "Rural properties",
+            "Fellsmere Farms area",
+            "Surrounding unincorporated areas"
+          ],
+          "closingNote": "Have a property outside city limits? We likely service it—just ask."
+        },
+        "testimonials": [
+          {
+            "quote": "Finally found a pool company that shows up when they say they will. Fair prices, good work. That's all I ask for.",
+            "author": "Jerry T.",
+            "location": "Fellsmere",
+            "rating": 5
+          },
+          {
+            "quote": "They're honest. Told me my pump could be repaired instead of pushing a new one. That's rare these days.",
+            "author": "Sandra K.",
+            "location": "Fellsmere",
+            "rating": 5
+          }
+        ],
+        "faq": {
+          "h2": "Pool Service FAQs for Fellsmere Residents",
+          "questions": [
+            {
+              "question": "Do you really come all the way out to Fellsmere?",
+              "answer": "Yes, we service Fellsmere regularly. We have other customers in the area, so we're already making the trip. No extra charges for being outside Vero Beach city limits."
+            },
+            {
+              "question": "Is pool service more expensive in Fellsmere?",
+              "answer": "No. We charge the same rates in Fellsmere as we do elsewhere. Pool service cost depends on pool size and condition, not your address."
+            },
+            {
+              "question": "My pool is on a large rural property. Can you still service it?",
+              "answer": "Absolutely. We service pools on properties of all sizes. Just let us know any access details (gates, codes, etc.) and we'll take care of the rest."
+            }
+          ]
+        },
+        "finalCTA": {
+          "h2": "Ready for Reliable Pool Service in Fellsmere?",
+          "content": "Get honest, dependable pool care at a fair price. Contact us for your free estimate."
+        },
+        "nearbyAreas": [
+          {
+            "text": "Sebastian",
+            "url": "/service-areas/sebastian-fl/"
+          },
+          {
+            "text": "Vero Beach",
+            "url": "/"
+          },
+          {
+            "text": "Wabasso",
+            "url": "/service-areas/wabasso-fl/"
+          }
+        ]
+      },
+      {
+        "id": "wabasso-fl",
+        "seo": {
+          "title": "Pool Service Wabasso, FL | Pool Cleaning & Maintenance",
+          "metaDescription": "Dependable pool service in Wabasso, FL. Regular cleaning, maintenance, and repairs to keep your pool swim-ready year-round.",
+          "url": "/service-areas/wabasso-fl/"
+        },
+        "hero": {
+          "h1": "Pool Service in Wabasso, FL",
+          "subheadline": "Reliable pool care for Wabasso homeowners.",
+          "heroImage": {
+            "src": "/images/wabasso-fl-hero.jpg",
+            "alt": "Clean residential pool in Wabasso, Florida"
+          }
+        },
+        "localIntro": "Wabasso sits in a great spot—close to the beaches, near the charm of Vero Beach, but with its own relaxed character. If you have a pool here, you want it ready for a swim whenever the mood strikes.\n\nWe provide dependable pool service to Wabasso residents. Same technician, same day each week, consistent quality. That's what we deliver.\n\nWhether you're in one of Wabasso's established neighborhoods or on a larger property toward the west, we'll keep your pool clean, balanced, and running smoothly.",
+        "servicesInArea": {
+          "h2": "Pool Services in Wabasso",
+          "intro": "Full-service pool care for Wabasso homeowners.",
+          "services": [
+            {
+              "name": "Pool Cleaning",
+              "description": "Weekly service to keep your pool sparkling.",
+              "url": "/pool-cleaning/"
+            },
+            {
+              "name": "Pool Maintenance",
+              "description": "Complete care beyond just cleaning.",
+              "url": "/pool-maintenance/"
+            },
+            {
+              "name": "Pool Repair",
+              "description": "Quick repairs when equipment fails.",
+              "url": "/pool-repair/"
+            },
+            {
+              "name": "Equipment Installation",
+              "description": "Upgrades and replacements done right.",
+              "url": "/pool-equipment-installation/"
+            },
+            {
+              "name": "Pool Resurfacing",
+              "description": "Restore your pool's appearance and function.",
+              "url": "/pool-resurfacing/"
+            },
+            {
+              "name": "Leak Detection",
+              "description": "Professional leak finding and repair.",
+              "url": "/pool-leak-detection/"
+            }
+          ]
+        },
+        "localKnowledge": {
+          "h2": "Why Wabasso Pool Owners Choose Us",
+          "content": "Wabasso homeowners appreciate straightforward service from people they can trust. That's exactly what we provide.",
+          "bullets": [
+            "Consistent, reliable weekly service",
+            "Same technician who knows your pool",
+            "Fair, transparent pricing",
+            "Quick response when issues arise"
+          ]
+        },
+        "neighborhoodsServed": {
+          "h2": "Areas We Serve in Wabasso",
+          "content": "We service pools throughout Wabasso and nearby areas, including:",
+          "neighborhoods": [
+            "Wabasso Beach",
+            "Environmental Learning Center area",
+            "West Wabasso",
+            "Surrounding properties"
+          ],
+          "closingNote": "Contact us to confirm service in your specific area."
+        },
+        "testimonials": [
+          {
+            "quote": "Dependable is the word. They show up every Thursday, pool is always clean. Exactly what I wanted.",
+            "author": "Dan R.",
+            "location": "Wabasso",
+            "rating": 5
+          },
+          {
+            "quote": "Switched to them after my old pool guy retired. Great transition—they learned our pool quickly and service is excellent.",
+            "author": "Marie C.",
+            "location": "Wabasso",
+            "rating": 5
+          }
+        ],
+        "faq": {
+          "h2": "Pool Service FAQs for Wabasso Residents",
+          "questions": [
+            {
+              "question": "Do you service the Wabasso Beach area?",
+              "answer": "Yes, we service Wabasso Beach and all surrounding areas. Barrier island, mainland, and properties to the west—we cover it all."
+            },
+            {
+              "question": "What day would my service be?",
+              "answer": "We schedule by route efficiency. When you sign up, we'll let you know which day works best for your area. Most Wabasso customers are serviced mid-week."
+            },
+            {
+              "question": "Can you help with a pool that's been neglected?",
+              "answer": "Absolutely. Whether you inherited a green pool with a home purchase or just got behind on maintenance, we can get it back in shape and keep it that way."
+            }
+          ]
+        },
+        "finalCTA": {
+          "h2": "Ready for Dependable Pool Service in Wabasso?",
+          "content": "Get consistent, quality pool care you can rely on. Contact us for your free estimate."
+        },
+        "nearbyAreas": [
+          {
+            "text": "Vero Beach",
+            "url": "/"
+          },
+          {
+            "text": "Indian River Shores",
+            "url": "/service-areas/indian-river-shores-fl/"
+          },
+          {
+            "text": "Sebastian",
+            "url": "/service-areas/sebastian-fl/"
+          }
+        ]
+      },
+      {
+        "id": "gifford-fl",
+        "seo": {
+          "title": "Pool Service Gifford, FL | Affordable Pool Cleaning & Repair",
+          "metaDescription": "Quality pool service in Gifford, FL at competitive prices. Weekly cleaning, chemical balancing, and equipment repairs. Free estimates available.",
+          "url": "/service-areas/gifford-fl/"
+        },
+        "hero": {
+          "h1": "Pool Service in Gifford, FL",
+          "subheadline": "Quality pool care at prices that work for your budget.",
+          "heroImage": {
+            "src": "/images/gifford-fl-hero.jpg",
+            "alt": "Residential pool in Gifford, Florida"
+          }
+        },
+        "localIntro": "Gifford is a working community where people value getting good service at a fair price. We share that mindset. No inflated quotes, no unnecessary services—just solid pool care that keeps your pool clean and functional.\n\nWe serve Gifford homeowners with the same quality and attention we bring to every community. Your pool gets the same thorough service, the same quality chemicals, and the same expertise as any pool in the county.\n\nA pool is a big investment no matter where you live. We help Gifford pool owners protect that investment with reliable, affordable maintenance.",
+        "servicesInArea": {
+          "h2": "Pool Services in Gifford",
+          "intro": "Complete pool services at competitive prices for Gifford residents.",
+          "services": [
+            {
+              "name": "Pool Cleaning",
+              "description": "Affordable weekly and bi-weekly cleaning.",
+              "url": "/pool-cleaning/"
+            },
+            {
+              "name": "Pool Maintenance",
+              "description": "Full-service care that keeps costs down long-term.",
+              "url": "/pool-maintenance/"
+            },
+            {
+              "name": "Pool Repair",
+              "description": "Honest repairs at fair prices.",
+              "url": "/pool-repair/"
+            },
+            {
+              "name": "Equipment Installation",
+              "description": "Quality equipment without the premium markup.",
+              "url": "/pool-equipment-installation/"
+            },
+            {
+              "name": "Pool Resurfacing",
+              "description": "Options for every budget.",
+              "url": "/pool-resurfacing/"
+            },
+            {
+              "name": "Leak Detection",
+              "description": "Find problems before they get expensive.",
+              "url": "/pool-leak-detection/"
+            }
+          ]
+        },
+        "localKnowledge": {
+          "h2": "Why Gifford Pool Owners Choose Us",
+          "content": "We believe everyone deserves quality pool service, regardless of their address or budget. Gifford customers get our best work at our best prices.",
+          "bullets": [
+            "Competitive rates for Gifford homeowners",
+            "Same quality service as anywhere in the county",
+            "Honest about what you need (and what you don't)",
+            "Flexible payment options available"
+          ]
+        },
+        "neighborhoodsServed": {
+          "h2": "Areas We Serve in Gifford",
+          "content": "We provide pool service throughout Gifford and surrounding neighborhoods.",
+          "neighborhoods": [
+            "Gifford",
+            "Pointe West",
+            "Surrounding areas"
+          ],
+          "closingNote": "Not sure if we service your area? Just ask—we probably do."
+        },
+        "testimonials": [
+          {
+            "quote": "Best price I found, and the service is better than the more expensive company I used before. Win-win.",
+            "author": "Marcus J.",
+            "location": "Gifford",
+            "rating": 5
+          },
+          {
+            "quote": "They treat us right. Same good service my sister gets in Vero Beach. We appreciate that.",
+            "author": "Theresa W.",
+            "location": "Gifford",
+            "rating": 5
+          }
+        ],
+        "faq": {
+          "h2": "Pool Service FAQs for Gifford Residents",
+          "questions": [
+            {
+              "question": "Are your prices really the same as other areas?",
+              "answer": "Yes. We price based on pool size and service needs, not neighborhood. Gifford customers pay the same rates as customers anywhere else in Indian River County."
+            },
+            {
+              "question": "What if my pool needs a lot of work to get started?",
+              "answer": "We'll assess your pool and give you honest options. If it needs a cleanup before starting regular service, we'll quote that separately. No surprises."
+            },
+            {
+              "question": "Do you offer payment plans for bigger repairs?",
+              "answer": "For larger projects like resurfacing or major equipment replacement, we do offer financing options. Ask us for details."
+            }
+          ]
+        },
+        "finalCTA": {
+          "h2": "Ready for Quality Pool Service in Gifford?",
+          "content": "Get great pool care at a price that fits your budget. Contact us for your free estimate."
+        },
+        "nearbyAreas": [
+          {
+            "text": "Vero Beach",
+            "url": "/"
+          },
+          {
+            "text": "Wabasso",
+            "url": "/service-areas/wabasso-fl/"
+          },
+          {
+            "text": "Indian River Shores",
+            "url": "/service-areas/indian-river-shores-fl/"
+          }
+        ]
+      },
+      {
+        "id": "port-st-lucie-fl",
+        "seo": {
+          "title": "Pool Service Port St. Lucie, FL | Cleaning & Repair",
+          "metaDescription": "Top-rated pool service in Port St. Lucie. Serving Tradition, St. Lucie West, Sandpiper Bay, and more. Weekly cleaning & expert repairs.",
+          "url": "/service-areas/port-st-lucie-fl/"
+        },
+        "hero": {
+          "h1": "Pool Service in Port St. Lucie, FL",
+          "subheadline": "Reliable, professional pool care for Port St. Lucie homeowners.",
+          "heroImage": {
+            "src": "/images/port-st-lucie-fl-hero.jpg",
+            "alt": "Screened pool in Port St. Lucie, Florida"
+          }
+        },
+        "localIntro": "Port St. Lucie is growing fast, and for good reason. From the master-planned communities of Tradition and St. Lucie West to the riverfront homes in Sandpiper Bay, it's a fantastic place to live—and to own a pool.\n\nWe provide comprehensive pool service throughout Port St. Lucie. We understand the specific needs of PSL homeowners, whether you have a family pool that gets heavy use or a quiet backyard retreat. Our team is in your neighborhood every week, ensuring pools are clean, safe, and ready for swimming.\n\nWith our professional maintenance plans, you can spend your weekends enjoying your pool instead of cleaning it.",
+        "servicesInArea": {
+          "h2": "Pool Services in Port St. Lucie",
+          "intro": "Complete pool care solutions for all Port St. Lucie neighborhoods.",
+          "services": [
+            {
+              "name": "Pool Cleaning",
+              "description": "Weekly skimming, vacuuming, brushing, and balancing.",
+              "url": "/pool-cleaning/"
+            },
+            {
+              "name": "Pool Maintenance",
+              "description": "Preventative care to keep your equipment running smooth.",
+              "url": "/pool-maintenance/"
+            },
+            {
+              "name": "Pool Repair",
+              "description": "Expert repair for pumps, motors, filters, and heaters.",
+              "url": "/pool-repair/"
+            },
+            {
+              "name": "Equipment Installation",
+              "description": "Energy-efficient upgrades and automation.",
+              "url": "/pool-equipment-installation/"
+            },
+            {
+              "name": "Green Pool Cleanup",
+              "description": "Fast turnaround for algae-ridden pools.",
+              "url": "/green-pool-cleanup/"
+            },
+            {
+              "name": "Leak Detection",
+              "description": "Pinpoint accuracy to stop water loss.",
+              "url": "/pool-leak-detection/"
+            }
+          ]
+        },
+        "localKnowledge": {
+          "h2": "Why Port St. Lucie Chooses Us",
+          "content": "In a city as large as Port St. Lucie, you need a pool company that is organized, reliable, and communicative. We show up when scheduled and send digital reports after every visit.",
+          "bullets": [
+            "Consistent weekly service schedule",
+            "Digital service reports with photos",
+            "No contracts required",
+            "Full-service repair capabilities"
+          ]
+        },
+        "neighborhoodsServed": {
+          "h2": "Port St. Lucie Neighborhoods We Serve",
+          "content": "We cover the entire Port St. Lucie area, including:",
+          "neighborhoods": [
+            "Tradition",
+            "St. Lucie West",
+            "Sandpiper Bay",
+            "Torino",
+            "Becker Road Area",
+            "River Park",
+            "Gatlin Blvd Area",
+            "Prima Vista"
+          ],
+          "closingNote": "We service all zip codes in Port St. Lucie."
+        },
+        "testimonials": [
+          {
+            "quote": "Great service. Technician is always polite and does a thorough job. My pool in Tradition looks amazing.",
+            "author": "David L.",
+            "location": "Tradition",
+            "rating": 5
+          },
+          {
+            "quote": "Highly recommend. They fixed my pump quickly and the weekly cleaning is top notch.",
+            "author": "Sarah P.",
+            "location": "St. Lucie West",
+            "rating": 5
+          }
+        ],
+        "faq": {
+          "h2": "PSL Pool Service FAQs",
+          "questions": [
+            {
+              "question": "Do you service master-planned communities like Tradition?",
+              "answer": "Yes, we service all gated and non-gated communities in Tradition, St. Lucie West, and throughout Port St. Lucie."
+            },
+            {
+              "question": "What is included in weekly service?",
+              "answer": "Our weekly service includes skimming, brushing walls, vacuuming (as needed), emptying baskets, cleaning the filter, and balancing all chemicals."
+            },
+            {
+              "question": "How quickly can you fix a broken pump?",
+              "answer": "We prioritize repairs for our regular service customers. Often we can diagnose and repair or replace equipment within 24-48 hours."
+            }
+          ]
+        },
+        "finalCTA": {
+          "h2": "Best Pool Service in Port St. Lucie",
+          "content": "Get the reliable pool care you deserve. Contact us today for a free quote."
+        },
+        "nearbyAreas": [
+          {
+            "text": "Vero Beach",
+            "url": "/"
+          },
+          {
+            "text": "Call us for other areas",
+            "url": "/contact/"
+          }
+        ]
+      }
+    ]
+  }

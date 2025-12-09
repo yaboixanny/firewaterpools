@@ -1,0 +1,250 @@
+{
+  "companyName": "[Company Name]",
+  "phone": "[Phone Number]",
+  "email": "[Email]",
+  "address": "[Address], Vero Beach, FL [ZIP]",
+  "pages": {
+    "homepage": {
+      "url": "/",
+      "h1": "Pool Service in Vero Beach, FL",
+      "seoTitle": "Pool Service Vero Beach, FL | [Company Name]",
+      "metaDescription": "Trusted pool service in Vero Beach, FL. Weekly cleaning, maintenance, repairs, and more from a locally owned company. Call for your free estimate."
+    },
+    "servicePages": [
+      {
+        "name": "Pool Cleaning",
+        "url": "/pool-cleaning/",
+        "h1": "Professional Pool Cleaning in Vero Beach",
+        "seoTitle": "Pool Cleaning Service Vero Beach, FL | Weekly & Bi-Weekly Plans",
+        "metaDescription": "Keep your Vero Beach pool sparkling clean with our professional cleaning service. Skimming, brushing, vacuuming, and chemical balancing included. Get your free estimate."
+      },
+      {
+        "name": "Pool Maintenance",
+        "url": "/pool-maintenance/",
+        "h1": "Pool Maintenance Services in Vero Beach",
+        "seoTitle": "Pool Maintenance Vero Beach, FL | Reliable Weekly Service",
+        "metaDescription": "Complete pool maintenance for Vero Beach homeowners. Chemical balancing, filter cleaning, equipment checks, and more. Affordable weekly and monthly plans available."
+      },
+      {
+        "name": "Pool Repair",
+        "url": "/pool-repair/",
+        "h1": "Pool Repair Services in Vero Beach, FL",
+        "seoTitle": "Pool Repair Vero Beach | Pumps, Filters, Heaters & More",
+        "metaDescription": "Fast, reliable pool repair in Vero Beach. We fix pumps, filters, heaters, leaks, and more. Licensed and insured technicians. Same-week service available."
+      },
+      {
+        "name": "Pool Equipment Installation",
+        "url": "/pool-equipment-installation/",
+        "h1": "Pool Equipment Installation in Vero Beach",
+        "seoTitle": "Pool Equipment Installation Vero Beach, FL | Pumps, Heaters, Automation",
+        "metaDescription": "Expert pool equipment installation in Vero Beach. Pumps, heaters, salt systems, automation, and LED lighting. Quality brands and professional installation."
+      },
+      {
+        "name": "Pool Resurfacing",
+        "url": "/pool-resurfacing/",
+        "h1": "Pool Resurfacing & Replastering in Vero Beach",
+        "seoTitle": "Pool Resurfacing Vero Beach, FL | Plaster, Pebble & Quartz Finishes",
+        "metaDescription": "Transform your worn pool with professional resurfacing in Vero Beach. Plaster, pebble, and quartz finishes available. Free estimates and financing options."
+      },
+      {
+        "name": "Pool Leak Detection",
+        "url": "/pool-leak-detection/",
+        "h1": "Pool Leak Detection & Repair in Vero Beach",
+        "seoTitle": "Pool Leak Detection Vero Beach, FL | Find & Fix Leaks Fast",
+        "metaDescription": "Losing water in your Vero Beach pool? Our leak detection experts locate and repair pool leaks quickly. Non-invasive testing and permanent repairs."
+      },
+      {
+        "name": "Salt System Installation",
+        "url": "/salt-system-installation/",
+        "h1": "Salt System Installation in Vero Beach",
+        "seoTitle": "Saltwater Pool Conversion Vero Beach, FL | Salt System Installation",
+        "metaDescription": "Convert your Vero Beach pool to saltwater. We install and service salt chlorine generators from top brands. Enjoy softer water and lower chemical costs."
+      },
+      {
+        "name": "Pool Opening & Closing",
+        "url": "/pool-opening-closing/",
+        "h1": "Seasonal Pool Opening & Closing Services",
+        "seoTitle": "Pool Opening & Closing Service Vero Beach, FL | Seasonal Care",
+        "metaDescription": "Seasonal pool opening and closing for Vero Beach snowbirds and vacation homeowners. Complete winterization and spring startup services available."
+      },
+      {
+        "name": "Green Pool Cleanup",
+        "url": "/green-pool-cleanup/",
+        "h1": "Green Pool Cleanup in Vero Beach",
+        "seoTitle": "Green Pool Cleanup Vero Beach, FL | Algae Removal Specialists",
+        "metaDescription": "Green pool in Vero Beach? We restore algae-filled pools to crystal clear in days. Fast response, fair pricing, and guaranteed results."
+      },
+      {
+        "name": "Commercial Pool Service",
+        "url": "/commercial-pool-service/",
+        "h1": "Commercial Pool Service in Vero Beach",
+        "seoTitle": "Commercial Pool Service Vero Beach, FL | HOAs, Hotels & Condos",
+        "metaDescription": "Reliable commercial pool service for Vero Beach hotels, HOAs, condos, and fitness centers. Licensed, insured, and health department compliant."
+      }
+    ],
+    "locationPages": {
+      "overview": {
+        "name": "Service Areas Overview",
+        "url": "/service-areas/",
+        "h1": "Areas We Serve in Indian River County",
+        "seoTitle": "Service Areas | Pool Service in Indian River County, FL",
+        "metaDescription": "Serving Vero Beach, Sebastian, Indian River Shores, Orchid Island, and surrounding communities. Check if we service your neighborhood."
+      },
+      "locations": [
+        {
+          "name": "Sebastian",
+          "url": "/service-areas/sebastian-fl/",
+          "h1": "Pool Service in Sebastian, FL",
+          "seoTitle": "Pool Service Sebastian, FL | Cleaning, Maintenance & Repairs",
+          "metaDescription": "Professional pool service in Sebastian, FL. Weekly cleaning, equipment repair, and maintenance plans. Serving Sebastian homeowners for [X] years."
+        },
+        {
+          "name": "Indian River Shores",
+          "url": "/service-areas/indian-river-shores-fl/",
+          "h1": "Pool Service in Indian River Shores",
+          "seoTitle": "Pool Service Indian River Shores, FL | Premium Pool Care",
+          "metaDescription": "Premium pool service for Indian River Shores homes. Meticulous cleaning, chemical balancing, and equipment maintenance. Discreet, reliable service."
+        },
+        {
+          "name": "Orchid Island",
+          "url": "/service-areas/orchid-island-fl/",
+          "h1": "Pool Service in Orchid Island, FL",
+          "seoTitle": "Pool Service Orchid Island, FL | Exclusive Pool Maintenance",
+          "metaDescription": "Trusted pool service for Orchid Island residents. Personalized maintenance plans, responsive repairs, and exceptional attention to detail."
+        },
+        {
+          "name": "Fellsmere",
+          "url": "/service-areas/fellsmere-fl/",
+          "h1": "Pool Service in Fellsmere, FL",
+          "seoTitle": "Pool Service Fellsmere, FL | Local Pool Cleaning & Repair",
+          "metaDescription": "Reliable pool cleaning and repair in Fellsmere, FL. Affordable weekly maintenance plans and fast equipment repairs. Call for your free quote."
+        },
+        {
+          "name": "Wabasso",
+          "url": "/service-areas/wabasso-fl/",
+          "h1": "Pool Service in Wabasso, FL",
+          "seoTitle": "Pool Service Wabasso, FL | Pool Cleaning & Maintenance",
+          "metaDescription": "Dependable pool service in Wabasso, FL. Regular cleaning, maintenance, and repairs to keep your pool swim-ready year-round."
+        },
+        {
+          "name": "Gifford",
+          "url": "/service-areas/gifford-fl/",
+          "h1": "Pool Service in Gifford, FL",
+          "seoTitle": "Pool Service Gifford, FL | Affordable Pool Cleaning & Repair",
+          "metaDescription": "Quality pool service in Gifford, FL at competitive prices. Weekly cleaning, chemical balancing, and equipment repairs. Free estimates available."
+        },
+        {
+          "name": "Port St. Lucie",
+          "url": "/service-areas/port-st-lucie-fl/",
+          "h1": "Pool Service in Port St. Lucie, FL",
+          "seoTitle": "Pool Service Port St. Lucie, FL | Cleaning, Maintenance & Repairs",
+          "metaDescription": "Professional pool service in Port St. Lucie. Serving Tradition, St. Lucie West, and all of PSL. Weekly cleaning and repairs."
+        }
+      ]
+    },
+    "blogPages": {
+      "hub": {
+        "name": "Pool Care Guide",
+        "url": "/pool-care-guide/",
+        "h1": "Pool Care Guide for Florida Homeowners",
+        "seoTitle": "Pool Care Guide | Tips for Florida Pool Owners | [Company Name]",
+        "metaDescription": "Everything Florida pool owners need to know about pool care. Maintenance tips, troubleshooting guides, and expert advice from Vero Beach pool professionals."
+      },
+      "posts": [
+        {
+          "name": "How Often to Clean Pool",
+          "url": "/pool-care-guide/how-often-clean-pool-florida/",
+          "h1": "How Often Should You Clean Your Pool in Florida?",
+          "seoTitle": "How Often to Clean Your Pool in Florida | Maintenance Schedule",
+          "metaDescription": "Learn the ideal pool cleaning frequency for Florida's climate. Weekly vs. bi-weekly service, seasonal factors, and signs your pool needs attention."
+        },
+        {
+          "name": "Balance Chemicals in Heat",
+          "url": "/pool-care-guide/balance-pool-chemicals-hot-weather/",
+          "h1": "How to Balance Pool Chemicals in Florida's Heat",
+          "seoTitle": "Pool Chemical Balance in Hot Weather | Florida Pool Tips",
+          "metaDescription": "Florida heat affects pool chemistry. Learn how to maintain proper pH, chlorine, and alkalinity levels during summer months for a safe, clear pool."
+        },
+        {
+          "name": "Pool Pump Repair Signs",
+          "url": "/pool-care-guide/pool-pump-repair-signs/",
+          "h1": "7 Signs Your Pool Pump Needs Repair or Replacement",
+          "seoTitle": "Pool Pump Problems: Signs You Need Repair or Replacement",
+          "metaDescription": "Strange noises, weak flow, or high energy bills? Learn the warning signs that your pool pump needs professional attention before it fails completely."
+        },
+        {
+          "name": "Salt vs Chlorine Pool",
+          "url": "/pool-care-guide/salt-pool-vs-chlorine/",
+          "h1": "Salt Pool vs. Chlorine Pool: Pros, Cons & Costs",
+          "seoTitle": "Salt Pool vs. Chlorine Pool | Which Is Better for Florida Homes?",
+          "metaDescription": "Comparing saltwater and chlorine pools for Florida homeowners. Costs, maintenance requirements, and which system works best for the Treasure Coast climate."
+        },
+        {
+          "name": "Prevent Algae",
+          "url": "/pool-care-guide/prevent-algae-florida-pool/",
+          "h1": "How to Prevent Algae Growth in Your Florida Pool",
+          "seoTitle": "Prevent Pool Algae in Florida | Tips from Pool Professionals",
+          "metaDescription": "Florida's heat and humidity make algae a constant threat. Learn proven strategies to prevent green, yellow, and black algae in your pool."
+        },
+        {
+          "name": "Green Pool Fix",
+          "url": "/pool-care-guide/pool-turned-green/",
+          "h1": "What to Do When Your Pool Turns Green",
+          "seoTitle": "Green Pool? Here's How to Fix It | Step-by-Step Guide",
+          "metaDescription": "Came home to a green pool? Learn whether to DIY or call a professional, plus step-by-step guidance for restoring your pool to clear blue water."
+        },
+        {
+          "name": "Choose Pool Service",
+          "url": "/pool-care-guide/how-to-choose-pool-service/",
+          "h1": "How to Choose a Pool Service Company in Florida",
+          "seoTitle": "Choosing a Pool Service Company | What to Look For",
+          "metaDescription": "Not all pool companies are equal. Learn what to look for in licensing, insurance, reviews, and service agreements before hiring a pool service."
+        },
+        {
+          "name": "When to Resurface",
+          "url": "/pool-care-guide/when-to-resurface-pool/",
+          "h1": "When to Resurface Your Pool and What to Expect",
+          "seoTitle": "Pool Resurfacing Guide | Signs, Costs & Process Explained",
+          "metaDescription": "Stains, rough surfaces, or visible plaster damage? Learn when your pool needs resurfacing, what finishes are available, and what the process involves."
+        },
+        {
+          "name": "Hurricane Pool Prep",
+          "url": "/pool-care-guide/pool-hurricane-preparation/",
+          "h1": "How to Prepare Your Pool for Hurricane Season",
+          "seoTitle": "Hurricane Pool Prep | Protect Your Pool During Florida Storms",
+          "metaDescription": "Don't drain your pool before a hurricane. Learn the right way to protect your pool and equipment during Florida's storm season."
+        },
+        {
+          "name": "Energy Efficient Equipment",
+          "url": "/pool-care-guide/energy-efficient-pool-equipment/",
+          "h1": "Energy-Efficient Pool Equipment That Cuts Your Electric Bill",
+          "seoTitle": "Energy-Efficient Pool Pumps & Equipment | Save Money in Florida",
+          "metaDescription": "Variable speed pumps can cut pool energy costs by 70%. Learn which energy-efficient upgrades offer the best ROI for Florida pool owners."
+        }
+      ]
+    },
+    "businessPages": [
+      {
+        "name": "About Us",
+        "url": "/about/",
+        "h1": "About [Company Name]",
+        "seoTitle": "About Us | [Company Name] | Vero Beach Pool Service",
+        "metaDescription": "Locally owned pool service company serving Vero Beach and Indian River County. Meet our team, learn our story, and see why homeowners trust us."
+      },
+      {
+        "name": "Contact",
+        "url": "/contact/",
+        "h1": "Contact Us",
+        "seoTitle": "Contact [Company Name] | Vero Beach Pool Service",
+        "metaDescription": "Get in touch for a free pool service estimate in Vero Beach. Call, text, or fill out our form. Same-day response guaranteed."
+      },
+      {
+        "name": "Free Estimate",
+        "url": "/free-estimate/",
+        "h1": "Get Your Free Pool Service Estimate",
+        "seoTitle": "Free Pool Service Estimate | Vero Beach, FL | [Company Name]",
+        "metaDescription": "Request your free, no-obligation pool service estimate in Vero Beach. Quick response, transparent pricing, and no pressure. Fill out our simple form."
+      }
+    ]
+  }
+}

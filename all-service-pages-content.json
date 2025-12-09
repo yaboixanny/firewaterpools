@@ -1,0 +1,1245 @@
+{
+  "companyInfo": {
+    "name": "[Company Name]",
+    "phone": "(772) XXX-XXXX",
+    "phoneLink": "tel:+1772XXXXXXX",
+    "email": "[email]",
+    "address": "[Address], Vero Beach, FL [ZIP]",
+    "serviceArea": "Vero Beach and Indian River County"
+  },
+  "globalElements": {
+    "trustSignals": [
+      "Licensed & Insured",
+      "5-Star Rated",
+      "Locally Owned"
+    ],
+    "primaryCTA": {
+      "text": "Get Your Free Estimate",
+      "link": "/free-estimate/"
+    },
+    "whyChooseUs": [
+      {
+        "title": "Local & Reliable",
+        "description": "We live and work in Indian River County. Same technician every visit."
+      },
+      {
+        "title": "No Contracts",
+        "description": "Cancel anytime. We keep you because of our service, not paperwork."
+      },
+      {
+        "title": "Honest Pricing",
+        "description": "No hidden fees. You'll know exactly what you're paying."
+      },
+      {
+        "title": "Licensed & Insured",
+        "description": "CPO certified. Fully insured for your protection."
+      }
+    ],
+    "areasServed": [
+      "Vero Beach",
+      "Indian River Shores",
+      "Orchid Island",
+      "Sebastian",
+      "Fellsmere",
+      "Wabasso",
+      "Gifford"
+    ]
+  },
+  "servicePages": [
+    {
+      "id": "pool-cleaning",
+      "seo": {
+        "title": "Pool Cleaning Service Vero Beach, FL | Weekly & Bi-Weekly Plans",
+        "metaDescription": "Keep your Vero Beach pool sparkling clean with our professional cleaning service. Skimming, brushing, vacuuming, and chemical balancing included. Get your free estimate.",
+        "url": "/pool-cleaning/"
+      },
+      "hero": {
+        "h1": "Professional Pool Cleaning in Vero Beach",
+        "subheadline": "Weekly and bi-weekly service to keep your pool sparkling clean year-round.",
+        "heroImage": {
+          "src": "/images/pool-cleaning-hero.jpg",
+          "alt": "Pool technician cleaning a sparkling blue residential pool in Vero Beach, FL"
+        }
+      },
+      "problemStatement": "Keeping a pool clean in Florida isn't easy. Between the heat, humidity, rain, and debris, your pool can go from clear to cloudy in days. If you're tired of spending your weekends skimming leaves and battling algae, we can help.",
+      "serviceDetails": {
+        "h2": "What's Included in Our Pool Cleaning Service",
+        "intro": "Every visit covers everything your pool needs to stay clean and healthy.",
+        "includes": [
+          "Skimming surface debris",
+          "Brushing walls and tile line",
+          "Vacuuming pool floor",
+          "Emptying skimmer and pump baskets",
+          "Testing and balancing water chemistry",
+          "Inspecting equipment for issues",
+          "Cleaning filter (monthly or as needed)"
+        ]
+      },
+      "serviceOptions": {
+        "h2": "Pool Cleaning Plans",
+        "intro": "Choose the schedule that fits your pool and lifestyle.",
+        "options": [
+          {
+            "name": "Weekly Service",
+            "frequency": "Once per week",
+            "bestFor": "Most Vero Beach pools"
+          },
+          {
+            "name": "Bi-Weekly Service",
+            "frequency": "Every 2 weeks",
+            "bestFor": "Screened enclosures, light use"
+          },
+          {
+            "name": "One-Time Cleaning",
+            "frequency": "Single visit",
+            "bestFor": "Seasonal openings, catch-up cleans"
+          }
+        ],
+        "pricingNote": "Pricing depends on pool size and condition. Contact us for a free quote."
+      },
+      "localProof": {
+        "h2": "Serving Vero Beach and Indian River County",
+        "content": "We service pools throughout Vero Beach, from the Barrier Island to Vista Royale, Indian River Shores to Vero Lake Estates. Whether you have a small backyard pool or a large screened enclosure, we've got you covered."
+      },
+      "testimonials": [
+        {
+          "quote": "They've been cleaning our pool for two years now. Always on time, always thorough. Best pool company we've used in Vero.",
+          "author": "Mike R.",
+          "location": "Vero Beach",
+          "rating": 5
+        },
+        {
+          "quote": "Finally found a reliable pool service. Our pool has never looked better, and we don't have to think about it anymore.",
+          "author": "Susan T.",
+          "location": "Indian River Shores",
+          "rating": 5
+        },
+        {
+          "quote": "Great communication, fair prices, and they actually show up when they say they will. Highly recommend.",
+          "author": "David L.",
+          "location": "Vero Beach",
+          "rating": 5
+        }
+      ],
+      "faq": {
+        "h2": "Pool Cleaning FAQs",
+        "questions": [
+          {
+            "question": "How often should I have my pool cleaned in Florida?",
+            "answer": "For most Vero Beach pools, weekly cleaning is ideal. Florida's heat, humidity, and frequent rain create perfect conditions for algae growth. Pools with screen enclosures and light use may be fine with bi-weekly service."
+          },
+          {
+            "question": "Do you bring your own chemicals?",
+            "answer": "Yes, we bring everything needed to balance your water. Chemicals are included in your service cost—no surprise fees."
+          },
+          {
+            "question": "What if it rains on my service day?",
+            "answer": "Light rain doesn't stop us. If there's severe weather, we'll reschedule for the next available day and let you know."
+          },
+          {
+            "question": "Do you service saltwater pools?",
+            "answer": "Absolutely. Our technicians are experienced with both saltwater and traditional chlorine pools. We'll check your salt cell and chlorinator as part of regular service."
+          },
+          {
+            "question": "Can you clean a green pool?",
+            "answer": "Yes. If your pool has turned green, we offer one-time green pool cleanup to restore it. Once it's clear, we can set you up on regular service to keep it that way."
+          }
+        ]
+      },
+      "finalCTA": {
+        "h2": "Ready for a Cleaner Pool?",
+        "content": "Stop spending your weekends on pool maintenance. Get a free, no-obligation estimate and see why Vero Beach homeowners trust us to keep their pools swim-ready."
+      },
+      "relatedServices": [
+        {
+          "text": "Pool Maintenance",
+          "url": "/pool-maintenance/"
+        },
+        {
+          "text": "Green Pool Cleanup",
+          "url": "/green-pool-cleanup/"
+        },
+        {
+          "text": "Pool Repair",
+          "url": "/pool-repair/"
+        }
+      ]
+    },
+    {
+      "id": "pool-maintenance",
+      "seo": {
+        "title": "Pool Maintenance Vero Beach, FL | Reliable Weekly Service",
+        "metaDescription": "Complete pool maintenance for Vero Beach homeowners. Chemical balancing, filter cleaning, equipment checks, and more. Affordable weekly and monthly plans available.",
+        "url": "/pool-maintenance/"
+      },
+      "hero": {
+        "h1": "Pool Maintenance Services in Vero Beach",
+        "subheadline": "Comprehensive care that keeps your pool healthy, safe, and ready to swim.",
+        "heroImage": {
+          "src": "/images/pool-maintenance-hero.jpg",
+          "alt": "Pool maintenance technician testing water chemistry at a Vero Beach home"
+        }
+      },
+      "problemStatement": "A pool is an investment, and like any investment, it needs regular attention. Skipping maintenance leads to algae, equipment failures, and expensive repairs. Our maintenance plans handle everything so you can enjoy your pool without the hassle.",
+      "serviceDetails": {
+        "h2": "What's Included in Our Pool Maintenance Service",
+        "intro": "More than just cleaning—we keep your entire pool system running smoothly.",
+        "includes": [
+          "Complete water chemistry management",
+          "Filter cleaning and inspection",
+          "Pump and motor checks",
+          "Salt cell cleaning (saltwater pools)",
+          "Tile and waterline cleaning",
+          "Equipment performance monitoring",
+          "Seasonal adjustments for Florida weather",
+          "Written service reports"
+        ]
+      },
+      "serviceOptions": {
+        "h2": "Pool Maintenance Plans",
+        "intro": "We offer flexible plans based on your pool's needs.",
+        "options": [
+          {
+            "name": "Full-Service Weekly",
+            "frequency": "Once per week",
+            "bestFor": "Complete hands-off pool care"
+          },
+          {
+            "name": "Chemical-Only Service",
+            "frequency": "Weekly",
+            "bestFor": "Homeowners who handle their own cleaning"
+          },
+          {
+            "name": "Snowbird / Seasonal",
+            "frequency": "Customized",
+            "bestFor": "Part-time Vero Beach residents"
+          }
+        ],
+        "pricingNote": "Pricing depends on pool size, equipment, and service level. Contact us for a free quote."
+      },
+      "localProof": {
+        "h2": "Trusted by Vero Beach Pool Owners",
+        "content": "From beachside estates on Ocean Drive to family homes in Timber Ridge, we maintain pools across Indian River County. Our technicians know the local water conditions and how Florida's climate affects your pool chemistry."
+      },
+      "testimonials": [
+        {
+          "quote": "We travel a lot and needed someone we could trust. They send photos after every visit and our pool is always perfect when we get home.",
+          "author": "Karen M.",
+          "location": "Orchid Island",
+          "rating": 5
+        },
+        {
+          "quote": "Switched from another company that kept missing visits. These guys are reliable and actually know what they're doing.",
+          "author": "Tom H.",
+          "location": "Sebastian",
+          "rating": 5
+        },
+        {
+          "quote": "Worth every penny. Our equipment lasts longer and we haven't had a single algae issue since we started with them.",
+          "author": "Jennifer P.",
+          "location": "Vero Beach",
+          "rating": 5
+        }
+      ],
+      "faq": {
+        "h2": "Pool Maintenance FAQs",
+        "questions": [
+          {
+            "question": "What's the difference between pool cleaning and pool maintenance?",
+            "answer": "Pool cleaning focuses on removing debris and keeping water clear. Pool maintenance includes cleaning plus equipment inspection, water chemistry management, and preventive care that extends the life of your pool and equipment."
+          },
+          {
+            "question": "How do I know if my pool needs more than just cleaning?",
+            "answer": "If you're constantly fighting cloudy water, your equipment is making strange noises, or you've had multiple algae outbreaks, you likely need comprehensive maintenance—not just cleaning."
+          },
+          {
+            "question": "Do you service pool equipment too?",
+            "answer": "Yes. Our maintenance service includes equipment checks, and if we spot a problem, we can handle repairs in-house. This catches small issues before they become expensive failures."
+          },
+          {
+            "question": "Can you maintain my pool while I'm away for the season?",
+            "answer": "Absolutely. Many of our clients are seasonal residents. We offer snowbird plans that keep your pool maintained while you're gone, so it's ready when you return."
+          },
+          {
+            "question": "Will I have the same technician each visit?",
+            "answer": "Yes. Consistency matters for good pool care. You'll have the same technician who knows your pool, your equipment, and any quirks specific to your setup."
+          }
+        ]
+      },
+      "finalCTA": {
+        "h2": "Keep Your Pool in Peak Condition",
+        "content": "Don't wait for problems to appear. Proactive maintenance saves money, extends equipment life, and keeps your pool swim-ready every day."
+      },
+      "relatedServices": [
+        {
+          "text": "Pool Cleaning",
+          "url": "/pool-cleaning/"
+        },
+        {
+          "text": "Pool Repair",
+          "url": "/pool-repair/"
+        },
+        {
+          "text": "Pool Equipment Installation",
+          "url": "/pool-equipment-installation/"
+        }
+      ]
+    },
+    {
+      "id": "pool-repair",
+      "seo": {
+        "title": "Pool Repair Vero Beach | Pumps, Filters, Heaters & More",
+        "metaDescription": "Fast, reliable pool repair in Vero Beach. We fix pumps, filters, heaters, leaks, and more. Licensed and insured technicians. Same-week service available.",
+        "url": "/pool-repair/"
+      },
+      "hero": {
+        "h1": "Pool Repair Services in Vero Beach, FL",
+        "subheadline": "Fast, reliable repairs to get your pool back up and running.",
+        "heroImage": {
+          "src": "/images/pool-repair-hero.jpg",
+          "alt": "Technician repairing a pool pump at a residential home in Vero Beach"
+        }
+      },
+      "problemStatement": "A broken pump, a failing heater, or a mysterious leak can turn your pool from a backyard oasis into a source of stress. We diagnose and fix pool equipment problems quickly so you can get back to enjoying your pool.",
+      "serviceDetails": {
+        "h2": "Pool Equipment We Repair",
+        "intro": "Our technicians are trained to work on all major pool equipment brands.",
+        "includes": [
+          "Pool pumps and motors",
+          "Filter systems (sand, cartridge, DE)",
+          "Pool heaters and heat pumps",
+          "Salt chlorine generators",
+          "Automatic pool cleaners",
+          "Pool lights and transformers",
+          "Valves and plumbing",
+          "Control systems and timers"
+        ]
+      },
+      "serviceOptions": {
+        "h2": "Pool Repair Options",
+        "intro": "We work around your schedule to get repairs done fast.",
+        "options": [
+          {
+            "name": "Standard Service Call",
+            "frequency": "Scheduled within 3-5 days",
+            "bestFor": "Non-urgent repairs"
+          },
+          {
+            "name": "Priority Service",
+            "frequency": "Within 24-48 hours",
+            "bestFor": "Equipment failures affecting pool use"
+          },
+          {
+            "name": "Emergency Service",
+            "frequency": "Same day (when available)",
+            "bestFor": "Major leaks or safety issues"
+          }
+        ],
+        "pricingNote": "We provide upfront quotes before starting any repair. No surprises."
+      },
+      "localProof": {
+        "h2": "Vero Beach's Trusted Pool Repair Team",
+        "content": "We've repaired hundreds of pools across Indian River County—from vintage equipment in older Vero Beach homes to high-end automation systems in Indian River Shores. No job is too big or too small."
+      },
+      "testimonials": [
+        {
+          "quote": "Our pump died on a Friday before a party. They came out Saturday morning and had us back up and running. Lifesavers.",
+          "author": "Chris D.",
+          "location": "Vero Beach",
+          "rating": 5
+        },
+        {
+          "quote": "Honest and fair. They told me my old pump wasn't worth repairing and gave me options. No pressure, just good advice.",
+          "author": "Linda S.",
+          "location": "Fellsmere",
+          "rating": 5
+        },
+        {
+          "quote": "Fixed a leak another company couldn't find. Thorough, professional, and reasonably priced.",
+          "author": "Robert K.",
+          "location": "Sebastian",
+          "rating": 5
+        }
+      ],
+      "faq": {
+        "h2": "Pool Repair FAQs",
+        "questions": [
+          {
+            "question": "How do I know if my pool pump needs repair or replacement?",
+            "answer": "If your pump is making loud noises, losing prime, running hot, or over 8-10 years old, it may be time to replace rather than repair. We'll give you an honest assessment and help you weigh the cost of repair vs. replacement."
+          },
+          {
+            "question": "Do you repair all brands of pool equipment?",
+            "answer": "Yes. We work on Pentair, Hayward, Jandy, Sta-Rite, Polaris, and most other major brands. If parts are available, we can fix it."
+          },
+          {
+            "question": "How much does a pool repair cost?",
+            "answer": "It depends on the issue. Minor repairs like replacing a capacitor might be under $150. Major repairs like a new pump motor can range from $300-$600. We always provide a quote before starting work."
+          },
+          {
+            "question": "Can you repair my pool heater?",
+            "answer": "Yes. We service gas heaters, electric heat pumps, and solar heating systems. Common repairs include igniter replacement, heat exchanger cleaning, and thermostat issues."
+          },
+          {
+            "question": "What if the repair costs more than expected?",
+            "answer": "We don't proceed with any work beyond the quoted amount without your approval. If we discover additional issues during diagnosis, we'll call you first."
+          }
+        ]
+      },
+      "finalCTA": {
+        "h2": "Need a Pool Repair?",
+        "content": "Don't let a broken pump or failing equipment ruin your pool season. Contact us for fast, reliable repairs from technicians who know pool equipment inside and out."
+      },
+      "relatedServices": [
+        {
+          "text": "Pool Equipment Installation",
+          "url": "/pool-equipment-installation/"
+        },
+        {
+          "text": "Pool Leak Detection",
+          "url": "/pool-leak-detection/"
+        },
+        {
+          "text": "Pool Maintenance",
+          "url": "/pool-maintenance/"
+        }
+      ]
+    },
+    {
+      "id": "pool-equipment-installation",
+      "seo": {
+        "title": "Pool Equipment Installation Vero Beach, FL | Pumps, Heaters, Automation",
+        "metaDescription": "Expert pool equipment installation in Vero Beach. Pumps, heaters, salt systems, automation, and LED lighting. Quality brands and professional installation.",
+        "url": "/pool-equipment-installation/"
+      },
+      "hero": {
+        "h1": "Pool Equipment Installation in Vero Beach",
+        "subheadline": "Upgrade your pool with professional installation from certified technicians.",
+        "heroImage": {
+          "src": "/images/pool-equipment-installation-hero.jpg",
+          "alt": "New variable speed pool pump installed at a Vero Beach residence"
+        }
+      },
+      "problemStatement": "Old, inefficient pool equipment costs you money every month in energy bills and repair calls. Modern equipment runs quieter, lasts longer, and can cut your pool energy costs by up to 70%. We help you choose the right upgrades and install them correctly.",
+      "serviceDetails": {
+        "h2": "Pool Equipment We Install",
+        "intro": "From basic replacements to complete system upgrades.",
+        "includes": [
+          "Variable speed pumps",
+          "Pool heaters and heat pumps",
+          "Salt chlorine generators",
+          "Filter systems",
+          "Pool automation and controls",
+          "LED pool and spa lights",
+          "Automatic pool cleaners",
+          "UV and ozone sanitizers"
+        ]
+      },
+      "serviceOptions": {
+        "h2": "Installation Options",
+        "intro": "We carry top brands and can source specific equipment on request.",
+        "options": [
+          {
+            "name": "Equipment Replacement",
+            "frequency": "Direct swap",
+            "bestFor": "Replacing failed equipment with similar model"
+          },
+          {
+            "name": "Equipment Upgrade",
+            "frequency": "Enhanced replacement",
+            "bestFor": "Upgrading to more efficient or capable equipment"
+          },
+          {
+            "name": "System Renovation",
+            "frequency": "Full equipment pad",
+            "bestFor": "Complete pool system overhaul"
+          }
+        ],
+        "pricingNote": "We provide detailed quotes including equipment and labor. Financing available on qualifying purchases."
+      },
+      "localProof": {
+        "h2": "Professional Installation Across Indian River County",
+        "content": "We've installed equipment for homeowners throughout Vero Beach, from modest pools in South Beach to elaborate setups in Orchid Island and John's Island. Every installation meets manufacturer specifications and local codes."
+      },
+      "testimonials": [
+        {
+          "quote": "Upgraded to a variable speed pump and my electric bill dropped by almost $100 a month. Should have done it years ago.",
+          "author": "Patricia W.",
+          "location": "Vero Beach",
+          "rating": 5
+        },
+        {
+          "quote": "They installed a complete automation system. I can control everything from my phone now. Worth every penny.",
+          "author": "James M.",
+          "location": "Indian River Shores",
+          "rating": 5
+        },
+        {
+          "quote": "Clean, professional installation. They even cleaned up the equipment pad area when they were done.",
+          "author": "Nancy B.",
+          "location": "Sebastian",
+          "rating": 5
+        }
+      ],
+      "faq": {
+        "h2": "Pool Equipment Installation FAQs",
+        "questions": [
+          {
+            "question": "What brands do you install?",
+            "answer": "We install Pentair, Hayward, Jandy, and other major brands. We'll recommend equipment based on your pool size, usage, and budget—not based on what's easiest for us to sell."
+          },
+          {
+            "question": "Is a variable speed pump worth the extra cost?",
+            "answer": "For most Vero Beach pools, yes. Variable speed pumps use 70-80% less energy than single-speed pumps. Most homeowners see a payback within 1-2 years through energy savings, plus they're much quieter."
+          },
+          {
+            "question": "Can you add a heater to my existing pool?",
+            "answer": "Yes. We can install gas heaters, electric heat pumps, or solar heating depending on your preferences and budget. Heat pumps are popular in Florida for their efficiency."
+          },
+          {
+            "question": "How long does equipment installation take?",
+            "answer": "Most single-equipment installations (pump, heater, salt system) take 2-4 hours. Complete equipment pad renovations may take a full day or two depending on scope."
+          },
+          {
+            "question": "Do you offer warranties on installation?",
+            "answer": "Yes. All installations include a labor warranty in addition to manufacturer equipment warranties. We stand behind our work."
+          }
+        ]
+      },
+      "finalCTA": {
+        "h2": "Ready to Upgrade Your Pool Equipment?",
+        "content": "Whether you need to replace a failing pump or want to modernize your entire pool system, we'll help you choose the right equipment and install it right the first time."
+      },
+      "relatedServices": [
+        {
+          "text": "Pool Repair",
+          "url": "/pool-repair/"
+        },
+        {
+          "text": "Salt System Installation",
+          "url": "/salt-system-installation/"
+        },
+        {
+          "text": "Pool Maintenance",
+          "url": "/pool-maintenance/"
+        }
+      ]
+    },
+    {
+      "id": "pool-resurfacing",
+      "seo": {
+        "title": "Pool Resurfacing Vero Beach, FL | Plaster, Pebble & Quartz Finishes",
+        "metaDescription": "Transform your worn pool with professional resurfacing in Vero Beach. Plaster, pebble, and quartz finishes available. Free estimates and financing options.",
+        "url": "/pool-resurfacing/"
+      },
+      "hero": {
+        "h1": "Pool Resurfacing & Replastering in Vero Beach",
+        "subheadline": "Restore your pool's beauty and extend its life with a fresh finish.",
+        "heroImage": {
+          "src": "/images/pool-resurfacing-hero.jpg",
+          "alt": "Freshly resurfaced pool with pebble finish in Vero Beach, FL"
+        }
+      },
+      "problemStatement": "Over time, pool surfaces wear out. Rough plaster tears up swimsuits and scrapes feet. Stains become impossible to remove. Cracks let water seep into the shell. If your pool looks tired and feels rough, resurfacing brings it back to life.",
+      "serviceDetails": {
+        "h2": "Pool Finish Options",
+        "intro": "We offer a range of finishes to match your style and budget.",
+        "includes": [
+          "Standard white plaster",
+          "Colored plaster finishes",
+          "Quartz aggregate (Diamond Brite, etc.)",
+          "Pebble finishes (PebbleTec, PebbleSheen)",
+          "Glass bead finishes",
+          "Tile replacement and repairs",
+          "Coping and deck repairs"
+        ]
+      },
+      "serviceOptions": {
+        "h2": "Resurfacing Options",
+        "intro": "From budget-friendly plaster to premium pebble finishes.",
+        "options": [
+          {
+            "name": "Standard Plaster",
+            "frequency": "Lasts 5-7 years",
+            "bestFor": "Budget-conscious, classic look"
+          },
+          {
+            "name": "Quartz Finish",
+            "frequency": "Lasts 10-15 years",
+            "bestFor": "Durability with color options"
+          },
+          {
+            "name": "Pebble Finish",
+            "frequency": "Lasts 15-20+ years",
+            "bestFor": "Premium look, longest lifespan"
+          }
+        ],
+        "pricingNote": "Pricing depends on pool size, finish selection, and any needed repairs. Free on-site estimates. Financing available."
+      },
+      "localProof": {
+        "h2": "Pool Resurfacing Throughout Indian River County",
+        "content": "We've resurfaced pools of all shapes and sizes across Vero Beach—from small backyard pools in Vista Gardens to large resort-style pools in gated communities. Our crews know how to work efficiently while delivering a flawless finish."
+      },
+      "testimonials": [
+        {
+          "quote": "Our 25-year-old pool looks brand new. We went with PebbleSheen and couldn't be happier. The color is gorgeous.",
+          "author": "Diane R.",
+          "location": "Vero Beach",
+          "rating": 5
+        },
+        {
+          "quote": "Professional crew, finished on schedule, and the cleanup was thorough. Our pool went from embarrassing to stunning.",
+          "author": "Mark T.",
+          "location": "Indian River Shores",
+          "rating": 5
+        },
+        {
+          "quote": "They helped us understand all the options without pushing the most expensive one. Ended up with quartz and love it.",
+          "author": "Angela F.",
+          "location": "Sebastian",
+          "rating": 5
+        }
+      ],
+      "faq": {
+        "h2": "Pool Resurfacing FAQs",
+        "questions": [
+          {
+            "question": "How do I know if my pool needs resurfacing?",
+            "answer": "Signs include rough texture that scrapes skin, visible staining that won't brush off, plaster flaking or delaminating, spider cracks throughout the surface, and discoloration that chemicals can't fix."
+          },
+          {
+            "question": "How long does pool resurfacing take?",
+            "answer": "Most residential pools take 5-7 days from drain to refill. This includes prep work, applying the new finish, filling, and initial chemistry balancing."
+          },
+          {
+            "question": "What's the difference between plaster, quartz, and pebble?",
+            "answer": "Plaster is the most affordable but least durable (5-7 years). Quartz adds crusite aggregate for better durability and color options (10-15 years). Pebble finishes are the most durable and beautiful but cost more (15-20+ years)."
+          },
+          {
+            "question": "Can you match my existing coping and tile?",
+            "answer": "We can often match or complement existing coping and tile. If your coping or tile is also worn, we can replace it as part of the resurfacing project for a complete refresh."
+          },
+          {
+            "question": "Do you offer financing for resurfacing?",
+            "answer": "Yes. Pool resurfacing is a significant investment, and we offer financing options to help make it manageable. Ask about current promotions."
+          }
+        ]
+      },
+      "finalCTA": {
+        "h2": "Ready to Transform Your Pool?",
+        "content": "A fresh finish makes your pool look new again and can last for decades. Get a free estimate and see what's possible for your pool."
+      },
+      "relatedServices": [
+        {
+          "text": "Pool Repair",
+          "url": "/pool-repair/"
+        },
+        {
+          "text": "Pool Leak Detection",
+          "url": "/pool-leak-detection/"
+        },
+        {
+          "text": "Pool Equipment Installation",
+          "url": "/pool-equipment-installation/"
+        }
+      ]
+    },
+    {
+      "id": "pool-leak-detection",
+      "seo": {
+        "title": "Pool Leak Detection Vero Beach, FL | Find & Fix Leaks Fast",
+        "metaDescription": "Losing water in your Vero Beach pool? Our leak detection experts locate and repair pool leaks quickly. Non-invasive testing and permanent repairs.",
+        "url": "/pool-leak-detection/"
+      },
+      "hero": {
+        "h1": "Pool Leak Detection & Repair in Vero Beach",
+        "subheadline": "Find the leak. Fix it right. Stop wasting water and money.",
+        "heroImage": {
+          "src": "/images/pool-leak-detection-hero.jpg",
+          "alt": "Technician performing pool leak detection test in Vero Beach"
+        }
+      },
+      "problemStatement": "Adding water to your pool every few days? High water bills? Soggy spots in your yard? You might have a pool leak. The longer a leak goes unfixed, the more damage it can cause—to your wallet, your yard, and even your pool's structure.",
+      "serviceDetails": {
+        "h2": "Our Leak Detection Process",
+        "intro": "We use professional-grade equipment to find leaks without tearing up your yard.",
+        "includes": [
+          "Bucket test verification",
+          "Electronic leak detection",
+          "Pressure testing of plumbing lines",
+          "Dye testing at fittings and fixtures",
+          "Structural crack inspection",
+          "Underground pipe location",
+          "Detailed leak report with options"
+        ]
+      },
+      "serviceOptions": {
+        "h2": "Leak Detection & Repair Options",
+        "intro": "From detection to permanent fix.",
+        "options": [
+          {
+            "name": "Leak Detection Only",
+            "frequency": "Find the leak",
+            "bestFor": "Identifying the source and scope"
+          },
+          {
+            "name": "Detection + Minor Repair",
+            "frequency": "Find and fix",
+            "bestFor": "Simple leaks at fittings or fixtures"
+          },
+          {
+            "name": "Detection + Major Repair",
+            "frequency": "Comprehensive solution",
+            "bestFor": "Underground plumbing or structural leaks"
+          }
+        ],
+        "pricingNote": "Leak detection starts at $XXX. Repair costs depend on leak location and severity. We provide a full quote before any repair work."
+      },
+      "localProof": {
+        "h2": "Leak Detection Experts in Indian River County",
+        "content": "Florida's sandy soil and shifting ground make pool leaks common. We've found leaks in pools throughout Vero Beach—from small fitting leaks to major underground pipe failures. Our equipment finds leaks others miss."
+      },
+      "testimonials": [
+        {
+          "quote": "Two other companies couldn't find our leak. These guys found it in 30 minutes—a tiny crack in a return line fitting.",
+          "author": "Steve and Mary J.",
+          "location": "Vero Beach",
+          "rating": 5
+        },
+        {
+          "quote": "We were losing an inch of water a day. They found a crack in the skimmer and fixed it the same day. Pool holds water perfectly now.",
+          "author": "Barbara N.",
+          "location": "Fellsmere",
+          "rating": 5
+        },
+        {
+          "quote": "Thorough and professional. Explained everything they were doing and showed me exactly where the leak was.",
+          "author": "Frank G.",
+          "location": "Sebastian",
+          "rating": 5
+        }
+      ],
+      "faq": {
+        "h2": "Pool Leak Detection FAQs",
+        "questions": [
+          {
+            "question": "How do I know if my pool has a leak or just evaporation?",
+            "answer": "In Florida, pools can lose 1/4 inch per day to evaporation. More than that usually indicates a leak. The bucket test helps: fill a bucket with pool water, mark the levels, wait 24 hours, and compare. If the pool lost more than the bucket, you likely have a leak."
+          },
+          {
+            "question": "Can you find underground leaks without digging?",
+            "answer": "Yes. We use electronic listening equipment and pressure testing to locate underground leaks before any digging. This pinpoints the exact location so we only dig where necessary."
+          },
+          {
+            "question": "What's the most common cause of pool leaks?",
+            "answer": "In our experience, the most common leaks are at equipment fittings, skimmer bodies, light niches, and return lines. Underground plumbing leaks are less common but do happen, especially in older pools."
+          },
+          {
+            "question": "Will leak detection damage my pool or yard?",
+            "answer": "Our detection methods are non-invasive. We only recommend digging or deck cutting if we've confirmed an underground leak and that's the only way to repair it."
+          },
+          {
+            "question": "How long does leak detection take?",
+            "answer": "Most leak detection visits take 1-3 hours depending on pool complexity and how elusive the leak is. We don't leave until we've found it or determined it's not a pool leak."
+          }
+        ]
+      },
+      "finalCTA": {
+        "h2": "Suspect a Pool Leak?",
+        "content": "Don't keep filling your pool and hoping the problem goes away. A small leak today can become a big repair tomorrow. Let us find it and fix it."
+      },
+      "relatedServices": [
+        {
+          "text": "Pool Repair",
+          "url": "/pool-repair/"
+        },
+        {
+          "text": "Pool Resurfacing",
+          "url": "/pool-resurfacing/"
+        },
+        {
+          "text": "Pool Maintenance",
+          "url": "/pool-maintenance/"
+        }
+      ]
+    },
+    {
+      "id": "salt-system-installation",
+      "seo": {
+        "title": "Saltwater Pool Conversion Vero Beach, FL | Salt System Installation",
+        "metaDescription": "Convert your Vero Beach pool to saltwater. We install and service salt chlorine generators from top brands. Enjoy softer water and lower chemical costs.",
+        "url": "/salt-system-installation/"
+      },
+      "hero": {
+        "h1": "Salt System Installation in Vero Beach",
+        "subheadline": "Enjoy softer water, less chemical hassle, and a better swimming experience.",
+        "heroImage": {
+          "src": "/images/salt-system-hero.jpg",
+          "alt": "Salt chlorine generator installed on pool equipment pad in Vero Beach"
+        }
+      },
+      "problemStatement": "Tired of red eyes, bleached swimsuits, and constantly buying chlorine? A saltwater pool system generates its own chlorine naturally, giving you silky-smooth water with less maintenance and fewer chemicals to handle.",
+      "serviceDetails": {
+        "h2": "What's Included in Salt System Installation",
+        "intro": "A complete conversion to saltwater pool sanitation.",
+        "includes": [
+          "Salt chlorine generator installation",
+          "Cell plumbing integration",
+          "Control system setup and programming",
+          "Initial salt addition and balancing",
+          "Equipment compatibility check",
+          "Homeowner training on operation",
+          "Post-installation follow-up"
+        ]
+      },
+      "serviceOptions": {
+        "h2": "Salt System Options",
+        "intro": "We install systems sized for your pool from trusted brands.",
+        "options": [
+          {
+            "name": "Standard System",
+            "frequency": "Up to 20,000 gallons",
+            "bestFor": "Average residential pools"
+          },
+          {
+            "name": "Mid-Range System",
+            "frequency": "Up to 40,000 gallons",
+            "bestFor": "Larger pools or heavy use"
+          },
+          {
+            "name": "Premium System",
+            "frequency": "Up to 60,000+ gallons",
+            "bestFor": "Large pools, commercial applications"
+          }
+        ],
+        "pricingNote": "System pricing depends on pool size and brand. Installation typically adds $200-400 to equipment cost."
+      },
+      "localProof": {
+        "h2": "Saltwater Conversions Across Indian River County",
+        "content": "We've converted hundreds of pools to saltwater throughout Vero Beach and surrounding areas. From compact pools in Gifford to expansive pools in gated communities, we size and install systems for optimal performance."
+      },
+      "testimonials": [
+        {
+          "quote": "Best upgrade we ever made. The water feels amazing and I'm not buying chlorine every week anymore.",
+          "author": "Michelle K.",
+          "location": "Vero Beach",
+          "rating": 5
+        },
+        {
+          "quote": "My kids had sensitive skin and always complained after swimming. Since going salt, no more issues.",
+          "author": "Greg P.",
+          "location": "Sebastian",
+          "rating": 5
+        },
+        {
+          "quote": "They explained exactly how it works and made sure I knew how to maintain it. Great experience.",
+          "author": "Donna H.",
+          "location": "Indian River Shores",
+          "rating": 5
+        }
+      ],
+      "faq": {
+        "h2": "Salt System FAQs",
+        "questions": [
+          {
+            "question": "Is a saltwater pool actually chlorine-free?",
+            "answer": "No—saltwater pools still use chlorine, but the salt cell generates it from dissolved salt instead of you adding it manually. The chlorine levels are typically lower and more consistent, which is why the water feels softer."
+          },
+          {
+            "question": "How much does it cost to run a salt system?",
+            "answer": "Salt systems add minimal electricity cost (roughly $5-10/month). You'll save money on chlorine purchases. The main ongoing cost is replacing the salt cell every 3-7 years depending on use."
+          },
+          {
+            "question": "Will salt damage my pool equipment?",
+            "answer": "Salt can be corrosive to certain metals over time. We check your equipment for compatibility and may recommend sacrificial anodes or equipment upgrades to prevent corrosion issues."
+          },
+          {
+            "question": "Can any pool be converted to saltwater?",
+            "answer": "Most pools can be converted. We'll assess your equipment, plumbing, and surface finish to ensure compatibility. Pools with certain metal fixtures or older heaters may need upgrades."
+          },
+          {
+            "question": "How salty is the water?",
+            "answer": "Saltwater pools have about 3,000 ppm of salt—roughly 1/10th the salinity of ocean water. Most people can't taste it, and it won't dry out your skin like ocean water does."
+          }
+        ]
+      },
+      "finalCTA": {
+        "h2": "Ready for Saltwater?",
+        "content": "Join the thousands of pool owners who've made the switch. Softer water, simpler maintenance, and a better swim—contact us to learn if salt is right for your pool."
+      },
+      "relatedServices": [
+        {
+          "text": "Pool Equipment Installation",
+          "url": "/pool-equipment-installation/"
+        },
+        {
+          "text": "Pool Maintenance",
+          "url": "/pool-maintenance/"
+        },
+        {
+          "text": "Pool Repair",
+          "url": "/pool-repair/"
+        }
+      ]
+    },
+    {
+      "id": "pool-opening-closing",
+      "seo": {
+        "title": "Pool Opening & Closing Service Vero Beach, FL | Seasonal Care",
+        "metaDescription": "Seasonal pool opening and closing for Vero Beach snowbirds and vacation homeowners. Complete winterization and spring startup services available.",
+        "url": "/pool-opening-closing/"
+      },
+      "hero": {
+        "h1": "Seasonal Pool Opening & Closing Services",
+        "subheadline": "Leave your pool with confidence. Return to it swim-ready.",
+        "heroImage": {
+          "src": "/images/pool-opening-closing-hero.jpg",
+          "alt": "Crystal clear pool ready for the season in Vero Beach, FL"
+        }
+      },
+      "problemStatement": "Heading north for the summer or closing up your vacation home? A pool left unattended can turn green, grow algae, and develop equipment problems. Our seasonal services keep your pool protected while you're away and ready to enjoy when you return.",
+      "serviceDetails": {
+        "h2": "What's Included",
+        "intro": "Comprehensive care for seasonal pool owners.",
+        "includes": [
+          "Pre-departure pool cleaning and chemistry balance",
+          "Equipment inspection and winterization",
+          "Timer and automation adjustments",
+          "Ongoing monitoring visits (optional)",
+          "Spring startup and deep cleaning",
+          "Equipment reactivation and testing",
+          "Water chemistry restoration"
+        ]
+      },
+      "serviceOptions": {
+        "h2": "Seasonal Service Options",
+        "intro": "Flexible plans for snowbirds and vacation homeowners.",
+        "options": [
+          {
+            "name": "Closing Service",
+            "frequency": "One-time",
+            "bestFor": "Preparing your pool before you leave"
+          },
+          {
+            "name": "Opening Service",
+            "frequency": "One-time",
+            "bestFor": "Getting your pool swim-ready when you return"
+          },
+          {
+            "name": "Full Seasonal Package",
+            "frequency": "Closing + monitoring + opening",
+            "bestFor": "Complete peace of mind while away"
+          }
+        ],
+        "pricingNote": "Pricing depends on pool size and monitoring frequency. Contact us for a customized quote."
+      },
+      "localProof": {
+        "h2": "Trusted by Vero Beach Snowbirds",
+        "content": "Many of our clients are seasonal residents who spend summers up north. We understand what it takes to maintain a Florida pool in your absence—the heat, the storms, the humidity. We've got you covered."
+      },
+      "testimonials": [
+        {
+          "quote": "We spend May through October in Michigan. They take care of everything and our pool is always perfect when we get back.",
+          "author": "Harold and Joyce M.",
+          "location": "Vero Beach",
+          "rating": 5
+        },
+        {
+          "quote": "Came back to a green pool last year after using another company. Switched to these guys and no problems since.",
+          "author": "Richard N.",
+          "location": "Indian River Shores",
+          "rating": 5
+        },
+        {
+          "quote": "They send photos every month so we can see how things look. Great peace of mind.",
+          "author": "Carol S.",
+          "location": "Orchid Island",
+          "rating": 5
+        }
+      ],
+      "faq": {
+        "h2": "Seasonal Pool Service FAQs",
+        "questions": [
+          {
+            "question": "Should I drain my pool when I leave for the season?",
+            "answer": "No. Draining a pool in Florida can cause the shell to pop out of the ground due to hydrostatic pressure from groundwater. Keep your pool filled and maintained, even when you're away."
+          },
+          {
+            "question": "How often should someone check on my pool while I'm gone?",
+            "answer": "For Florida summers, we recommend at least bi-weekly visits to maintain chemistry, run equipment, and catch any issues early. Monthly is a minimum, but problems can develop quickly in our climate."
+          },
+          {
+            "question": "What happens if there's a hurricane while I'm away?",
+            "answer": "We offer storm preparation services for our seasonal clients. We'll secure equipment, adjust water levels, and check on your pool after the storm passes."
+          },
+          {
+            "question": "Can you coordinate with my property manager or neighbor?",
+            "answer": "Absolutely. We work with property managers, neighbors, and home watch services regularly. We can provide access updates and coordinate as needed."
+          },
+          {
+            "question": "How far in advance should I schedule opening service?",
+            "answer": "Book your opening service at least 1-2 weeks before you arrive. Spring is our busy season, and earlier booking ensures your pool is ready when you get here."
+          }
+        ]
+      },
+      "finalCTA": {
+        "h2": "Heading Out of Town?",
+        "content": "Don't leave your pool to chance. Let us handle the closing, monitoring, and opening so you can enjoy your time away—and your pool when you return."
+      },
+      "relatedServices": [
+        {
+          "text": "Pool Maintenance",
+          "url": "/pool-maintenance/"
+        },
+        {
+          "text": "Pool Cleaning",
+          "url": "/pool-cleaning/"
+        },
+        {
+          "text": "Green Pool Cleanup",
+          "url": "/green-pool-cleanup/"
+        }
+      ]
+    },
+    {
+      "id": "green-pool-cleanup",
+      "seo": {
+        "title": "Green Pool Cleanup Vero Beach, FL | Algae Removal Specialists",
+        "metaDescription": "Green pool in Vero Beach? We restore algae-filled pools to crystal clear in days. Fast response, fair pricing, and guaranteed results.",
+        "url": "/green-pool-cleanup/"
+      },
+      "hero": {
+        "h1": "Green Pool Cleanup in Vero Beach",
+        "subheadline": "From swamp to swim-ready—usually in just a few days.",
+        "heroImage": {
+          "src": "/images/green-pool-cleanup-hero.jpg",
+          "alt": "Before and after green pool cleanup in Vero Beach, FL"
+        }
+      },
+      "problemStatement": "It happens fast in Florida. A pump failure, a missed week of service, a heavy rainstorm—and suddenly your pool looks like a pond. Don't panic. We specialize in bringing green pools back to life without draining.",
+      "serviceDetails": {
+        "h2": "Our Green Pool Cleanup Process",
+        "intro": "A systematic approach to restore your pool safely and completely.",
+        "includes": [
+          "Initial assessment and water testing",
+          "Heavy debris removal",
+          "Shock treatment and algaecide application",
+          "Filter cleaning (multiple times as needed)",
+          "Continuous brushing and circulation",
+          "Daily monitoring until clear",
+          "Final chemistry balance",
+          "Filter deep clean or replacement if needed"
+        ]
+      },
+      "serviceOptions": {
+        "h2": "Green Pool Cleanup Options",
+        "intro": "Severity determines timeline and cost.",
+        "options": [
+          {
+            "name": "Light Green",
+            "frequency": "2-3 days",
+            "bestFor": "Can still see bottom, early algae"
+          },
+          {
+            "name": "Dark Green",
+            "frequency": "4-5 days",
+            "bestFor": "Can't see bottom, heavy algae"
+          },
+          {
+            "name": "Black/Swamp",
+            "frequency": "5-7+ days",
+            "bestFor": "Severe neglect, may need drain and clean"
+          }
+        ],
+        "pricingNote": "Pricing based on pool size and severity. We provide a quote after initial assessment."
+      },
+      "localProof": {
+        "h2": "Green Pool Experts in Indian River County",
+        "content": "We've cleaned green pools all across Vero Beach—vacation homes left unattended, foreclosures, equipment failures, and more. No pool is too far gone. If it can be saved, we'll save it."
+      },
+      "testimonials": [
+        {
+          "quote": "Our pool was literally black. We thought we'd have to drain it. They had it blue in 5 days. Unbelievable.",
+          "author": "Kevin and Traci R.",
+          "location": "Vero Beach",
+          "rating": 5
+        },
+        {
+          "quote": "Came back from a month away to a swamp. They came out the next day and worked their magic. Incredible turnaround.",
+          "author": "Wayne P.",
+          "location": "Sebastian",
+          "rating": 5
+        },
+        {
+          "quote": "Fair price for a nasty job. Pool looks better than it did before it went green.",
+          "author": "Lisa M.",
+          "location": "Fellsmere",
+          "rating": 5
+        }
+      ],
+      "faq": {
+        "h2": "Green Pool Cleanup FAQs",
+        "questions": [
+          {
+            "question": "Should I just drain my green pool and start over?",
+            "answer": "Usually no. Draining a pool in Florida is risky—the shell can pop out of the ground from hydrostatic pressure. In most cases, we can clear the pool without draining. Draining is a last resort for the most severe cases."
+          },
+          {
+            "question": "How long does green pool cleanup take?",
+            "answer": "Depending on severity: light green (2-3 days), dark green (4-5 days), black/swamp (5-7+ days). We visit daily or every other day to treat, brush, and monitor progress."
+          },
+          {
+            "question": "Is swimming in a green pool dangerous?",
+            "answer": "Yes. Green pools harbor harmful bacteria, parasites, and mosquito larvae. Don't swim in a green pool, and keep children and pets away until it's fully restored."
+          },
+          {
+            "question": "Will green pool cleanup damage my equipment?",
+            "answer": "The cleanup process is hard on filters—we typically need to clean or backwash multiple times. We'll let you know if your filter media needs replacement. Pumps and other equipment are usually fine."
+          },
+          {
+            "question": "What caused my pool to turn green?",
+            "answer": "Usually a combination of factors: inadequate chlorine, circulation problems, filter issues, or simply being overwhelmed by Florida's heat and rain. We'll identify the cause and help you prevent it from happening again."
+          }
+        ]
+      },
+      "finalCTA": {
+        "h2": "Don't Live with a Green Pool",
+        "content": "The longer you wait, the harder (and more expensive) it gets. Let us restore your pool to crystal clear water so you can enjoy it again."
+      },
+      "relatedServices": [
+        {
+          "text": "Pool Cleaning",
+          "url": "/pool-cleaning/"
+        },
+        {
+          "text": "Pool Maintenance",
+          "url": "/pool-maintenance/"
+        },
+        {
+          "text": "Pool Repair",
+          "url": "/pool-repair/"
+        }
+      ]
+    },
+    {
+      "id": "commercial-pool-service",
+      "seo": {
+        "title": "Commercial Pool Service Vero Beach, FL | HOAs, Hotels & Condos",
+        "metaDescription": "Reliable commercial pool service for Vero Beach hotels, HOAs, condos, and fitness centers. Licensed, insured, and health department compliant.",
+        "url": "/commercial-pool-service/"
+      },
+      "hero": {
+        "h1": "Commercial Pool Service in Vero Beach",
+        "subheadline": "Professional pool management for HOAs, hotels, condos, and fitness centers.",
+        "heroImage": {
+          "src": "/images/commercial-pool-service-hero.jpg",
+          "alt": "Commercial pool at a Vero Beach condominium maintained by professional service"
+        }
+      },
+      "problemStatement": "Commercial pools face challenges residential pools don't: higher bather loads, stricter health codes, liability concerns, and residents or guests who expect perfection. You need a pool company that understands commercial requirements and delivers consistent results.",
+      "serviceDetails": {
+        "h2": "Commercial Pool Services",
+        "intro": "Comprehensive pool management tailored to commercial properties.",
+        "includes": [
+          "Daily, multiple weekly, or custom service schedules",
+          "Health department compliance management",
+          "Chemical logs and documentation",
+          "Equipment monitoring and maintenance",
+          "Emergency response service",
+          "Coordination with property management",
+          "Seasonal deep cleaning",
+          "Staff training on basic pool safety"
+        ]
+      },
+      "serviceOptions": {
+        "h2": "Commercial Service Plans",
+        "intro": "Flexible schedules to meet your property's needs and budget.",
+        "options": [
+          {
+            "name": "Daily Service",
+            "frequency": "7 days/week",
+            "bestFor": "Hotels, high-traffic community pools"
+          },
+          {
+            "name": "Multi-Weekly Service",
+            "frequency": "3-5 days/week",
+            "bestFor": "Condos, fitness centers, mid-traffic pools"
+          },
+          {
+            "name": "Standard Service",
+            "frequency": "2-3 days/week",
+            "bestFor": "Smaller HOAs, low-traffic amenity pools"
+          }
+        ],
+        "pricingNote": "Commercial pricing based on pool size, bather load, and service frequency. Contact us for a property assessment and quote."
+      },
+      "localProof": {
+        "h2": "Trusted by Vero Beach Properties",
+        "content": "We service HOA pools, condo communities, hotels, and fitness centers throughout Indian River County. Our commercial clients count on us for reliability, compliance, and communication—and we deliver."
+      },
+      "testimonials": [
+        {
+          "quote": "We manage 4 community pools and they handle all of them. Consistent service, no surprises, and they're always available when we need them.",
+          "author": "Property Manager",
+          "location": "Vero Beach HOA",
+          "rating": 5
+        },
+        {
+          "quote": "Health department inspections used to stress me out. Since switching to this company, we pass every time with flying colors.",
+          "author": "Hotel Manager",
+          "location": "Vero Beach",
+          "rating": 5
+        },
+        {
+          "quote": "Responsive and professional. When our pump failed before a holiday weekend, they had a replacement installed the next morning.",
+          "author": "Condo Board President",
+          "location": "Indian River Shores",
+          "rating": 5
+        }
+      ],
+      "faq": {
+        "h2": "Commercial Pool Service FAQs",
+        "questions": [
+          {
+            "question": "Are you licensed for commercial pool service?",
+            "answer": "Yes. We hold a Certified Pool Operator (CPO) certification and meet all Florida requirements for commercial pool service. We're fully licensed and insured for commercial properties."
+          },
+          {
+            "question": "Can you help us pass health department inspections?",
+            "answer": "Absolutely. We maintain proper chemical logs, ensure code-compliant signage, and keep your pool within required parameters. Many of our commercial clients have improved their inspection scores after switching to us."
+          },
+          {
+            "question": "What happens if there's an emergency outside service hours?",
+            "answer": "We offer emergency response for our commercial clients. If your pool needs urgent attention—a pump failure, contamination event, or safety issue—we're available."
+          },
+          {
+            "question": "Do you service pools with high bather loads?",
+            "answer": "Yes. Hotel pools, community pools, and fitness centers require more frequent service and closer chemical monitoring. We adjust our service frequency and chemical management to match your bather load."
+          },
+          {
+            "question": "Can you work with our property management company?",
+            "answer": "Yes. We coordinate with property managers, HOA boards, and maintenance staff regularly. We can provide reports, attend board meetings, and communicate through whatever channels work best for your property."
+          }
+        ]
+      },
+      "finalCTA": {
+        "h2": "Need Reliable Commercial Pool Service?",
+        "content": "Your pool reflects on your property. Let us keep it clean, compliant, and ready for your residents or guests. Contact us for a property assessment."
+      },
+      "relatedServices": [
+        {
+          "text": "Pool Maintenance",
+          "url": "/pool-maintenance/"
+        },
+        {
+          "text": "Pool Repair",
+          "url": "/pool-repair/"
+        },
+        {
+          "text": "Pool Equipment Installation",
+          "url": "/pool-equipment-installation/"
+        }
+      ]
+    }
+  ]
+}
