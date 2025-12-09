@@ -1,0 +1,87 @@
+{
+    "aboutPage": {
+        "hero": {
+            "h1": "Served My Country, Now Serving Your Pool.",
+            "subheadline": "Firewater Pools is a veteran-owned, locally operated pool service dedicated to integrity, discipline, and excellence.",
+            "heroImage": {
+                "src": "/images/about-hero.jpg",
+                "alt": "Kevin, owner of Firewater Pools, standing by a sparkling pool"
+            },
+            "badge": "Veteran Owned & Operated"
+        },
+        "story": {
+            "h2": "Meet Kevin",
+            "h3": "Owner & Operator",
+            "content": [
+                "After serving in the military, I learned that discipline and attention to detail aren't just habits—they're a way of life. When I returned home to Indian River County, I saw a need for a pool service company that operated with those same values.",
+                "I started Firewater Pools with a simple mission: to treat every pool as if it were my own and every customer with the respect they deserve. No shortcuts, no missed visits, just honest work done right.",
+                "When you hire Firewater Pools, you're not just getting a pool guy; you're getting a dedicated professional who takes pride in keeping your backyard oasis safe and beautiful for your family."
+            ],
+            "image": {
+                "src": "/images/kevin-owner.jpg",
+                "alt": "Kevin Owner Portrait"
+            }
+        },
+        "values": {
+            "h2": "Core Values",
+            "intro": "The principles that guide our work every single day.",
+            "items": [
+                {
+                    "title": "Integrity",
+                    "description": "We do what we say we're going to do. If we make a mistake, we own it and fix it.",
+                    "icon": "shield-check"
+                },
+                {
+                    "title": "Discipline",
+                    "description": "We show up on time, in uniform, and follow a strict checklist for every service.",
+                    "icon": "clock"
+                },
+                {
+                    "title": "Excellence",
+                    "description": "Good enough isn't good enough. We strive for crystal clear water and perfectly running equipment.",
+                    "icon": "star"
+                },
+                {
+                    "title": "Service",
+                    "description": "Serving our community with the same dedication I brought to my military service.",
+                    "icon": "hand-heart"
+                }
+            ]
+        },
+        "credentials": {
+            "h2": "Credentials You Can Trust",
+            "items": [
+                "Licensed & Insured",
+                "CPO Certified (Certified Pool Operator)",
+                "Veteran Owned Business",
+                "Top Rated on Google"
+            ]
+        },
+        "testimonials": {
+            "h2": "What Our Neighbors Say",
+            "items": [
+                {
+                    "quote": "Kevin runs his business like a tight ship. Always on time, respectful, and my pool has never looked better.",
+                    "author": "James R.",
+                    "location": "Vero Beach, FL"
+                },
+                {
+                    "quote": "Finally, a pool guy I can trust. He explains everything clearly and doesn't try to upsell me on things I don't need.",
+                    "author": "Sarah M.",
+                    "location": "Sebastian, FL"
+                },
+                {
+                    "quote": "Supporting a veteran-owned business was important to us, and Kevin exceeded all our expectations.",
+                    "author": "Bill & Mary T.",
+                    "location": "Indian River Shores"
+                }
+            ]
+        },
+        "finalCTA": {
+            "h2": "Ready to Experience the Difference?",
+            "content": "I'd honor the opportunity to earn your business. Give me a call or request a free quote, and let's get your pool ready for the season.",
+            "buttonText": "Get A Free Quote",
+            "personalSignoff": "Sincerely,\nKevin"
+        }
+    }
+}

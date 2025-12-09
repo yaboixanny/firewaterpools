@@ -7,6 +7,7 @@ from datetime import datetime
 JSON_FILE = 'pool-service-website-structure.json'
 CONTENT_JSON_FILE = 'all-service-pages-content.json'
 LOCATION_CONTENT_JSON_FILE = 'location-pages-content.json'
+ABOUT_CONTENT_JSON_FILE = 'about-page-content.json'
 OUTPUT_DIR = 'site'
 COMPANY_NAME = "Firewater Pools"
 PHONE = "(772) 555-0123"
@@ -376,6 +377,175 @@ def generate_detailed_service_content(content_data):
                 <p class="text-xl text-white/90 mb-10 max-w-2xl mx-auto">{content_data['finalCTA'].get('content', '')}</p>
                 <a href="/free-estimate/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary text-lg font-bold rounded-lg hover:bg-slate-100 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
                     Get Free Estimate
+                </a>
+            </div>
+        </section>
+        """
+
+    return html
+
+def generate_about_content(content_data):
+    """
+    Generates HTML content for the About page based on the provided JSON data.
+    """
+    html = ""
+    about_data = content_data.get('aboutPage', {})
+
+    # 1. Hero Section (Custom for About)
+    if 'hero' in about_data:
+        hero = about_data['hero']
+        html += f"""
+        <section class="relative bg-slate-900 text-white py-32 md:py-48 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="{hero.get('heroImage', {}).get('src', '')}" alt="{hero.get('heroImage', {}).get('alt', '')}" class="w-full h-full object-cover opacity-30">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent"></div>
+            </div>
+            <div class="container mx-auto px-4 relative z-10 text-center max-w-4xl">
+                {'<span class="inline-flex items-center px-4 py-2 rounded-full bg-yellow-500/20 border border-yellow-500/50 text-yellow-400 font-bold mb-8 uppercase tracking-wider text-sm"><svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>' + hero['badge'] + '</span>' if 'badge' in hero else ''}
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">{hero.get('h1', '')}</h1>
+                <p class="text-xl md:text-2xl text-slate-200 font-light leading-relaxed max-w-2xl mx-auto">{hero.get('subheadline', '')}</p>
+            </div>
+        </section>
+        """
+
+    # 2. Owner Story Section
+    if 'story' in about_data:
+        story = about_data['story']
+        paragraphs = story.get('content', [])
+        p_html = "".join([f'<p class="text-lg text-slate-600 mb-6 leading-relaxed">{p}</p>' for p in paragraphs])
+        
+        html += f"""
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row gap-16 items-center">
+                     <div class="md:w-1/2 relative">
+                        <div class="absolute -top-4 -left-4 w-32 h-32 bg-primary/10 rounded-tl-3xl -z-10"></div>
+                        <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-slate-100 rounded-br-3xl -z-10"></div>
+                        <img src="{story.get('image', {}).get('src', '')}" alt="{story.get('image', {}).get('alt', '')}" class="rounded-xl shadow-2xl relative z-10 w-full object-cover aspect-[3/4]">
+                        
+                         <div class="absolute bottom-8 left-8 bg-white/95 backdrop-blur-sm p-6 rounded-lg shadow-lg max-w-xs border-l-4 border-primary">
+                            <p class="font-bold text-slate-900 text-lg">Kevin</p>
+                            <p class="text-slate-500 text-sm uppercase tracking-wide">{story.get('h3', 'Owner')}</p>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-4xl font-bold text-slate-900 mb-8 relative inline-block">
+                            {story.get('h2', 'Our Story')}
+                            <span class="absolute bottom-0 left-0 w-1/3 h-2 bg-primary/20 -mb-2"></span>
+                        </h2>
+                        {p_html}
+                    </div>
+                </div>
+            </div>
+        </section>
+        """
+
+    # 3. Values Section
+    if 'values' in about_data:
+        values = about_data['values']
+        cards_html = ""
+        for item in values.get('items', []):
+            icon_html = "" # Add logic to pick icon based on name if needed, or generic
+            if item.get('icon') == 'shield-check':
+                icon_html = '<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>'
+            elif item.get('icon') == 'clock':
+                icon_html = '<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>'
+            elif item.get('icon') == 'star':
+                icon_html = '<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>'
+            elif item.get('icon') == 'hand-heart':
+                icon_html = '<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>'
+            else: 
+                icon_html = '<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>' # fallback
+
+            cards_html += f"""
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg transition-all hover:-translate-y-1">
+                <div class="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-primary/30">
+                    {icon_html}
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">{item['title']}</h3>
+                <p class="text-slate-600 leading-relaxed">{item['description']}</p>
+            </div>
+            """
+        
+        html += f"""
+        <section class="py-24 bg-slate-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4">{values.get('h2', 'Our Values')}</h2>
+                    <p class="text-lg text-slate-600">{values.get('intro', '')}</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {cards_html}
+                </div>
+            </div>
+        </section>
+        """
+
+    # 4. Credentials Section
+    if 'credentials' in about_data:
+        creds = about_data['credentials']
+        items_html = "".join([f'<div class="flex items-center bg-white px-6 py-4 rounded-full shadow-sm border border-slate-100"><svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span class="font-semibold text-slate-700">{item}</span></div>' for item in creds.get('items', [])])
+        
+        html += f"""
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 text-center">
+                 <h2 class="text-2xl font-bold text-slate-900 mb-10">{creds.get('h2', 'Credentials')}</h2>
+                 <div class="flex flex-wrap gap-4 justify-center">
+                    {items_html}
+                 </div>
+            </div>
+        </section>
+        """
+        
+    # 5. Testimonials (Cards)
+    if 'testimonials' in about_data:
+        testis = about_data['testimonials']
+        cards_html = ""
+        for item in testis.get('items', []):
+             cards_html += f"""
+            <div class="bg-slate-50 p-8 rounded-2xl relative border border-slate-100">
+                <div class="text-yellow-400 flex mb-4">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                </div>
+                <p class="text-slate-700 italic mb-6 leading-relaxed">"{item['quote']}"</p>
+                <div class="flex items-center">
+                     <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-500 font-bold mr-3">{item['author'][0]}</div>
+                     <div>
+                        <p class="font-bold text-slate-900 text-sm">{item['author']}</p>
+                        <p class="text-slate-500 text-xs">{item['location']}</p>
+                     </div>
+                </div>
+            </div>
+            """
+        
+        html += f"""
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-4">
+                 <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">{testis.get('h2', 'What Our Neighbors Say')}</h2>
+                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {cards_html}
+                 </div>
+            </div>
+        </section>
+        """
+
+    # 6. Final CTA
+    if 'finalCTA' in about_data:
+        cta = about_data['finalCTA']
+        html += f"""
+        <section class="py-24 bg-primary text-white text-center">
+            <div class="container mx-auto px-4 max-w-3xl">
+                <h2 class="text-3xl md:text-5xl font-bold mb-8">{cta.get('h2', '')}</h2>
+                <p class="text-xl text-white/90 mb-12 leading-relaxed">{cta.get('content', '')}</p>
+                
+                {f'<div class="text-2xl font-handwriting font-bold mb-12 transform -rotate-2 opacity-90">{cta["personalSignoff"]}</div>' if 'personalSignoff' in cta else ''}
+                
+                <a href="/free-estimate/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary text-lg font-bold rounded-lg hover:bg-slate-100 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
+                    {cta.get('buttonText', 'Contact Us')}
                 </a>
             </div>
         </section>
@@ -903,6 +1073,8 @@ def create_page(path, data, extra_data, page_type="generic", content_data=None):
     if content_data:
         if page_type in ['location', 'location_hub']:
             content = generate_location_content(content_data, page_type)
+        elif page_type == 'about':
+            content = generate_about_content(content_data)
         else:
             content = generate_detailed_service_content(content_data)
     else:
@@ -956,6 +1128,12 @@ def main():
             location_content['overview'] = loc_json.get('locationsOverviewPage')
             for item in loc_json.get('locationPages', []):
                 location_content[item['id']] = item
+
+    # Read About Content JSON
+    about_content = {}
+    if os.path.exists(ABOUT_CONTENT_JSON_FILE):
+        with open(ABOUT_CONTENT_JSON_FILE, 'r') as f:
+            about_content = json.load(f)
 
     pages = site_data.get('pages', {})
     
@@ -1038,9 +1216,17 @@ def main():
     # Business Pages
     for page in pages.get('businessPages', []):
         p_type = 'generic'
-        if 'contact' in page['url']: p_type = 'contact'
-        if 'free-estimate' in page['url']: p_type = 'free-estimate'
-        create_page(page['url'], page, extra_data, p_type)
+        c_data = None
+        
+        if 'contact' in page['url']: 
+            p_type = 'contact'
+        if 'free-estimate' in page['url']: 
+            p_type = 'free-estimate'
+        if 'about' in page['url']:
+            p_type = 'about'
+            c_data = about_content
+            
+        create_page(page['url'], page, extra_data, p_type, content_data=c_data)
 
     print("Site generation complete.")
 
