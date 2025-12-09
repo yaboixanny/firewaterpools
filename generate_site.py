@@ -971,78 +971,167 @@ def generate_content_for_page(page_type, data, extra_data={}):
         </div>
     """
 
-    # Customize Form for Contact/Free Estimate
-    if page_type == 'contact' or page_type == 'free-estimate':
-        form_title = "Send us a Message" if page_type == 'contact' else "Request Your Free Estimate"
+    # Free Estimate Page (Simple Form)
+    if page_type == 'free-estimate':
         content = f"""
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
-                <h3 class="text-2xl font-bold mb-6 text-slate-900">Get In Touch</h3>
-                <p class="text-slate-600 mb-8">Have questions? We're here to help. Fill out the form or give us a call directly.</p>
-                
-                <div class="space-y-6">
-                    <div class="flex items-start">
-                        <div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center text-primary flex-shrink-0">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                        </div>
-                        <div class="ml-4">
-                            <h4 class="text-lg font-semibold text-slate-900">Phone</h4>
-                            <p class="text-slate-600">{PHONE}</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                         <div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center text-primary flex-shrink-0">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                        </div>
-                        <div class="ml-4">
-                            <h4 class="text-lg font-semibold text-slate-900">Email</h4>
-                            <p class="text-slate-600">{EMAIL}</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Request Your Free Estimate</h2>
+                <p class="text-lg text-slate-600">Tell us a bit about your pool and we'll get back to you with a custom quote.</p>
             </div>
             
-            <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100">
-                <h3 class="text-2xl font-bold mb-6 text-slate-900">{form_title}</h3>
-                <form class="space-y-4">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-slate-100">
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <label class="block text-sm font-medium text-slate-700 mb-1">First Name</label>
-                            <input type="text" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="John">
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">First Name</label>
+                            <input type="text" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-slate-50 focus:bg-white" placeholder="John">
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-slate-700 mb-1">Last Name</label>
-                            <input type="text" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Doe">
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Last Name</label>
+                            <input type="text" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-slate-50 focus:bg-white" placeholder="Doe">
                         </div>
                     </div>
-                    <div>
-                        <label class="block text-sm font-medium text-slate-700 mb-1">Email Address</label>
-                        <input type="email" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="john@example.com">
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Email Address</label>
+                            <input type="email" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-slate-50 focus:bg-white" placeholder="john@example.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Phone Number</label>
+                            <input type="tel" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-slate-50 focus:bg-white" placeholder="(772) 555-0123">
+                        </div>
                     </div>
-                    <div>
-                        <label class="block text-sm font-medium text-slate-700 mb-1">Phone Number</label>
-                        <input type="tel" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="(772) 555-0123">
-                    </div>
+                    
                      <div>
-                        <label class="block text-sm font-medium text-slate-700 mb-1">Service Needed</label>
-                        <select class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all">
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">Service Needed</label>
+                        <select class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-slate-50 focus:bg-white">
                             <option>Pool Cleaning</option>
                             <option>Repair</option>
                             <option>Green Pool Cleanup</option>
+                            <option>Equipment Install</option>
                             <option>Other</option>
                         </select>
                     </div>
+                    
                     <div>
-                        <label class="block text-sm font-medium text-slate-700 mb-1">Message</label>
-                        <textarea rows="4" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Tell us about your pool..."></textarea>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">Message & Details</label>
+                        <textarea rows="4" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-slate-50 focus:bg-white" placeholder="Tell us about your pool (size, condition, specific issues)..."></textarea>
                     </div>
-                    <button type="submit" class="w-full py-3 px-6 bg-primary hover:bg-secondary text-white font-bold rounded-lg transition-colors shadow-md">
-                        Submit Request
+                    
+                    <button type="submit" class="w-full py-4 px-6 bg-primary hover:bg-secondary text-white font-bold text-lg rounded-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
+                        Get Your Free Estimate
                     </button>
+                    <p class="text-center text-sm text-slate-500 mt-4">We respect your privacy. No spam, ever.</p>
                 </form>
             </div>
         </div>
         """
+
+    # Custom Improved Contact Page
+    if page_type == 'contact':
+        content = f"""
+        <div class="mb-20">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Contact Card -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center text-primary mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Call Us</h3>
+                    <p class="text-slate-600 mb-4">Mon-Fri from 8am to 5pm.</p>
+                    <a href="tel:{PHONE.replace('(', '').replace(')', '').replace(' ', '').replace('-', '')}" class="text-lg font-bold text-primary hover:text-secondary">{PHONE}</a>
+                </div>
+
+                <!-- Email Card -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center text-primary mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Email Us</h3>
+                    <p class="text-slate-600 mb-4">We'll respond within 24 hours.</p>
+                    <a href="mailto:{EMAIL}" class="text-lg font-bold text-primary hover:text-secondary">{EMAIL}</a>
+                </div>
+
+                <!-- Location Card -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 flex flex-col items-center text-center">
+                     <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center text-primary mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Our Office</h3>
+                    <p class="text-slate-600 mb-4">Proudly based in Vero Beach.</p>
+                    <span class="text-lg font-bold text-slate-800">Available by Appointment</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Message Form -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100">
+                    <h3 class="text-2xl font-bold mb-6 text-slate-900">Send us a Message</h3>
+                    <form class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1">First Name</label>
+                                <input type="text" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="John">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1">Last Name</label>
+                                <input type="text" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Doe">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Email Address</label>
+                            <input type="email" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="john@example.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Phone Number</label>
+                            <input type="tel" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="(772) 555-0123">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">How can we help?</label>
+                            <textarea rows="4" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Tell us about your pool..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3 px-6 bg-primary hover:bg-secondary text-white font-bold rounded-lg transition-colors shadow-md">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Map & Hours -->
+                <div class="space-y-8">
+                     <!-- Map Embed -->
+                    <div class="bg-slate-200 rounded-2xl overflow-hidden h-80 shadow-inner relative">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113060.05739023021!2d-80.46335186835252!3d27.63855598686629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88de5ec866874ee5%3A0x6b4fb6d43516c11b!2sVero%20Beach%2C%20FL!5e0!3m2!1sen!2sus!4v1709568912345!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                    <!-- Hours Box -->
+                    <div class="bg-slate-900 text-white p-8 rounded-2xl shadow-xl">
+                        <h3 class="text-xl font-bold mb-6 flex items-center">
+                            <svg class="w-6 h-6 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Business Hours
+                        </h3>
+                        <ul class="space-y-3 text-slate-300">
+                            <li class="flex justify-between border-b border-slate-700 pb-2">
+                                <span>Monday - Friday</span>
+                                <span class="font-bold text-white">8:00 AM - 5:00 PM</span>
+                            </li>
+                            <li class="flex justify-between border-b border-slate-700 pb-2">
+                                <span>Saturday</span>
+                                <span class="font-bold text-white">By Appointment</span>
+                            </li>
+                            <li class="flex justify-between pb-2">
+                                <span>Sunday</span>
+                                <span class="text-slate-500">Closed</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        """
+    
     return content
 
 def create_page(path, data, extra_data, page_type="generic", content_data=None):
