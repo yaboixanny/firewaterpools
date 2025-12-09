@@ -976,7 +976,7 @@ def generate_content_for_page(page_type, data, extra_data={}):
     # Free Estimate Page (Simple Form)
     if page_type == 'free-estimate':
         content = f"""
-        <div class="max-w-4xl mx-auto">
+        <div class="max-w-4xl mx-auto py-24">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-slate-900 mb-4">Request Your Free Estimate</h2>
                 <p class="text-lg text-slate-600">Tell us a bit about your pool and we'll get back to you with a custom quote.</p>
