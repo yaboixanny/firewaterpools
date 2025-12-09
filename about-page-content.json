@@ -1,14 +1,5 @@
 {
     "aboutPage": {
-        "hero": {
-            "h1": "Served My Country, Now Serving Your Pool.",
-            "subheadline": "Firewater Pools is a veteran-owned, locally operated pool service dedicated to integrity, discipline, and excellence.",
-            "heroImage": {
-                "src": "/images/about-hero.jpg",
-                "alt": "Kevin, owner of Firewater Pools, standing by a sparkling pool"
-            },
-            "badge": "Veteran Owned & Operated"
-        },
         "story": {
             "h2": "Meet Kevin",
             "h3": "Owner & Operator",
