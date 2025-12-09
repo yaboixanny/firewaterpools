@@ -8,9 +8,11 @@ JSON_FILE = 'pool-service-website-structure.json'
 CONTENT_JSON_FILE = 'all-service-pages-content.json'
 LOCATION_CONTENT_JSON_FILE = 'location-pages-content.json'
 ABOUT_CONTENT_JSON_FILE = 'about-page-content.json'
+BLOG_CONTENT_JSON_FILE = 'pool-care-guide-content.json'
 OUTPUT_DIR = 'site'
 COMPANY_NAME = "Firewater Pools"
 PHONE = "(772) 555-0123"
+ASSETS_DIR = 'assets'
 EMAIL = "hello@firewaterpools.com"
 ADDRESS = "123 Ocean Drive, Vero Beach, FL 32960"
 
@@ -1134,6 +1136,129 @@ def generate_content_for_page(page_type, data, extra_data={}):
     
     return content
 
+def generate_blog_post_content(content_data):
+    html = ""
+    # Header Meta
+    html += f"""
+    <section class="py-12 bg-slate-50 border-b border-slate-200">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <a href="/pool-care-guide/" class="inline-flex items-center text-primary font-medium hover:underline mb-8">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                Back to Guide
+            </a>
+            <div class="flex items-center space-x-4 text-sm text-slate-500 mb-6">
+                <span class="flex items-center"><svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg> {content_data.get('date', '')}</span>
+                <span class="flex items-center"><svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 007-7z"></path></svg> {content_data.get('author', 'Firewater Pools')}</span>
+            </div>
+            <p class="text-xl md:text-2xl text-slate-700 leading-relaxed italic border-l-4 border-primary pl-6 py-2 bg-white rounded-r-lg shadow-sm">
+                {content_data.get('intro', '')}
+            </p>
+        </div>
+    </section>
+    """
+
+    # Content Body
+    body_content = ""
+    for item in content_data.get('content', []):
+        body_content += f'<div class="mb-8">{item}</div>'
+
+    html += f"""
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-3xl prose prose-lg prose-slate prose-headings:text-slate-900 prose-a:text-primary">
+            {body_content}
+            
+            <div class="mt-12 p-8 bg-blue-50 rounded-2xl border border-blue-100">
+                <h3 class="text-xl font-bold text-slate-900 mb-4">Summary</h3>
+                <p class="text-slate-700">{content_data.get('conclusion', '')}</p>
+            </div>
+        </div>
+    </section>
+    """
+    
+    # CTA
+    html += f"""
+    <section class="py-20 bg-slate-900 text-white text-center">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <h2 class="text-3xl font-bold mb-6">Still have questions?</h2>
+            <p class="text-lg text-slate-300 mb-8">Pool care can be tricky. We're here to help you get it right.</p>
+            <a href="/contact/" class="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-bold rounded-lg hover:bg-secondary transition-all">
+                Contact Us
+            </a>
+        </div>
+    </section>
+    """
+    
+    return html
+
+def generate_blog_hub_content(content_data, blog_posts_list):
+    html = ""
+    
+    # Intro
+    if 'intro' in content_data:
+        html += f"""
+        <section class="py-16 bg-white text-center">
+            <div class="container mx-auto px-4 max-w-3xl">
+                <p class="text-xl text-slate-600 leading-relaxed">{content_data.get('intro', '')}</p>
+            </div>
+        </section>
+        """
+
+    # Grid
+    posts_html = ""
+    for post in blog_posts_list:
+        # We need to peek into the content json for details if we had them all loaded, 
+        # but here we might only have the structure data (name, h1, etc).
+        # We can map the ID to the intro/date if passed, but simpler to just use structure data for now
+        # or rely on the fact that we might not have efficient access to all content here easily without loading it all.
+        # Actually, main() passes explicit content_data for the Hub, but for the grid items we need the content of *other* pages.
+        # Let's assume we want a simple card for now.
+        
+        posts_html += f"""
+        <a href="{post['url']}" class="group flex flex-col bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1 h-full">
+            <div class="h-48 bg-slate-200 relative overflow-hidden">
+                <!-- Placeholder for blog image -->
+                <div class="absolute inset-0 bg-gradient-to-br from-primary/80 to-secondary/80 flex items-center justify-center">
+                    <svg class="w-16 h-16 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path></svg>
+                </div>
+            </div>
+            <div class="p-8 flex flex-col flex-grow">
+                <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">{post['h1']}</h3>
+                <p class="text-slate-600 mb-6 flex-grow text-sm line-clamp-3">{post['metaDescription']}</p>
+                <span class="text-indigo-600 font-semibold text-sm flex items-center mt-auto">
+                    Read Article 
+                    <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </span>
+            </div>
+        </a>
+        """
+
+    html += f"""
+    <section class="py-20 bg-slate-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {posts_html}
+            </div>
+        </div>
+    </section>
+    """
+
+    # Hub CTA
+    if 'cta' in content_data:
+        cta = content_data['cta']
+        html += f"""
+        <section class="py-24 bg-white text-center">
+             <div class="container mx-auto px-4 max-w-3xl">
+                <h2 class="text-3xl font-bold text-slate-900 mb-6">{cta.get('h2', '')}</h2>
+                <p class="text-xl text-slate-600 mb-10">{cta.get('content', '')}</p>
+                <a href="/contact/" class="inline-flex items-center justify-center px-8 py-4 bg-primary text-white text-lg font-bold rounded-lg hover:bg-secondary transition-all shadow-lg hover:shadow-xl">
+                    {cta.get('buttonText', 'Contact Us')}
+                </a>
+            </div>
+        </section>
+        """
+
+    return html
+
 def create_page(path, data, extra_data, page_type="generic", content_data=None):
     # Ensure directory exists
     clean_path = path.strip('/')
@@ -1164,6 +1289,10 @@ def create_page(path, data, extra_data, page_type="generic", content_data=None):
             content = generate_location_content(content_data, page_type)
         elif page_type == 'about':
             content = generate_about_content(content_data)
+        elif page_type == 'blog_post':
+            content = generate_blog_post_content(content_data)
+        elif page_type == 'blog_hub':
+            content = generate_blog_hub_content(content_data, extra_data.get('blog_posts_list', []))
         else:
             content = generate_detailed_service_content(content_data)
     else:
@@ -1196,6 +1325,11 @@ def main():
         shutil.rmtree(OUTPUT_DIR)
     os.makedirs(OUTPUT_DIR)
 
+    # Copy Assets
+    if os.path.exists(ASSETS_DIR):
+        shutil.copytree(ASSETS_DIR, OUTPUT_DIR, dirs_exist_ok=True)
+        print(f"Copied assets from {ASSETS_DIR} to {OUTPUT_DIR}")
+
     # Read Structure JSON
     with open(JSON_FILE, 'r') as f:
         site_data = json.load(f)
@@ -1223,6 +1357,12 @@ def main():
     if os.path.exists(ABOUT_CONTENT_JSON_FILE):
         with open(ABOUT_CONTENT_JSON_FILE, 'r') as f:
             about_content = json.load(f)
+
+    # Read Blog Content JSON
+    blog_content = {}
+    if os.path.exists(BLOG_CONTENT_JSON_FILE):
+        with open(BLOG_CONTENT_JSON_FILE, 'r') as f:
+            blog_content = json.load(f)
 
     pages = site_data.get('pages', {})
     
@@ -1297,10 +1437,18 @@ def main():
         
     # Blog Pages
     blog_pages = pages.get('blogPages', {})
+    blog_posts_list = blog_pages.get('posts', [])
+    
     if 'hub' in blog_pages:
-        create_page(blog_pages['hub']['url'], blog_pages['hub'], extra_data, 'blog_hub')
-    for page in blog_pages.get('posts', []):
-        create_page(page['url'], page, extra_data, 'blog_post')
+        hub_content = blog_content.get('hub', {})
+        extra_data['blog_posts_list'] = blog_posts_list
+        create_page(blog_pages['hub']['url'], blog_pages['hub'], extra_data, 'blog_hub', content_data=hub_content)
+        
+    for page in blog_posts_list:
+        post_id = page['url'].strip('/').split('/')[-1]
+        post_content = blog_content.get('posts', {}).get(post_id, {})
+        if post_content:
+            create_page(page['url'], page, extra_data, 'blog_post', content_data=post_content)
         
     # Business Pages
     for page in pages.get('businessPages', []):
