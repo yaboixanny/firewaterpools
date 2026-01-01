@@ -100,7 +100,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     </div>
                 </div>
 
-                <a href="/pool-care-guide/" class="text-slate-600 hover:text-primary font-medium transition-colors">Guide</a>
                 <a href="/about/" class="text-slate-600 hover:text-primary font-medium transition-colors">About</a>
                 <a href="/contact/" class="text-slate-600 hover:text-primary font-medium transition-colors">Contact</a>
             </nav>
