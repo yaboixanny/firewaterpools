@@ -526,125 +526,6 @@
       ]
     },
     {
-      "id": "pool-resurfacing",
-      "seo": {
-        "title": "Pool Resurfacing Vero Beach, FL | Plaster, Pebble & Quartz Finishes",
-        "metaDescription": "Transform your worn pool with professional resurfacing in Vero Beach. Plaster, pebble, and quartz finishes available. Free estimates and financing options.",
-        "url": "/pool-resurfacing/"
-      },
-      "hero": {
-        "h1": "Pool Resurfacing & Replastering in Vero Beach",
-        "subheadline": "Restore your pool's beauty and extend its life with a fresh finish.",
-        "heroImage": {
-          "src": "/images/pool-resurfacing-hero.jpg",
-          "alt": "Freshly resurfaced pool with pebble finish in Vero Beach, FL"
-        }
-      },
-      "problemStatement": "Over time, pool surfaces wear out. Rough plaster tears up swimsuits and scrapes feet. Stains become impossible to remove. Cracks let water seep into the shell. If your pool looks tired and feels rough, resurfacing brings it back to life.",
-      "serviceDetails": {
-        "h2": "Pool Finish Options",
-        "intro": "We offer a range of finishes to match your style and budget.",
-        "includes": [
-          "Standard white plaster",
-          "Colored plaster finishes",
-          "Quartz aggregate (Diamond Brite, etc.)",
-          "Pebble finishes (PebbleTec, PebbleSheen)",
-          "Glass bead finishes",
-          "Tile replacement and repairs",
-          "Coping and deck repairs"
-        ]
-      },
-      "serviceOptions": {
-        "h2": "Resurfacing Options",
-        "intro": "From budget-friendly plaster to premium pebble finishes.",
-        "options": [
-          {
-            "name": "Standard Plaster",
-            "frequency": "Lasts 5-7 years",
-            "bestFor": "Budget-conscious, classic look"
-          },
-          {
-            "name": "Quartz Finish",
-            "frequency": "Lasts 10-15 years",
-            "bestFor": "Durability with color options"
-          },
-          {
-            "name": "Pebble Finish",
-            "frequency": "Lasts 15-20+ years",
-            "bestFor": "Premium look, longest lifespan"
-          }
-        ],
-        "pricingNote": "Pricing depends on pool size, finish selection, and any needed repairs. Free on-site estimates. Financing available."
-      },
-      "localProof": {
-        "h2": "Pool Resurfacing Throughout Indian River County",
-        "content": "We've resurfaced pools of all shapes and sizes across Vero Beach—from small backyard pools in Vista Gardens to large resort-style pools in gated communities. Our crews know how to work efficiently while delivering a flawless finish."
-      },
-      "testimonials": [
-        {
-          "quote": "Our 25-year-old pool looks brand new. We went with PebbleSheen and couldn't be happier. The color is gorgeous.",
-          "author": "Diane R.",
-          "location": "Vero Beach",
-          "rating": 5
-        },
-        {
-          "quote": "Professional crew, finished on schedule, and the cleanup was thorough. Our pool went from embarrassing to stunning.",
-          "author": "Mark T.",
-          "location": "Indian River Shores",
-          "rating": 5
-        },
-        {
-          "quote": "They helped us understand all the options without pushing the most expensive one. Ended up with quartz and love it.",
-          "author": "Angela F.",
-          "location": "Sebastian",
-          "rating": 5
-        }
-      ],
-      "faq": {
-        "h2": "Pool Resurfacing FAQs",
-        "questions": [
-          {
-            "question": "How do I know if my pool needs resurfacing?",
-            "answer": "Signs include rough texture that scrapes skin, visible staining that won't brush off, plaster flaking or delaminating, spider cracks throughout the surface, and discoloration that chemicals can't fix."
-          },
-          {
-            "question": "How long does pool resurfacing take?",
-            "answer": "Most residential pools take 5-7 days from drain to refill. This includes prep work, applying the new finish, filling, and initial chemistry balancing."
-          },
-          {
-            "question": "What's the difference between plaster, quartz, and pebble?",
-            "answer": "Plaster is the most affordable but least durable (5-7 years). Quartz adds crusite aggregate for better durability and color options (10-15 years). Pebble finishes are the most durable and beautiful but cost more (15-20+ years)."
-          },
-          {
-            "question": "Can you match my existing coping and tile?",
-            "answer": "We can often match or complement existing coping and tile. If your coping or tile is also worn, we can replace it as part of the resurfacing project for a complete refresh."
-          },
-          {
-            "question": "Do you offer financing for resurfacing?",
-            "answer": "Yes. Pool resurfacing is a significant investment, and we offer financing options to help make it manageable. Ask about current promotions."
-          }
-        ]
-      },
-      "finalCTA": {
-        "h2": "Ready to Transform Your Pool?",
-        "content": "A fresh finish makes your pool look new again and can last for decades. Get a free estimate and see what's possible for your pool."
-      },
-      "relatedServices": [
-        {
-          "text": "Pool Repair",
-          "url": "/pool-repair/"
-        },
-        {
-          "text": "Pool Leak Detection",
-          "url": "/pool-leak-detection/"
-        },
-        {
-          "text": "Pool Equipment Installation",
-          "url": "/pool-equipment-installation/"
-        }
-      ]
-    },
-    {
       "id": "pool-leak-detection",
       "seo": {
         "title": "Pool Leak Detection Vero Beach, FL | Find & Fix Leaks Fast",
@@ -752,10 +633,6 @@
         {
           "text": "Pool Repair",
           "url": "/pool-repair/"
-        },
-        {
-          "text": "Pool Resurfacing",
-          "url": "/pool-resurfacing/"
         },
         {
           "text": "Pool Maintenance",

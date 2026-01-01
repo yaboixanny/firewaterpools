@@ -104,11 +104,6 @@
             "description": "Pumps, heaters, salt systems, and automation"
           },
           {
-            "name": "Pool Resurfacing",
-            "url": "/pool-resurfacing/",
-            "description": "Plaster, pebble, and quartz finishes"
-          },
-          {
             "name": "Leak Detection",
             "url": "/pool-leak-detection/",
             "description": "Find and fix pool leaks"
@@ -182,11 +177,6 @@
               "name": "Equipment Installation",
               "description": "Upgrades and new installations done right.",
               "url": "/pool-equipment-installation/"
-            },
-            {
-              "name": "Pool Resurfacing",
-              "description": "Restore your pool with plaster, pebble, or quartz finishes.",
-              "url": "/pool-resurfacing/"
             },
             {
               "name": "Leak Detection",
@@ -331,11 +321,6 @@
               "url": "/pool-equipment-installation/"
             },
             {
-              "name": "Pool Resurfacing",
-              "description": "Bring your pool back to life with a new finish.",
-              "url": "/pool-resurfacing/"
-            },
-            {
               "name": "Leak Detection",
               "description": "Find and fix leaks with professional equipment.",
               "url": "/pool-leak-detection/"
@@ -458,11 +443,6 @@
               "url": "/pool-equipment-installation/"
             },
             {
-              "name": "Pool Resurfacing",
-              "description": "Premium finishes including PebbleTec and glass bead.",
-              "url": "/pool-resurfacing/"
-            },
-            {
               "name": "Leak Detection",
               "description": "Non-invasive leak detection to protect your landscaping.",
               "url": "/pool-leak-detection/"
@@ -583,11 +563,6 @@
               "url": "/pool-equipment-installation/"
             },
             {
-              "name": "Pool Resurfacing",
-              "description": "Premium finishes that complement your property.",
-              "url": "/pool-resurfacing/"
-            },
-            {
               "name": "Leak Detection",
               "description": "Professional detection with minimal disruption.",
               "url": "/pool-leak-detection/"
@@ -704,11 +679,6 @@
               "name": "Equipment Installation",
               "description": "New equipment installed right.",
               "url": "/pool-equipment-installation/"
-            },
-            {
-              "name": "Pool Resurfacing",
-              "description": "Give your pool a fresh start.",
-              "url": "/pool-resurfacing/"
             },
             {
               "name": "Leak Detection",
@@ -829,11 +799,6 @@
               "url": "/pool-equipment-installation/"
             },
             {
-              "name": "Pool Resurfacing",
-              "description": "Restore your pool's appearance and function.",
-              "url": "/pool-resurfacing/"
-            },
-            {
               "name": "Leak Detection",
               "description": "Professional leak finding and repair.",
               "url": "/pool-leak-detection/"
@@ -952,11 +917,6 @@
               "url": "/pool-equipment-installation/"
             },
             {
-              "name": "Pool Resurfacing",
-              "description": "Options for every budget.",
-              "url": "/pool-resurfacing/"
-            },
-            {
               "name": "Leak Detection",
               "description": "Find problems before they get expensive.",
               "url": "/pool-leak-detection/"
@@ -1010,7 +970,7 @@
             },
             {
               "question": "Do you offer payment plans for bigger repairs?",
-              "answer": "For larger projects like resurfacing or major equipment replacement, we do offer financing options. Ask us for details."
+              "answer": "For larger projects like major equipment replacement, we do offer financing options. Ask us for details."
             }
           ]
         },
