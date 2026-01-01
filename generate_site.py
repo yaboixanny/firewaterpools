@@ -11,10 +11,9 @@ ABOUT_CONTENT_JSON_FILE = 'about-page-content.json'
 BLOG_CONTENT_JSON_FILE = 'pool-care-guide-content.json'
 OUTPUT_DIR = 'site'
 COMPANY_NAME = "Firewater Pools"
-PHONE = "(772) 555-0123"
+PHONE = "772-269-0249"
 ASSETS_DIR = 'assets'
-EMAIL = "hello@firewaterpools.com"
-ADDRESS = "123 Ocean Drive, Vero Beach, FL 32960"
+ADDRESS = "Based in Vero Beach"
 
 # HTML Template
 HTML_TEMPLATE = """<!DOCTYPE html>
@@ -32,9 +31,9 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             theme: {{
                 extend: {{
                     colors: {{
-                        primary: '#0ea5e9',   // Sky 500
-                        secondary: '#0284c7', // Sky 600
-                        accent: '#0369a1',    // Sky 700
+                        primary: '#2563eb',   // Blue 600 (Water)
+                        secondary: '#dc2626', // Red 600 (Fire)
+                        accent: '#1d4ed8',    // Blue 700
                         dark: '#0f172a',      // Slate 900
                     }},
                     fontFamily: {{
@@ -70,8 +69,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <!-- Header -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="/" class="text-2xl font-bold text-primary tracking-tight">
-                Firewater<span class="text-dark">Pools</span>
+            <a href="/" class="text-2xl font-bold tracking-tight">
+                <span class="text-secondary">Fire</span><span class="text-primary">water</span><span class="text-dark">Pools</span>
             </a>
             
             <nav class="hidden md:flex space-x-8 items-center">
@@ -130,7 +129,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     {subheadline}
                 </p>
                 <div class="flex flex-col sm:flex-row gap-5 justify-center">
-                    <a href="/free-estimate/" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-lg text-white bg-primary hover:bg-primary/90 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
+                    <a href="/free-estimate/" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-lg text-white bg-primary hover:bg-secondary transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
                         Get Your Free Quote
                     </a>
                 </div>
@@ -146,7 +145,9 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                 <div class="col-span-1 md:col-span-1">
-                    <a href="/" class="text-2xl font-bold text-white mb-6 block">Firewater<span class="text-primary">Pools</span></a>
+                    <a href="/" class="text-2xl font-bold tracking-tight mb-6 block">
+                        <span class="text-secondary">Fire</span><span class="text-primary">water</span><span class="text-white">Pools</span>
+                    </a>
                     <p class="text-slate-400 mb-6 leading-relaxed">Premier pool service and maintenance for Vero Beach and Indian River County. Locally owned and operated.</p>
                 </div>
                 
@@ -176,11 +177,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         </li>
                         <li class="flex items-center">
                             <svg class="w-6 h-6 text-primary mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                            <a href="tel:7725550123" class="hover:text-white transition-colors">{phone}</a>
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-6 h-6 text-primary mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                            <a href="mailto:{email}" class="hover:text-white transition-colors">{email}</a>
+                            <a href="tel:7722690249" class="hover:text-white transition-colors">{phone}</a>
                         </li>
                     </ul>
                 </div>
@@ -210,13 +207,10 @@ def generate_schema_markup(page_data, is_home=False):
         "name": COMPANY_NAME,
         "image": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?ixlib=rb-1.2.1",
         "telephone": PHONE,
-        "email": EMAIL,
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "123 Ocean Drive",
             "addressLocality": "Vero Beach",
             "addressRegion": "FL",
-            "postalCode": "32960",
             "addressCountry": "US"
         },
         "geo": {
@@ -377,7 +371,7 @@ def generate_detailed_service_content(content_data):
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl md:text-5xl font-bold mb-6">{content_data['finalCTA'].get('h2', 'Ready to get started?')}</h2>
                 <p class="text-xl text-white/90 mb-10 max-w-2xl mx-auto">{content_data['finalCTA'].get('content', '')}</p>
-                <a href="/free-estimate/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary text-lg font-bold rounded-lg hover:bg-slate-100 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
+                <a href="/free-estimate/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary text-lg font-bold rounded-lg hover:bg-secondary hover:text-white transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
                     Get Free Estimate
                 </a>
             </div>
@@ -546,7 +540,7 @@ def generate_about_content(content_data):
                 
                 {f'<div class="text-2xl font-handwriting font-bold mb-12 transform -rotate-2 opacity-90">{cta["personalSignoff"]}</div>' if 'personalSignoff' in cta else ''}
                 
-                <a href="/free-estimate/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary text-lg font-bold rounded-lg hover:bg-slate-100 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
+                <a href="/free-estimate/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary text-lg font-bold rounded-lg hover:bg-secondary hover:text-white transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
                     {cta.get('buttonText', 'Contact Us')}
                 </a>
             </div>
@@ -998,11 +992,11 @@ def generate_content_for_page(page_type, data, extra_data={}):
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-sm font-semibold text-slate-700 mb-2">Email Address</label>
-                            <input type="email" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-slate-50 focus:bg-white" placeholder="john@example.com">
+                             <input type="email" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-slate-50 focus:bg-white" placeholder="your@email.com">
                         </div>
                         <div>
                             <label class="block text-sm font-semibold text-slate-700 mb-2">Phone Number</label>
-                            <input type="tel" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-slate-50 focus:bg-white" placeholder="(772) 555-0123">
+                            <input type="tel" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-slate-50 focus:bg-white" placeholder="772-269-0249">
                         </div>
                     </div>
                     
@@ -1035,35 +1029,25 @@ def generate_content_for_page(page_type, data, extra_data={}):
     if page_type == 'contact':
         content = f"""
         <div class="mb-20">
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
                 <!-- Contact Card -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center text-primary mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                <div class="bg-white p-10 rounded-2xl shadow-lg border border-slate-100 flex flex-col items-center text-center">
+                    <div class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center text-primary mb-8">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Call Us</h3>
-                    <p class="text-slate-600 mb-4">Mon-Fri from 8am to 5pm.</p>
-                    <a href="tel:{PHONE.replace('(', '').replace(')', '').replace(' ', '').replace('-', '')}" class="text-lg font-bold text-primary hover:text-secondary">{PHONE}</a>
-                </div>
-
-                <!-- Email Card -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center text-primary mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Email Us</h3>
-                    <p class="text-slate-600 mb-4">We'll respond within 24 hours.</p>
-                    <a href="mailto:{EMAIL}" class="text-lg font-bold text-primary hover:text-secondary">{EMAIL}</a>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">Call Us Directly</h3>
+                    <p class="text-slate-600 mb-6 text-lg">We're available Mon-Fri, 8am - 5pm.</p>
+                    <a href="tel:{PHONE.replace('-', '')}" class="text-2xl font-bold text-primary hover:text-secondary transition-colors">{PHONE}</a>
                 </div>
 
                 <!-- Location Card -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 flex flex-col items-center text-center">
-                     <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center text-primary mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                <div class="bg-white p-10 rounded-2xl shadow-lg border border-slate-100 flex flex-col items-center text-center">
+                     <div class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center text-primary mb-8">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Our Office</h3>
-                    <p class="text-slate-600 mb-4">Proudly based in Vero Beach.</p>
-                    <span class="text-lg font-bold text-slate-800">Available by Appointment</span>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">Service Area</h3>
+                    <p class="text-slate-600 mb-6 text-lg">Proudly serving Vero Beach & Indian River County.</p>
+                    <span class="text-2xl font-bold text-slate-800">{ADDRESS}</span>
                 </div>
             </div>
 
@@ -1083,12 +1067,8 @@ def generate_content_for_page(page_type, data, extra_data={}):
                             </div>
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-slate-700 mb-1">Email Address</label>
-                            <input type="email" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="john@example.com">
-                        </div>
-                        <div>
                             <label class="block text-sm font-medium text-slate-700 mb-1">Phone Number</label>
-                            <input type="tel" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="(772) 555-0123">
+                            <input type="tel" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="772-269-0249">
                         </div>
                         
                         <div>
@@ -1305,7 +1285,6 @@ def create_page(path, data, extra_data, page_type="generic", content_data=None):
         subheadline=subheadline,
         company_name=COMPANY_NAME,
         phone=PHONE,
-        email=EMAIL,
         address=ADDRESS,
         year=datetime.now().year,
         schema_markup=schema,
