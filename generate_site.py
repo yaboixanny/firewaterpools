@@ -416,7 +416,7 @@ def generate_about_content(content_data):
                      <div class="md:w-1/2 relative">
                         <div class="absolute -top-4 -left-4 w-32 h-32 bg-primary/10 rounded-tl-3xl -z-10"></div>
                         <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-slate-100 rounded-br-3xl -z-10"></div>
-                        <img src="{story.get('image', {}).get('src', '')}" alt="{story.get('image', {}).get('alt', '')}" class="rounded-xl shadow-2xl relative z-10 w-full object-cover aspect-[3/4]">
+                        <img src="{story.get('image', {}).get('src', '')}" alt="{story.get('image', {}).get('alt', '')}" class="rounded-xl shadow-2xl relative z-10 w-full h-auto">
                         
                          <div class="absolute bottom-8 left-8 bg-white/95 backdrop-blur-sm p-6 rounded-lg shadow-lg max-w-xs border-l-4 border-primary">
                             <p class="font-bold text-slate-900 text-lg">Kevin</p>
@@ -908,7 +908,7 @@ def generate_content_for_page(page_type, data, extra_data={}):
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <div class="order-2 lg:order-1 relative">
-                        <img src="/images/kevin-new.jpg" alt="Kevin owner of Firewater Pools" class="rounded-2xl shadow-2xl w-full object-cover h-[600px]">
+                        <img src="/images/kevin-new.jpg" alt="Kevin owner of Firewater Pools" class="rounded-2xl shadow-2xl w-full h-auto max-h-[700px] object-scale-down">
                         <div class="absolute -bottom-6 -right-6 bg-secondary text-white p-8 rounded-xl shadow-xl z-20 hidden lg:block">
                             <p class="text-2xl font-bold mb-1">Kevin</p>
                             <p class="opacity-90">Owner & Operator</p>
