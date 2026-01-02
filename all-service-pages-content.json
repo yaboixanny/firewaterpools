@@ -309,8 +309,8 @@
         }
       },
       "detailsImage": {
-        "src": "https://images.unsplash.com/photo-1563823528221-a47734185194?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=70",
-        "alt": "Expert pool motor and pump repair"
+        "src": "/images/pool-repair-pro.jpg",
+        "alt": "Professional pool technician repairing a pool pump in Vero Beach"
       },
       "problemStatement": "A broken pump, a failing heater, or a mysterious leak can turn your pool from a backyard oasis into a source of stress. We diagnose and fix pool equipment problems quickly so you can get back to enjoying your pool.",
       "serviceDetails": {
