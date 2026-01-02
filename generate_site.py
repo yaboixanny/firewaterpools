@@ -583,15 +583,33 @@ def generate_location_content(content_data, page_type='location'):
         
         services_html = ""
         for s in services:
+            link_html = ""
+            if s.get('url'):
+                link_html = f"""
+                <a href="{s['url']}" class="text-primary font-medium hover:text-secondary text-sm inline-flex items-center">
+                    Learn more <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </a>
+                """
+            
             services_html += f"""
             <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 hover:shadow-md transition-shadow">
                 <h3 class="text-xl font-bold text-slate-900 mb-2">{s['name']}</h3>
                 <p class="text-slate-600 mb-4 text-sm">{s['description']}</p>
-                <a href="{s['url']}" class="text-primary font-medium hover:text-secondary text-sm inline-flex items-center">
-                    Learn more <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                </a>
+                {link_html}
             </div>
             """
+        
+        ctas_html = ""
+        if 'ctas' in section_data:
+            ctas_html = '<div class="flex flex-wrap justify-center gap-4 mt-12">'
+            for cta in section_data['ctas']:
+                bg_color = "bg-primary" if cta.get('primary', True) else "bg-slate-700"
+                ctas_html += f"""
+                <a href="{cta['url']}" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-lg text-white {bg_color} hover:bg-secondary transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
+                    {cta['text']}
+                </a>
+                """
+            ctas_html += '</div>'
             
         html += f"""
         <section class="py-20 bg-white border-t border-slate-100">
@@ -603,6 +621,7 @@ def generate_location_content(content_data, page_type='location'):
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {services_html}
                 </div>
+                {ctas_html}
             </div>
         </section>
         """

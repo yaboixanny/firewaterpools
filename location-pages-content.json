@@ -297,33 +297,40 @@
         },
         "localIntro": "Sebastian offers the best of Florida living—close to the water, away from the crowds, and full of character. Whether you live near the Sebastian Inlet, along the Indian River, or in one of the established neighborhoods inland, your pool deserves care that matches the quality of life here.\n\nWe've been serving Sebastian pool owners for years, and we understand what makes this community unique. Many homes here have older pools that need experienced technicians who know vintage equipment. Others have newer builds with modern automation. We handle both with equal expertise.\n\nAs a Sebastian pool owner, you face the same Florida challenges—heat, humidity, afternoon storms—plus the salt air that comes with living near the coast. Our maintenance programs account for these local conditions to keep your pool clear and your equipment running longer.",
         "servicesInArea": {
-          "h2": "Pool Services in Sebastian",
-          "intro": "We offer complete pool services to Sebastian homeowners, from basic cleaning to major renovations.",
+          "h2": "Pool Services in Sebastian, FL",
+          "intro": "As a trusted Sebastian pool service company, we provide complete year-round care for residential swimming pools — from weekly cleaning to equipment repairs and full system upgrades. Whether you live in Sebastian, Roseland, Wabasso, or nearby, our licensed technicians keep your pool clean, safe, and crystal-clear so you can enjoy it without the hassle.",
           "services": [
             {
-              "name": "Pool Cleaning",
-              "description": "Weekly and bi-weekly cleaning to keep your Sebastian pool swim-ready.",
-              "url": "/pool-cleaning/"
+              "name": "Pool Cleaning in Sebastian, FL",
+              "description": "Our weekly and bi-weekly pool cleaning service includes skimming, brushing, vacuuming, filter cleaning, and water chemistry balancing to keep your Sebastian pool swim-ready all year. We focus on preventing algae, staining, and cloudy water so your pool always looks its best."
             },
             {
-              "name": "Pool Maintenance",
-              "description": "Full-service care including chemistry management and equipment checks.",
-              "url": "/pool-maintenance/"
+              "name": "Pool Maintenance & Water Care",
+              "description": "Routine pool maintenance is essential to protecting your equipment and preventing expensive repairs. Our maintenance plans include water testing, chemistry management, filter care, and equipment inspections to ensure your pool runs efficiently and safely."
             },
             {
-              "name": "Pool Repair",
-              "description": "Fast, reliable repairs for all pool equipment brands.",
-              "url": "/pool-repair/"
+              "name": "Pool Repair in Sebastian",
+              "description": "If your pump, filter, heater, or salt system isn’t working properly, our Sebastian pool repair team can diagnose and fix the issue fast. We work on all major pool equipment brands and provide honest recommendations and upfront pricing."
             },
             {
-              "name": "Equipment Installation",
-              "description": "Pumps, heaters, salt systems, and automation upgrades.",
-              "url": "/pool-equipment-installation/"
+              "name": "Pool Equipment Installation & Upgrades",
+              "description": "We install and upgrade energy-efficient pumps, variable-speed motors, pool heaters, salt systems, and smart automation controls. Upgrading your equipment can improve water quality, reduce energy costs, and make pool care easier than ever."
             },
             {
-              "name": "Leak Detection",
-              "description": "Find and fix leaks with professional equipment.",
-              "url": "/pool-leak-detection/"
+              "name": "Pool Leak Detection & Repair",
+              "description": "If your pool is losing water faster than normal, our leak detection specialists use professional testing equipment to locate and repair underground plumbing leaks, structural cracks, or equipment-related leaks before they cause further damage."
+            }
+          ],
+          "ctas": [
+            {
+              "text": "Get a Pool Service Estimate",
+              "url": "/contact/",
+              "primary": true
+            },
+            {
+              "text": "Give Us a Call",
+              "url": "tel:7722690249",
+              "primary": false
             }
           ]
         },
