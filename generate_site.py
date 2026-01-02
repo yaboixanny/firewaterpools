@@ -55,7 +55,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         body {{ font-family: 'Outfit', sans-serif; }}
         .hero-pattern {{
             background-color: #334155; 
-            background-image: url("https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
+            background-image: url("{hero_image_url}");
             background-blend-mode: multiply;
             background-size: cover;
             background-position: center;
@@ -253,12 +253,16 @@ def generate_detailed_service_content(content_data):
         includes = content_data['serviceDetails'].get('includes', [])
         includes_html = "".join([f'<li class="flex items-start"><svg class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span class="text-slate-700 text-lg">{item}</span></li>' for item in includes])
         
+        details_img = content_data.get('detailsImage', {})
+        details_src = details_img.get('src', 'https://images.unsplash.com/photo-1572331165267-854da2b00dc1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')
+        details_alt = details_img.get('alt', 'Pool Service Details')
+        
         html += f"""
         <section class="py-20 bg-slate-50">
             <div class="container mx-auto px-4">
                 <div class="flex flex-col md:flex-row gap-12 items-center">
                     <div class="md:w-1/2">
-                        <img src="https://images.unsplash.com/photo-1572331165267-854da2b00dc1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Pool Service Details" class="rounded-2xl shadow-xl">
+                        <img src="{details_src}" alt="{details_alt}" class="rounded-2xl shadow-xl">
                     </div>
                     <div class="md:w-1/2">
                         <h2 class="text-3xl font-bold text-slate-900 mb-4">{content_data['serviceDetails'].get('h2', 'What is included')}</h2>
@@ -1265,11 +1269,17 @@ def create_page(path, data, extra_data, page_type="generic", content_data=None):
     else:
         content = generate_content_for_page(page_type, data, extra_data)
     
+    # Determine hero image
+    hero_image_url = "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+    if content_data and 'hero' in content_data and 'heroImage' in content_data['hero']:
+        hero_image_url = content_data['hero']['heroImage'].get('src', hero_image_url)
+    
     html = HTML_TEMPLATE.format(
         seo_title=seo_title,
         meta_description=meta_desc,
         h1=h1,
         subheadline=subheadline,
+        hero_image_url=hero_image_url,
         company_name=COMPANY_NAME,
         phone=PHONE,
         address=ADDRESS,

@@ -57,9 +57,13 @@
         "h1": "Professional Pool Cleaning in Vero Beach",
         "subheadline": "Weekly and bi-weekly service to keep your pool sparkling clean year-round.",
         "heroImage": {
-          "src": "/images/pool-cleaning-hero.jpg",
-          "alt": "Pool technician cleaning a sparkling blue residential pool in Vero Beach, FL"
+          "src": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=70",
+          "alt": "Professional pool technician cleaning a sparkling blue residential pool in Vero Beach"
         }
+      },
+      "detailsImage": {
+        "src": "https://images.unsplash.com/photo-1572331165267-854da2b00dc1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=70",
+        "alt": "Weekly pool cleaning service in action"
       },
       "problemStatement": "Keeping a pool clean in Florida isn't easy. Between the heat, humidity, rain, and debris, your pool can go from clear to cloudy in days. If you're tired of spending your weekends skimming leaves and battling algae, we can help.",
       "serviceDetails": {
@@ -176,9 +180,13 @@
         "h1": "Pool Maintenance Services in Vero Beach",
         "subheadline": "Comprehensive care that keeps your pool healthy, safe, and ready to swim.",
         "heroImage": {
-          "src": "/images/pool-maintenance-hero.jpg",
-          "alt": "Pool maintenance technician testing water chemistry at a Vero Beach home"
+          "src": "https://images.unsplash.com/photo-1622348735871-3372f8549303?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=70",
+          "alt": "Professional pool water testing and chemical balancing"
         }
+      },
+      "detailsImage": {
+        "src": "https://images.unsplash.com/photo-1544148412-2580cc5538e6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=70",
+        "alt": "Precision pool chemical balancing service"
       },
       "problemStatement": "A pool is an investment, and like any investment, it needs regular attention. Skipping maintenance leads to algae, equipment failures, and expensive repairs. Our maintenance plans handle everything so you can enjoy your pool without the hassle.",
       "serviceDetails": {
@@ -296,9 +304,13 @@
         "h1": "Pool Repair Services in Vero Beach, FL",
         "subheadline": "Fast, reliable repairs to get your pool back up and running.",
         "heroImage": {
-          "src": "/images/pool-repair-hero.jpg",
-          "alt": "Technician repairing a pool pump at a residential home in Vero Beach"
+          "src": "https://images.unsplash.com/photo-1590479773265-7464e5d48118?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=70",
+          "alt": "Skilled pool technician repairing pool pump equipment"
         }
+      },
+      "detailsImage": {
+        "src": "https://images.unsplash.com/photo-1563823528221-a47734185194?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=70",
+        "alt": "Expert pool motor and pump repair"
       },
       "problemStatement": "A broken pump, a failing heater, or a mysterious leak can turn your pool from a backyard oasis into a source of stress. We diagnose and fix pool equipment problems quickly so you can get back to enjoying your pool.",
       "serviceDetails": {
@@ -378,7 +390,7 @@
           },
           {
             "question": "Can you repair my pool heater?",
-            "answer": "Yes. We service gas heaters, electric heat pumps, and solar heating systems. Common repairs include igniter replacement, heat exchanger cleaning, and thermostat issues."
+            "answer": "Yes. We service gas heaters, electric heat pumps, or solar heating systems. Common repairs include igniter replacement, heat exchanger cleaning, and thermostat issues."
           },
           {
             "question": "What if the repair costs more than expected?",
@@ -416,9 +428,13 @@
         "h1": "Pool Equipment Installation in Vero Beach",
         "subheadline": "Upgrade your pool with professional installation from certified technicians.",
         "heroImage": {
-          "src": "/images/pool-equipment-installation-hero.jpg",
-          "alt": "New variable speed pool pump installed at a Vero Beach residence"
+          "src": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=70",
+          "alt": "Brand new energy-efficient pool pump installation"
         }
+      },
+      "detailsImage": {
+        "src": "https://images.unsplash.com/photo-1563823528221-a47734185194?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=70",
+        "alt": "High-performance pool equipment setup"
       },
       "problemStatement": "Old, inefficient pool equipment costs you money every month in energy bills and repair calls. Modern equipment runs quieter, lasts longer, and can cut your pool energy costs by up to 70%. We help you choose the right upgrades and install them correctly.",
       "serviceDetails": {
@@ -536,9 +552,13 @@
         "h1": "Pool Leak Detection & Repair in Vero Beach",
         "subheadline": "Find the leak. Fix it right. Stop wasting water and money.",
         "heroImage": {
-          "src": "/images/pool-leak-detection-hero.jpg",
-          "alt": "Technician performing pool leak detection test in Vero Beach"
+          "src": "https://images.unsplash.com/photo-1470115636452-8727531cfe41?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=70",
+          "alt": "Precision pool leak detection testing"
         }
+      },
+      "detailsImage": {
+        "src": "https://images.unsplash.com/photo-1470115636452-8727531cfe41?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=70",
+        "alt": "Advanced sonic leak detection equipment"
       },
       "problemStatement": "Adding water to your pool every few days? High water bills? Soggy spots in your yard? You might have a pool leak. The longer a leak goes unfixed, the more damage it can cause—to your wallet, your yard, and even your pool's structure.",
       "serviceDetails": {
@@ -651,9 +671,13 @@
         "h1": "Salt System Installation in Vero Beach",
         "subheadline": "Enjoy softer water, less chemical hassle, and a better swimming experience.",
         "heroImage": {
-          "src": "/images/salt-system-hero.jpg",
-          "alt": "Salt chlorine generator installed on pool equipment pad in Vero Beach"
+          "src": "https://images.unsplash.com/photo-1551622633-87f54c9c1b9b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=70",
+          "alt": "Modern saltwater pool system installation"
         }
+      },
+      "detailsImage": {
+        "src": "https://images.unsplash.com/photo-1551622633-87f54c9c1b9b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=70",
+        "alt": "Saltwater conversion unit and cell"
       },
       "problemStatement": "Tired of red eyes, bleached swimsuits, and constantly buying chlorine? A saltwater pool system generates its own chlorine naturally, giving you silky-smooth water with less maintenance and fewer chemicals to handle.",
       "serviceDetails": {
@@ -770,9 +794,13 @@
         "h1": "Seasonal Pool Opening & Closing Services",
         "subheadline": "Leave your pool with confidence. Return to it swim-ready.",
         "heroImage": {
-          "src": "/images/pool-opening-closing-hero.jpg",
-          "alt": "Crystal clear pool ready for the season in Vero Beach, FL"
+          "src": "https://images.unsplash.com/photo-1517649763962-0c623066013b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=70",
+          "alt": "Vero Beach pool being opened for the season"
         }
+      },
+      "detailsImage": {
+        "src": "https://images.unsplash.com/photo-1517649763962-0c623066013b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=70",
+        "alt": "Pool safety cover removal"
       },
       "problemStatement": "Heading north for the summer or closing up your vacation home? A pool left unattended can turn green, grow algae, and develop equipment problems. Our seasonal services keep your pool protected while you're away and ready to enjoy when you return.",
       "serviceDetails": {
@@ -889,9 +917,13 @@
         "h1": "Green Pool Cleanup in Vero Beach",
         "subheadline": "From swamp to swim-ready—usually in just a few days.",
         "heroImage": {
-          "src": "/images/green-pool-cleanup-hero.jpg",
-          "alt": "Before and after green pool cleanup in Vero Beach, FL"
+          "src": "https://images.unsplash.com/photo-1592388753238-6600c7e99748?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=70",
+          "alt": "Severe green algae pool before professional cleanup"
         }
+      },
+      "detailsImage": {
+        "src": "https://images.unsplash.com/photo-1592388753238-6600c7e99748?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=70",
+        "alt": "Dramatic green to clear pool restoration"
       },
       "problemStatement": "It happens fast in Florida. A pump failure, a missed week of service, a heavy rainstorm—and suddenly your pool looks like a pond. Don't panic. We specialize in bringing green pools back to life without draining.",
       "serviceDetails": {
@@ -1009,9 +1041,13 @@
         "h1": "Commercial Pool Service in Vero Beach",
         "subheadline": "Professional pool management for HOAs, hotels, condos, and fitness centers.",
         "heroImage": {
-          "src": "/images/commercial-pool-service-hero.jpg",
-          "alt": "Commercial pool at a Vero Beach condominium maintained by professional service"
+          "src": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=70",
+          "alt": "Large commercial resort pool in Vero Beach"
         }
+      },
+      "detailsImage": {
+        "src": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=70",
+        "alt": "Professional commercial pool maintenance"
       },
       "problemStatement": "Commercial pools face challenges residential pools don't: higher bather loads, stricter health codes, liability concerns, and residents or guests who expect perfection. You need a pool company that understands commercial requirements and delivers consistent results.",
       "serviceDetails": {
