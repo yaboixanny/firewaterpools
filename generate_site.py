@@ -824,21 +824,7 @@ def generate_location_content(content_data, page_type='location'):
         </section>
         """
         
-    # 11. Nearby Areas
-    if 'nearbyAreas' in content_data:
-        links = content_data['nearbyAreas']
-        if isinstance(links, list):
-            links_html = " | ".join([f'<a href="{l["url"]}" class="text-slate-500 hover:text-primary transition-colors">{l["text"]}</a>' for l in links])
-            html += f"""
-            <section class="py-12 bg-white border-t border-slate-100">
-                <div class="container mx-auto px-4 text-center">
-                    <p class="text-sm text-slate-400 mb-4 uppercase tracking-wider font-semibold">Nearby Service Areas</p>
-                    <div class="flex flex-wrap gap-4 justify-center text-sm">
-                        {links_html}
-                    </div>
-                </div>
-            </section>
-            """
+
 
     return html
 
