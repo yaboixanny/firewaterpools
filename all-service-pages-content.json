@@ -328,26 +328,39 @@
         ]
       },
       "serviceOptions": {
-        "h2": "Pool Repair Options",
-        "intro": "We work around your schedule to get repairs done fast.",
+        "h2": "Vero Beach Pool Repair Services & Scheduling",
+        "intro": "Whether you have a loud pump or a major leak, our licensed technicians in Indian River County are ready to help.",
         "options": [
           {
-            "name": "Standard Service Call",
+            "name": "Standard Equipment Repair",
             "frequency": "Scheduled within 3-5 days",
-            "bestFor": "Non-urgent repairs"
+            "bestFor": "Noisy motors, salt cell cleaning, filter replacements, and minor automation issues."
           },
           {
-            "name": "Priority Service",
+            "name": "Priority Diagnostics",
             "frequency": "Within 24-48 hours",
-            "bestFor": "Equipment failures affecting pool use"
+            "bestFor": "Pump failures, broken pool heaters, green pool recovery, and time-sensitive repairs."
           },
           {
-            "name": "Emergency Service",
+            "name": "Emergency & Leak Services",
             "frequency": "Same day (when available)",
-            "bestFor": "Major leaks or safety issues"
+            "bestFor": "Major pipe leaks, structural cracks, safety hazards, and storm damage."
           }
         ],
-        "pricingNote": "We provide upfront quotes before starting any repair. No surprises."
+        "pricingNote": "We provide upfront quotes for all Vero Beach and Sebastian residents before starting work. No surprises.",
+        "hideButtons": true,
+        "ctas": [
+          {
+            "text": "Get Your Pool Repair Quote",
+            "url": "/contact/",
+            "primary": true
+          },
+          {
+            "text": "Call For Pool Repair",
+            "url": "tel:7722690249",
+            "primary": false
+          }
+        ]
       },
       "localProof": {
         "h2": "Vero Beach's Trusted Pool Repair Team",

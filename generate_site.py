@@ -60,8 +60,25 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             background-size: cover;
             background-position: center;
         }}
-        .group:hover .group-hover\:visible {{ visibility: visible; }}
-        .group:hover .group-hover\:opacity-100 {{ opacity: 1; }}
+        
+        /* Prevent Menu Flash */
+        .dropdown-menu {{
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.2s ease;
+        }}
+        .group:hover .dropdown-menu {{
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }}
+        #mobile-menu {{
+            display: none;
+        }}
+        #mobile-menu.active {{
+            display: flex;
+        }}
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
@@ -80,7 +97,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         Services 
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
-                    <div class="absolute left-0 mt-0 w-64 bg-white border border-slate-100 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left z-50 top-full">
+                    <div class="dropdown-menu absolute left-0 mt-0 w-64 bg-white border border-slate-100 rounded-lg shadow-xl z-50 top-full">
                         <div class="py-1">
                             {services_dropdown}
                         </div>
@@ -92,7 +109,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         Locations 
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
-                    <div class="absolute left-0 mt-0 w-64 bg-white border border-slate-100 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left z-50 top-full max-h-[80vh] overflow-y-auto">
+                    <div class="dropdown-menu absolute left-0 mt-0 w-64 bg-white border border-slate-100 rounded-lg shadow-xl z-50 top-full max-h-[80vh] overflow-y-auto">
                         <div class="py-1">
                             <a href="/service-areas/" class="block px-4 py-2 text-sm font-semibold text-slate-800 bg-slate-50 hover:bg-slate-100">All Locations</a>
                             {locations_dropdown}
@@ -108,11 +125,44 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 Get Free Estimate
             </a>
             
-             <button class="md:hidden text-slate-600">
+             <button id="mobile-menu-btn" class="md:hidden text-slate-600 focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
         </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-white border-t border-slate-100 flex-col py-4 px-4 space-y-4 shadow-lg">
+            <a href="/" class="text-slate-600 hover:text-primary font-medium">Home</a>
+            <div class="border-b border-slate-50 pb-2">
+                <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Services</p>
+                <div class="grid grid-cols-1 gap-2 pl-2">
+                    {services_dropdown}
+                </div>
+            </div>
+             <div class="border-b border-slate-50 pb-2">
+                <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Locations</p>
+                <div class="grid grid-cols-1 gap-2 pl-2">
+                    <a href="/service-areas/" class="text-slate-600 hover:text-primary py-1">All Locations</a>
+                    {locations_dropdown}
+                </div>
+            </div>
+            <a href="/about/" class="text-slate-600 hover:text-primary font-medium">About</a>
+            <a href="/contact/" class="text-slate-600 hover:text-primary font-medium">Contact</a>
+            <a href="/free-estimate/" class="bg-primary text-white text-center py-3 rounded-lg font-bold">Get Free Estimate</a>
+        </div>
     </header>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (menuBtn && mobileMenu) {{
+            menuBtn.addEventListener('click', () => {{
+                mobileMenu.classList.toggle('active');
+            }});
+        }}
+    </script>
 
     <!-- Main Content -->
     <main class="flex-grow">
@@ -279,17 +329,34 @@ def generate_detailed_service_content(content_data):
     # 3. Service Options (Pricing/Plans)
     if 'serviceOptions' in content_data:
         options = content_data['serviceOptions'].get('options', [])
+        hide_buttons = content_data['serviceOptions'].get('hideButtons', False)
         options_cards = ""
         for opt in options:
+            btn_html = ""
+            if not hide_buttons:
+                btn_html = f'<a href="/free-estimate/" class="block w-full py-3 px-6 bg-slate-100 hover:bg-primary hover:text-white text-slate-700 font-bold rounded-lg text-center transition-colors">Get Quote</a>'
+            
             options_cards += f"""
             <div class="bg-white p-8 rounded-xl shadow-md border border-slate-100 hover:shadow-xl transition-all hover:border-primary group">
                 <h3 class="text-2xl font-bold text-slate-900 mb-2">{opt['name']}</h3>
                 <div class="text-primary font-semibold text-lg mb-4 bg-blue-50 inline-block px-3 py-1 rounded-full">{opt['frequency']}</div>
                 <p class="text-slate-600 mb-6">Best for: <span class="font-medium text-slate-800">{opt['bestFor']}</span></p>
-                <a href="/free-estimate/" class="block w-full py-3 px-6 bg-slate-100 hover:bg-primary hover:text-white text-slate-700 font-bold rounded-lg text-center transition-colors">Get Quote</a>
+                {btn_html}
             </div>
             """
             
+        ctas_html = ""
+        if 'ctas' in content_data['serviceOptions']:
+            ctas_html = '<div class="flex flex-wrap justify-center gap-4 mt-12">'
+            for cta in content_data['serviceOptions']['ctas']:
+                bg_color = "bg-primary" if cta.get('primary', True) else "bg-slate-700"
+                ctas_html += f"""
+                <a href="{cta['url']}" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-lg text-white {bg_color} hover:bg-secondary transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
+                    {cta['text']}
+                </a>
+                """
+            ctas_html += '</div>'
+
         html += f"""
         <section class="py-20 bg-white">
             <div class="container mx-auto px-4">
@@ -300,6 +367,7 @@ def generate_detailed_service_content(content_data):
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {options_cards}
                 </div>
+                {ctas_html}
                 <p class="text-center text-slate-500 mt-8 italic text-sm">{content_data['serviceOptions'].get('pricingNote', '')}</p>
             </div>
         </section>
