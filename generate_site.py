@@ -24,6 +24,53 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <title>{seo_title}</title>
     <meta name="description" content="{meta_description}">
     
+    <!-- Critical CSS to prevent flash of unstyled content -->
+    <style>
+        body {{ font-family: 'Outfit', sans-serif; }}
+        .hero-pattern {{
+            background-color: #334155; 
+            background-image: url("{hero_image_url}");
+            background-blend-mode: multiply;
+            background-size: cover;
+            background-position: center;
+        }}
+        
+        /* Desktop nav is hidden on mobile by default */
+        @media (max-width: 767px) {{
+            nav.md\:flex {{ display: none !important; }}
+            .md\:inline-flex {{ display: none !important; }}
+        }}
+
+        /* Desktop nav is shown on desktop */
+        @media (min-width: 768px) {{
+            nav.md\:flex {{ display: flex !important; }}
+            .md\:hidden {{ display: none !important; }}
+            #mobile-menu {{ display: none !important; }}
+        }}
+
+        /* Prevent Dropdown Flash */
+        .dropdown-menu {{
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.2s ease;
+            position: absolute;
+            z-index: 50;
+        }}
+        .group:hover .dropdown-menu {{
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }}
+        
+        #mobile-menu {{
+            display: none;
+        }}
+        #mobile-menu.active {{
+            display: flex;
+        }}
+    </style>
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -50,36 +97,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     {schema_markup}
-    
-    <style>
-        body {{ font-family: 'Outfit', sans-serif; }}
-        .hero-pattern {{
-            background-color: #334155; 
-            background-image: url("{hero_image_url}");
-            background-blend-mode: multiply;
-            background-size: cover;
-            background-position: center;
-        }}
-        
-        /* Prevent Menu Flash */
-        .dropdown-menu {{
-            visibility: hidden;
-            opacity: 0;
-            transform: translateY(-10px);
-            transition: all 0.2s ease;
-        }}
-        .group:hover .dropdown-menu {{
-            visibility: visible;
-            opacity: 1;
-            transform: translateY(0);
-        }}
-        #mobile-menu {{
-            display: none;
-        }}
-        #mobile-menu.active {{
-            display: flex;
-        }}
-    </style>
 </head>
 <body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
 
@@ -97,7 +114,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         Services 
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
-                    <div class="dropdown-menu absolute left-0 mt-0 w-64 bg-white border border-slate-100 rounded-lg shadow-xl z-50 top-full">
+                    <div class="dropdown-menu left-0 mt-0 w-64 bg-white border border-slate-100 rounded-lg shadow-xl top-full">
                         <div class="py-1">
                             {services_dropdown}
                         </div>
@@ -109,7 +126,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         Locations 
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
-                    <div class="dropdown-menu absolute left-0 mt-0 w-64 bg-white border border-slate-100 rounded-lg shadow-xl z-50 top-full max-h-[80vh] overflow-y-auto">
+                    <div class="dropdown-menu left-0 mt-0 w-64 bg-white border border-slate-100 rounded-lg shadow-xl top-full max-h-[80vh] overflow-y-auto">
                         <div class="py-1">
                             <a href="/service-areas/" class="block px-4 py-2 text-sm font-semibold text-slate-800 bg-slate-50 hover:bg-slate-100">All Locations</a>
                             {locations_dropdown}
