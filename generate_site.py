@@ -1426,6 +1426,59 @@ def create_page(path, data, extra_data, page_type="generic", content_data=None):
         f.write(html)
     print(f"Created: {file_path}")
 
+def generate_sitemap(urls):
+    """
+    Generates a sitemap.xml file for Google Search Console.
+    """
+    domain = "https://www.firewaterpools.com"
+    today = datetime.now().strftime('%Y-%m-%d')
+    
+    sitemap_header = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+    sitemap_footer = '\n</urlset>'
+    
+    url_items = []
+    for url in urls:
+        # Ensure URL starts with /
+        if not url.startswith('/'):
+            url = '/' + url
+            
+        # Set priority and changefreq based on URL path
+        priority = "0.8"
+        changefreq = "weekly"
+        
+        if url == "/":
+            priority = "1.0"
+            changefreq = "daily"
+        elif "/pool-care-guide/" in url:
+            priority = "0.7"
+            changefreq = "monthly"
+        elif "/service-areas/" in url:
+            priority = "0.9"
+            changefreq = "weekly"
+            
+        item = f"""
+  <url>
+    <loc>{domain}{url}</loc>
+    <lastmod>{today}</lastmod>
+    <changefreq>{changefreq}</changefreq>
+    <priority>{priority}</priority>
+  </url>"""
+        url_items.append(item)
+        
+    sitemap_content = sitemap_header + "".join(url_items) + sitemap_footer
+    
+    sitemap_path = os.path.join(OUTPUT_DIR, 'sitemap.xml')
+    with open(sitemap_path, 'w') as f:
+        f.write(sitemap_content)
+    print(f"Sitemap generated at {sitemap_path}")
+    
+    # Generate robots.txt
+    robots_content = f"User-agent: *\nAllow: /\n\nSitemap: {domain}/sitemap.xml"
+    robots_path = os.path.join(OUTPUT_DIR, 'robots.txt')
+    with open(robots_path, 'w') as f:
+        f.write(robots_content)
+    print(f"robots.txt generated at {robots_path}")
+
 def main():
     # Clean output dir
     if os.path.exists(OUTPUT_DIR):
@@ -1511,7 +1564,10 @@ def main():
         
     }
 
+    all_urls = []
+    
     # Homepage
+    all_urls.append(pages['homepage']['url'])
     create_page(pages['homepage']['url'], pages['homepage'], extra_data, 'home')
     
     # Service Pages
@@ -1525,17 +1581,20 @@ def main():
         # Override for specific known pages if needed, simple logic for now
         c_data = detailed_content.get(page_id)
         
+        all_urls.append(page['url'])
         create_page(page['url'], page, extra_data, 'service', content_data=c_data)
         
     # Location Pages
     if 'overview' in loc_pages:
         c_data = location_content.get('overview')
+        all_urls.append(loc_pages['overview']['url'])
         create_page(loc_pages['overview']['url'], loc_pages['overview'], extra_data, 'location_hub', content_data=c_data)
         
     for page in loc_pages.get('locations', []):
         # Match by ID logic: /service-areas/sebastian-fl/ -> sebastian-fl
         page_id = page['url'].strip('/').split('/')[-1]
         c_data = location_content.get(page_id)
+        all_urls.append(page['url'])
         create_page(page['url'], page, extra_data, 'location', content_data=c_data)
         
     # Blog Pages
@@ -1545,12 +1604,14 @@ def main():
     if 'hub' in blog_pages:
         hub_content = blog_content.get('hub', {})
         extra_data['blog_posts_list'] = blog_posts_list
+        all_urls.append(blog_pages['hub']['url'])
         create_page(blog_pages['hub']['url'], blog_pages['hub'], extra_data, 'blog_hub', content_data=hub_content)
         
     for page in blog_posts_list:
         post_id = page['url'].strip('/').split('/')[-1]
         post_content = blog_content.get('posts', {}).get(post_id, {})
         if post_content:
+            all_urls.append(page['url'])
             create_page(page['url'], page, extra_data, 'blog_post', content_data=post_content)
         
     # Business Pages
@@ -1566,7 +1627,11 @@ def main():
             p_type = 'about'
             c_data = about_content
             
+        all_urls.append(page['url'])
         create_page(page['url'], page, extra_data, p_type, content_data=c_data)
+
+    # Generate Sitemap
+    generate_sitemap(all_urls)
 
     print("Site generation complete.")
 
