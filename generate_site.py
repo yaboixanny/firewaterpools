@@ -948,26 +948,47 @@ def generate_content_for_page(page_type, data, extra_data={}):
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <div>
-                        <h2 class="text-4xl font-bold text-slate-900 mb-6 leading-tight">Professional Pool Care in Vero Beach You Can Trust</h2>
+                        <h2 class="text-4xl font-bold text-slate-900 mb-6 leading-tight">Professional Pool Care You Can Trust</h2>
                         <div class="w-20 h-1 bg-primary rounded-full mb-8"></div>
-                        <p class="text-lg text-slate-600 mb-6 leading-relaxed">
-                            Keeping your pool crystal clear in Vero Beach requires more than just skimming the surface. It requires consistent care, precise chemical balancing, and expert equipment knowledge.
-                        </p>
                         <p class="text-lg text-slate-600 mb-8 leading-relaxed">
-                            At Firewater Pools, we take the hassle out of pool ownership. We are a locally owned, full-service company dedicated to providing reliable, high-quality, and affordable pool care to our neighbors in Indian River County.
+                            Keeping your pool crystal clear requires more than just skimming the surface. It requires consistent care, precise chemical balancing, and expert equipment knowledge. At Firewater Pools, we take the hassle out of pool ownership.
                         </p>
-                        <ul class="space-y-4 mb-8">
-                            <li class="flex items-center text-slate-700 font-medium">
-                                <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                Licensed & Insured Professionals
+                        <ul class="space-y-6 mb-8">
+                            <li class="flex items-start">
+                                <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-primary mr-4 flex-shrink-0">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-slate-900">Licensed & Insured Professionals</p>
+                                    <p class="text-slate-500 text-sm">Peace of mind for your property.</p>
+                                </div>
                             </li>
-                            <li class="flex items-center text-slate-700 font-medium">
-                                <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                No Contracts Required
+                            <li class="flex items-start">
+                                <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-primary mr-4 flex-shrink-0">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-slate-900">No Contracts Required</p>
+                                    <p class="text-slate-500 text-sm">We earn your business every single week.</p>
+                                </div>
                             </li>
-                            <li class="flex items-center text-slate-700 font-medium">
-                                <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                Detailed Weekly Digital Reports
+                            <li class="flex items-start">
+                                <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-primary mr-4 flex-shrink-0">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-slate-900">Weekly Digital Reports</p>
+                                    <p class="text-slate-500 text-sm">We email you a photo and chemical log after every visit so you know the job was done right.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-primary mr-4 flex-shrink-0">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-slate-900">5-Star Rated</p>
+                                    <p class="text-slate-500 text-sm">Voted best service in Vero Beach.</p>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -975,10 +996,16 @@ def generate_content_for_page(page_type, data, extra_data={}):
                         <div class="absolute -top-4 -left-4 w-24 h-24 bg-blue-100 rounded-full z-0 opacity-50"></div>
                         <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-primary/10 rounded-full z-0"></div>
                         <img src="https://images.unsplash.com/photo-1562778612-e1e0cda9915c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Sparkling blue pool" class="rounded-2xl shadow-2xl relative z-10 w-full object-cover h-[500px]">
-                        <div class="absolute bottom-8 left-8 bg-white p-6 rounded-lg shadow-xl z-20 max-w-xs hidden md:block">
-                            <p class="text-4xl font-bold text-primary mb-1">5★</p>
-                            <p class="font-bold text-slate-900">Top Rated Service</p>
-                            <p class="text-sm text-slate-500">Voted best in Vero Beach</p>
+                        <div class="absolute bottom-8 left-8 bg-white p-6 rounded-lg shadow-xl z-20 max-w-xs hidden md:block border-l-4 border-primary">
+                            <div class="flex text-yellow-400 mb-2">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                            </div>
+                            <p class="font-bold text-slate-900">Voted Best in Vero</p>
+                            <p class="text-sm text-slate-500">Professional & Reliable Care</p>
                         </div>
                     </div>
                 </div>
