@@ -1025,33 +1025,40 @@
           "services": [
             {
               "name": "Pool Cleaning",
-              "description": "Weekly skimming, vacuuming, brushing, and balancing.",
+              "description": "We provide reliable weekly service to keep your water crystal clear and swim-ready all year long. Our team handles everything from skimming and vacuuming to brushing the walls and precise chemical balancing. You simply enjoy your pool without the hassle of doing the chores yourself.",
               "url": "/pool-cleaning/"
             },
             {
               "name": "Pool Maintenance",
-              "description": "Preventative care to keep your equipment running smooth.",
+              "description": "Regular maintenance is essential for extending the lifespan of your entire pool system. We perform routine filter cleanings and detailed equipment inspections to catch small mechanical issues before they fail. This proactive approach helps you avoid expensive emergency repairs down the road.",
               "url": "/pool-maintenance/"
             },
             {
               "name": "Pool Repair",
-              "description": "Expert repair for pumps, motors, filters, and heaters.",
+              "description": "When equipment breaks down, our licensed technicians provide fast and accurate diagnostics to get you back up and running. We specialize in repairing all major brands of pumps, motors, filters, and heaters with minimal downtime. Let us restore your pool’s function quickly so you don’t miss a day of swimming.",
               "url": "/pool-repair/"
             },
             {
               "name": "Equipment Installation",
-              "description": "Energy-efficient upgrades and automation.",
+              "description": "Upgrade your current setup with modern, energy-efficient equipment that significantly lowers your monthly utility bills. We install high-performance variable speed pumps, salt chlorine generators, and smart automation systems. Control your entire pool directly from your smartphone with our expert installation services.",
               "url": "/pool-equipment-installation/"
             },
             {
               "name": "Green Pool Cleanup",
-              "description": "Fast turnaround for algae-ridden pools.",
+              "description": "Don’t let a swampy pool become a permanent breeding ground for mosquitoes and bacteria. Our aggressive green-to-clean treatments shock the water and remove algae blooms rapidly to make the water safe again. We work hard to restore your pool's health, clarity, and balance in record time.",
               "url": "/green-pool-cleanup/"
             },
             {
               "name": "Leak Detection",
-              "description": "Pinpoint accuracy to stop water loss.",
+              "description": "Unexplained water loss can damage your property foundation and drastically spike your water bill. We utilize advanced electronic listening devices and pressure testing to pinpoint the exact location of the leak. Our non-invasive methods ensure we find the problem without tearing up your deck unnecessarily.",
               "url": "/pool-leak-detection/"
+            }
+          ],
+          "ctas": [
+            {
+              "text": "Give Us a Call",
+              "url": "tel:7722690249",
+              "primary": true
             }
           ]
         },
