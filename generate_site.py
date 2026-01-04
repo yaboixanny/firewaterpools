@@ -1131,8 +1131,8 @@ def generate_content_for_page(page_type, data, extra_data={}):
         <section class="py-20 bg-slate-50">
             <div class="container mx-auto px-4">
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Comprehensive Pool Solutions</h2>
-                    <p class="text-lg text-slate-600">From routine cleaning to major repairs, we have the expertise to handle it all.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Full-Service Pool Care You Can Rely On</h2>
+                    <p class="text-lg text-slate-600">Stop juggling contractors. We handle everything from routine maintenance to complex equipment repairs in-house.</p>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
