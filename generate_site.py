@@ -782,6 +782,14 @@ def generate_location_content(content_data, page_type='location'):
             </div>
             """
             
+        map_html = ""
+        if ns.get('mapEmbed'):
+            map_html = f"""
+            <div class="mt-10 rounded-xl overflow-hidden shadow-lg h-96 border border-slate-200">
+                {ns['mapEmbed'].replace('width="600"', 'width="100%"').replace('height="450"', 'height="100%"')}
+            </div>
+            """
+            
         html += f"""
         <section class="py-20 bg-white">
             <div class="container mx-auto px-4 max-w-4xl">
@@ -791,6 +799,7 @@ def generate_location_content(content_data, page_type='location'):
                         <p class="text-lg text-slate-600">{ns.get('content', '')}</p>
                     </div>
                     {neighborhoods_html}
+                    {map_html}
                     <p class="text-center text-slate-500 mt-8 text-sm italic">{ns.get('closingNote', '')}</p>
                 </div>
             </div>
