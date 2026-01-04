@@ -1181,6 +1181,22 @@ def generate_content_for_page(page_type, data, extra_data={}):
                 </a>
             </div>
         </section>
+
+        <!-- Service Areas / Neighborhoods -->
+        <section class="py-16 bg-slate-50 border-t border-slate-200">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold text-slate-900 mb-6">Proudly Serving Vero Beach</h2>
+                <div class="w-16 h-1 bg-primary mx-auto mb-8 rounded-full"></div>
+                <p class="text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed">
+                    We provide professional pool service throughout the entire Vero Beach area, including 
+                    <span class="font-semibold text-slate-900 underline decoration-primary/30">Grand Harbor</span>, 
+                    <span class="font-semibold text-slate-900 underline decoration-primary/30">Sea Oaks</span>, 
+                    <span class="font-semibold text-slate-900 underline decoration-primary/30">The Moorings</span>, 
+                    <span class="font-semibold text-slate-900 underline decoration-primary/30">Bent Pine</span>, and 
+                    <span class="font-semibold text-slate-900 underline decoration-primary/30">Central Beach</span>.
+                </p>
+            </div>
+        </section>
         """
 
     # Base content with some typography for simple pages
