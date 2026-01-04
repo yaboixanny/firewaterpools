@@ -1184,6 +1184,12 @@ def generate_content_for_page(page_type, data, extra_data={}):
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {services_grid}
                 </div>
+                <div class="mt-12 text-center">
+                    <a href="tel:{PHONE.replace('-', '')}" class="inline-flex items-center justify-center px-8 py-4 bg-primary text-white text-lg font-bold rounded-lg hover:bg-secondary transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
+                        Call For Pool Service
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    </a>
+                </div>
             </div>
         </section>
 
