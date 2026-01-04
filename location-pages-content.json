@@ -1015,6 +1015,9 @@
             "alt": "Screened pool in Port St. Lucie, Florida"
           }
         },
+        "badgeText": "Serving the Treasure Coast",
+        "showStickyCallButton": true,
+        "hideLearnMore": true,
         "localIntro": "Port St. Lucie is growing fast, and for good reason. From the master-planned communities of Tradition and St. Lucie West to the riverfront homes in Sandpiper Bay, it's a fantastic place to live—and to own a pool.\n\nWe provide comprehensive pool service throughout Port St. Lucie. We understand the specific needs of PSL homeowners, whether you have a family pool that gets heavy use or a quiet backyard retreat. Our team is in your neighborhood every week, ensuring pools are clean, safe, and ready for swimming.\n\nWith our professional maintenance plans, you can spend your weekends enjoying your pool instead of cleaning it.",
         "servicesInArea": {
           "h2": "Pool Services in Port St. Lucie",
@@ -1062,18 +1065,32 @@
             "Full-service repair capabilities"
           ]
         },
+        "localTips": [
+          {
+            "title": "Water Quality in Port St. Lucie",
+            "content": "Port St. Lucie municipal water often has higher calcium hardness levels than neighboring Vero Beach. We monitor these levels closely to prevent scale buildup on your pool tiles and within your salt cell, ensuring your equipment lasts as long as possible."
+          }
+        ],
         "neighborhoodsServed": {
           "h2": "Port St. Lucie Neighborhoods We Serve",
-          "content": "We cover the entire Port St. Lucie area, including:",
-          "neighborhoods": [
-            "Tradition",
-            "St. Lucie West",
-            "Sandpiper Bay",
-            "Torino",
-            "Becker Road Area",
-            "River Park",
-            "Gatlin Blvd Area",
-            "Prima Vista"
+          "content": "We cover the entire Port St. Lucie area with specialized care for each community's unique environment:",
+          "neighborhoodsDetails": [
+            {
+              "name": "Tradition",
+              "detail": "In Tradition, where many homes have screened lanais, we focus on chemical balance to combat the lack of direct UV sunlight, which can affect chlorine efficiency differently than open pools."
+            },
+            {
+              "name": "St. Lucie West",
+              "detail": "Serving neighborhoods like PGA Village and Kings Isle, we manage high-use pools and sophisticated automation systems common in these premium homes."
+            },
+            {
+              "name": "Sandpiper Bay",
+              "detail": "In Sandpiper Bay, we often manage heavier debris removal due to the mature oak trees and lush tropical landscaping common in this established riverfront area."
+            },
+            {
+              "name": "Torino & Northern PSL",
+              "detail": "For homeowners in the Torino area, we provide reliable service that handles the wind-blown debris common in these more open residential tracts."
+            }
           ],
           "closingNote": "We service every zip code in Port St. Lucie, including 34952, 34953, 34983, 34986, and 34987."
         },

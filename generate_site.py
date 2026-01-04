@@ -188,7 +188,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             <div class="bg-gradient-to-t from-slate-900/60 to-transparent absolute inset-0"></div>
             <div class="container mx-auto px-4 relative z-10 text-center max-w-5xl mx-auto">
                 <span class="inline-block py-1.5 px-4 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm font-medium mb-8 animate-fade-in-up uppercase tracking-wider">
-                    Serving Vero Beach & Indian River County
+                    {badge_text}
                 </span>
                 <h1 class="text-5xl md:text-7xl font-bold mb-8 leading-tight tracking-tight drop-shadow-sm">{h1}</h1>
                 <p class="text-xl md:text-2xl text-slate-100 mb-12 max-w-2xl mx-auto font-light leading-relaxed drop-shadow-sm">
@@ -261,6 +261,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         </div>
     </footer>
 
+    {sticky_call_button}
 </body>
 </html>
 """
@@ -669,7 +670,7 @@ def generate_location_content(content_data, page_type='location'):
         services_html = ""
         for s in services:
             link_html = ""
-            if s.get('url'):
+            if s.get('url') and not content_data.get('hideLearnMore', False):
                 link_html = f"""
                 <a href="{s['url']}" class="text-primary font-medium hover:text-secondary text-sm inline-flex items-center">
                     Learn more <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
@@ -743,13 +744,43 @@ def generate_location_content(content_data, page_type='location'):
     if 'neighborhoodsServed' in content_data:
         ns = content_data['neighborhoodsServed']
         hoods = ns.get('neighborhoods', [])
-        # Split into columns
-        mid = (len(hoods) + 1) // 2
-        col1 = hoods[:mid]
-        col2 = hoods[mid:]
+        hoods_details = ns.get('neighborhoodsDetails', [])
         
-        def make_list(items):
-            return "".join([f'<li class="flex items-center text-slate-600 mb-2"><span class="w-1.5 h-1.5 bg-primary rounded-full mr-2"></span>{item}</li>' for item in items])
+        neighborhoods_html = ""
+        if hoods_details:
+            # Use grid for details
+            grid_items = ""
+            for detail in hoods_details:
+                grid_items += f"""
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">{detail['name']}</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">{detail['detail']}</p>
+                </div>
+                """
+            neighborhoods_html = f"""
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {grid_items}
+            </div>
+            """
+        else:
+            # Traditional list
+            mid = (len(hoods) + 1) // 2
+            col1 = hoods[:mid]
+            col2 = hoods[mid:]
+            
+            def make_list(items):
+                return "".join([f'<li class="flex items-center text-slate-600 mb-2"><span class="w-1.5 h-1.5 bg-primary rounded-full mr-2"></span>{item}</li>' for item in items])
+                
+            neighborhoods_html = f"""
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <ul class="space-y-1">
+                    {make_list(col1)}
+                </ul>
+                <ul class="space-y-1">
+                    {make_list(col2)}
+                </ul>
+            </div>
+            """
             
         html += f"""
         <section class="py-20 bg-white">
@@ -759,15 +790,38 @@ def generate_location_content(content_data, page_type='location'):
                         <h2 class="text-3xl font-bold text-slate-900 mb-4">{ns.get('h2', 'Neighborhoods We Serve')}</h2>
                         <p class="text-lg text-slate-600">{ns.get('content', '')}</p>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <ul class="space-y-1">
-                            {make_list(col1)}
-                        </ul>
-                        <ul class="space-y-1">
-                            {make_list(col2)}
-                        </ul>
-                    </div>
+                    {neighborhoods_html}
                     <p class="text-center text-slate-500 mt-8 text-sm italic">{ns.get('closingNote', '')}</p>
+                </div>
+            </div>
+        </section>
+        """
+
+    # 4.5 Local Tips (Water Conditions, etc.)
+    if 'localTips' in content_data:
+        tips = content_data['localTips']
+        tips_html = ""
+        for tip in tips:
+            tips_html += f"""
+            <div class="bg-amber-50 border-l-4 border-amber-400 p-6 rounded-r-xl shadow-sm">
+                <div class="flex">
+                    <div class="flex-shrink-0">
+                        <svg class="h-6 w-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-lg font-bold text-amber-900 mb-2">{tip['title']}</h3>
+                        <p class="text-amber-800 leading-relaxed">{tip['content']}</p>
+                    </div>
+                </div>
+            </div>
+            """
+        
+        html += f"""
+        <section class="py-16 bg-white border-t border-slate-100">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <h2 class="text-3xl font-bold text-slate-900 mb-10 text-center">Local Expert Advice</h2>
+                <div class="space-y-6">
+                    {tips_html}
                 </div>
             </div>
         </section>
@@ -1405,6 +1459,33 @@ def create_page(path, data, extra_data, page_type="generic", content_data=None):
     if content_data and 'hero' in content_data and 'heroImage' in content_data['hero']:
         hero_image_url = content_data['hero']['heroImage'].get('src', hero_image_url)
     
+    # Badge Text Override
+    badge_text = "Serving Vero Beach & Indian River County"
+    if content_data and 'badgeText' in content_data:
+        badge_text = content_data['badgeText']
+
+    # Sticky Call Button for Mobile
+    sticky_call_button = ""
+    if content_data and content_data.get('showStickyCallButton', False):
+        sticky_call_button = f"""
+    <!-- Sticky Call Button -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-[100] p-4 bg-gradient-to-t from-black/20 to-transparent">
+        <a href="tel:{PHONE.replace('-', '')}" class="flex items-center justify-center gap-3 bg-secondary text-white py-4 rounded-xl font-bold shadow-2xl animate-bounce-subtle">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M3.5 3h17a1 1 0 011 1v16a1 1 0 01-1 1h-17a1 1 0 01-1-1V4a1 1 0 011-1zm1 2v14h15V5h-15zm4 4h7v2h-7V9zm0 4h7v2h-7v-2z"></path></svg>
+            Call Now for a Free Estimate
+        </a>
+    </div>
+    <style>
+    @keyframes bounce-subtle {{
+        0%, 100% {{ transform: translateY(0); }}
+        50% {{ transform: translateY(-5px); }}
+    }}
+    .animate-bounce-subtle {{
+        animation: bounce-subtle 3s infinite ease-in-out;
+    }}
+    </style>
+    """
+
     html = HTML_TEMPLATE.format(
         seo_title=seo_title,
         meta_description=meta_desc,
@@ -1419,7 +1500,9 @@ def create_page(path, data, extra_data, page_type="generic", content_data=None):
         custom_content=content,
         locations_dropdown=extra_data.get('locations_dropdown', ''),
         services_dropdown=extra_data.get('services_dropdown', ''),
-        services_footer_list=extra_data.get('services_footer_list', '')
+        services_footer_list=extra_data.get('services_footer_list', ''),
+        badge_text=badge_text,
+        sticky_call_button=sticky_call_button
     )
     
     with open(file_path, 'w') as f:
