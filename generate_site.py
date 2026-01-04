@@ -1189,32 +1189,32 @@ def generate_content_for_page(page_type, data, extra_data={}):
             </div>
             
             <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-slate-100">
-                <form class="space-y-6">
+                <form name="free-estimate" method="POST" data-netlify="true" class="space-y-6">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-sm font-semibold text-slate-700 mb-2">First Name</label>
-                            <input type="text" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-slate-50 focus:bg-white" placeholder="John">
+                            <input type="text" name="first-name" required class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-slate-50 focus:bg-white" placeholder="John">
                         </div>
                         <div>
                             <label class="block text-sm font-semibold text-slate-700 mb-2">Last Name</label>
-                            <input type="text" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-slate-50 focus:bg-white" placeholder="Doe">
+                            <input type="text" name="last-name" required class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-slate-50 focus:bg-white" placeholder="Doe">
                         </div>
                     </div>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-sm font-semibold text-slate-700 mb-2">Email Address</label>
-                             <input type="email" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-slate-50 focus:bg-white" placeholder="your@email.com">
+                             <input type="email" name="email" required class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-slate-50 focus:bg-white" placeholder="your@email.com">
                         </div>
                         <div>
                             <label class="block text-sm font-semibold text-slate-700 mb-2">Phone Number</label>
-                            <input type="tel" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-slate-50 focus:bg-white" placeholder="772-269-0249">
+                            <input type="tel" name="phone" required class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-slate-50 focus:bg-white" placeholder="772-269-0249">
                         </div>
                     </div>
                     
                      <div>
                         <label class="block text-sm font-semibold text-slate-700 mb-2">Service Needed</label>
-                        <select class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-slate-50 focus:bg-white">
+                        <select name="service" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-slate-50 focus:bg-white">
                             <option>Pool Cleaning</option>
                             <option>Repair</option>
                             <option>Green Pool Cleanup</option>
@@ -1225,7 +1225,7 @@ def generate_content_for_page(page_type, data, extra_data={}):
                     
                     <div>
                         <label class="block text-sm font-semibold text-slate-700 mb-2">Message & Details</label>
-                        <textarea rows="4" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-slate-50 focus:bg-white" placeholder="Tell us about your pool (size, condition, specific issues)..."></textarea>
+                        <textarea name="message" rows="4" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-slate-50 focus:bg-white" placeholder="Tell us about your pool (size, condition, specific issues)..."></textarea>
                     </div>
                     
                     <button type="submit" class="w-full py-4 px-6 bg-primary hover:bg-secondary text-white font-bold text-lg rounded-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
@@ -1267,25 +1267,25 @@ def generate_content_for_page(page_type, data, extra_data={}):
                 <!-- Message Form -->
                 <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100">
                     <h3 class="text-2xl font-bold mb-6 text-slate-900">Send us a Message</h3>
-                    <form class="space-y-4">
+                    <form name="contact" method="POST" data-netlify="true" class="space-y-4">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
                                 <label class="block text-sm font-medium text-slate-700 mb-1">First Name</label>
-                                <input type="text" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="John">
+                                <input type="text" name="first-name" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="John">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-slate-700 mb-1">Last Name</label>
-                                <input type="text" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Doe">
+                                <input type="text" name="last-name" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Doe">
                             </div>
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-slate-700 mb-1">Phone Number</label>
-                            <input type="tel" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="772-269-0249">
+                            <input type="tel" name="phone" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="772-269-0249">
                         </div>
                         
                         <div>
                             <label class="block text-sm font-medium text-slate-700 mb-1">How can we help?</label>
-                            <textarea rows="4" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Tell us about your pool..."></textarea>
+                            <textarea name="message" rows="4" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Tell us about your pool..."></textarea>
                         </div>
                         <button type="submit" class="w-full py-3 px-6 bg-primary hover:bg-secondary text-white font-bold rounded-lg transition-colors shadow-md">
                             Send Message
