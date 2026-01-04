@@ -609,12 +609,52 @@ def generate_about_content(content_data):
         </section>
         """
         
+    # 4.5 External Links Section
+    html += f"""
+    <section class="py-16 bg-slate-50 border-t border-b border-slate-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-slate-900 mb-12">Verify & Connect</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Google Maps -->
+                <a href="https://maps.app.goo.gl/rxz38GoVW1M49ujMA" target="_blank" rel="noopener" class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-100 group h-full flex flex-col items-center">
+                    <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Find Us on Maps</h3>
+                    <p class="text-slate-500 mb-6 text-sm flex-grow">View our service area and leave a review.</p>
+                    <span class="text-primary font-bold inline-flex items-center text-sm">Open in Google Maps <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></span>
+                </a>
+
+                <!-- Sunbiz -->
+                <a href="https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?inquirytype=EntityName&directionType=Initial&searchNameOrder=FIREWATERPOOLS%20L230003438120&aggregateId=flal-l23000343812-b586057c-ce35-4dfe-b1ba-c65c0e08b377&searchTerm=Firewater%20Media%20Group%2C%20Inc&listNameOrder=FIREWATERMEDIAGROUP%20F100000012770" target="_blank" rel="noopener" class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-100 group h-full flex flex-col items-center">
+                    <div class="w-14 h-14 bg-orange-50 rounded-xl flex items-center justify-center text-orange-600 mb-6 group-hover:bg-orange-600 group-hover:text-white transition-colors">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Registered Business</h3>
+                    <p class="text-slate-500 mb-6 text-sm flex-grow">Sunbiz.org Department of State Registration.</p>
+                    <span class="text-orange-600 font-bold inline-flex items-center text-sm">Verify on Sunbiz <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></span>
+                </a>
+
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/p/Firewater-Pools-61570917715549/" target="_blank" rel="noopener" class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-100 group h-full flex flex-col items-center">
+                    <div class="w-14 h-14 bg-indigo-50 rounded-xl flex items-center justify-center text-indigo-600 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Follow on Facebook</h3>
+                    <p class="text-slate-500 mb-6 text-sm flex-grow">Stay updated with our latest pool projects.</p>
+                    <span class="text-indigo-600 font-bold inline-flex items-center text-sm">View Profile <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></span>
+                </a>
+            </div>
+        </div>
+    </section>
+    """
+        
     # 5. Testimonials (Cards)
     if 'testimonials' in about_data:
         testis = about_data['testimonials']
         cards_html = ""
         for item in testis.get('items', []):
-             cards_html += f"""
+            cards_html += f"""
             <div class="bg-slate-50 p-8 rounded-2xl relative border border-slate-100">
                 <div class="text-yellow-400 flex mb-4">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
