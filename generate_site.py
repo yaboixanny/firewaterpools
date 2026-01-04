@@ -280,32 +280,48 @@ def generate_schema_markup(page_data, is_home=False):
         return ""
         
     schema = {
-        "@context": "https://schema.org",
-        "@type": "PoolService",
-        "name": COMPANY_NAME,
-        "image": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?ixlib=rb-1.2.1",
-        "telephone": PHONE,
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Vero Beach",
-            "addressRegion": "FL",
-            "addressCountry": "US"
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": COMPANY_NAME,
+      "image": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?ixlib=rb-1.2.1",
+      "telephone": PHONE,
+      "url": "https://www.firewaterpools.com/",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Vero Beach",
+        "addressRegion": "FL",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "27.6386",
+        "longitude": "-80.3973"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Vero Beach",
+          "sameAs": "https://en.wikipedia.org/wiki/Vero_Beach,_Florida"
         },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "27.6386",
-            "longitude": "-80.3973"
-        },
-        "url": "https://www.firewaterpools.com",
-        "priceRange": "$$",
-        "openingHoursSpecification": [
-            {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                "opens": "08:00",
-                "closes": "18:00"
-            }
-        ]
+        {
+          "@type": "AdministrativeArea",
+          "name": "Indian River County",
+          "sameAs": "https://en.wikipedia.org/wiki/Indian_River_County,_Florida"
+        }
+      ]
     }
     return f'<script type="application/ld+json">\n{json.dumps(schema, indent=2)}\n</script>'
 

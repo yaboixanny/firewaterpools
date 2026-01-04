@@ -90,10 +90,12 @@
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "PoolService",
+  "@type": "LocalBusiness",
   "name": "Firewater Pools",
   "image": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?ixlib=rb-1.2.1",
   "telephone": "772-269-0249",
+  "url": "https://www.firewaterpools.com/",
+  "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Vero Beach",
@@ -105,20 +107,28 @@
     "latitude": "27.6386",
     "longitude": "-80.3973"
   },
-  "url": "https://www.firewaterpools.com",
-  "priceRange": "$$",
-  "openingHoursSpecification": [
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "08:00",
+    "closes": "18:00"
+  },
+  "areaServed": [
     {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday"
-      ],
-      "opens": "08:00",
-      "closes": "18:00"
+      "@type": "City",
+      "name": "Vero Beach",
+      "sameAs": "https://en.wikipedia.org/wiki/Vero_Beach,_Florida"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Indian River County",
+      "sameAs": "https://en.wikipedia.org/wiki/Indian_River_County,_Florida"
     }
   ]
 }
