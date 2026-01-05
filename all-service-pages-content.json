@@ -594,25 +594,40 @@
           {
             "name": "Leak Detection Only",
             "frequency": "Find the leak",
-            "bestFor": "Identifying the source and scope"
+            "bestFor": "Professional identification of exact leak locations using electronic listening equipment and pressure testing. Best for homeowners who have their own repair team or want a second opinion."
           },
           {
             "name": "Detection + Minor Repair",
             "frequency": "Find and fix",
-            "bestFor": "Simple leaks at fittings or fixtures"
+            "bestFor": "Comprehensive find-and-fix service for leaks at skimmers, light niches, or plumbing fittings. Fast, efficient, and typically completed during the initial visit."
           },
           {
             "name": "Detection + Major Repair",
             "frequency": "Comprehensive solution",
-            "bestFor": "Underground plumbing or structural leaks"
+            "bestFor": "Expert solution for underground pipe failures, structural cracks, or complex plumbing issues. We handle the heavy lifting, including excavation and permanent line restoration."
           }
         ],
-        "pricingNote": "Leak detection starts at $XXX. Repair costs depend on leak location and severity. We provide a full quote before any repair work."
+        "hideButtons": true,
+        "ctas": [
+          {
+            "text": "Get a Pool Leak Detection Quote",
+            "url": "/contact/",
+            "primary": true
+          }
+        ]
       },
       "localProof": {
         "h2": "Leak Detection Experts in Indian River County",
-        "content": "Florida's sandy soil and shifting ground make pool leaks common. We've found leaks in pools throughout Vero Beach—from small fitting leaks to major underground pipe failures. Our equipment finds leaks others miss."
+        "content": "Florida's sandy soil and shifting ground make pool leaks common. We've found leaks in pools throughout Vero Beach—from small fitting leaks to major underground pipe failures. Our equipment finds leaks others miss.",
+        "ctas": [
+          {
+            "text": "Call Kevin",
+            "url": "tel:7722690249",
+            "primary": true
+          }
+        ]
       },
+      "googleReviewsLink": "https://share.google/cb5b6mZeduqBiJQyN",
       "testimonials": [
         {
           "quote": "Two other companies couldn't find our leak. These guys found it in 30 minutes—a tiny crack in a return line fitting.",

@@ -418,6 +418,18 @@ def generate_detailed_service_content(content_data):
 
     # 4. Local Proof
     if 'localProof' in content_data:
+        lp_ctas_html = ""
+        if 'ctas' in content_data['localProof']:
+            lp_ctas_html = '<div class="flex flex-wrap justify-center gap-4 mt-8">'
+            for cta in content_data['localProof']['ctas']:
+                bg_color = "bg-primary" if cta.get('primary', True) else "bg-slate-700"
+                lp_ctas_html += f"""
+                <a href="{cta['url']}" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-lg text-white {bg_color} hover:bg-secondary transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
+                    {cta['text']}
+                </a>
+                """
+            lp_ctas_html += '</div>'
+
         html += f"""
         <section class="py-20 bg-dark text-white relative overflow-hidden">
             <div class="absolute inset-0 bg-primary/10"></div>
@@ -426,6 +438,7 @@ def generate_detailed_service_content(content_data):
                 <p class="text-xl text-slate-300 leading-relaxed">
                     {content_data['localProof'].get('content', '')}
                 </p>
+                {lp_ctas_html}
             </div>
         </section>
         """
@@ -446,12 +459,33 @@ def generate_detailed_service_content(content_data):
             </div>
             """
             
+        google_review_widget = ""
+        if content_data.get('googleReviewsLink'):
+            link = content_data['googleReviewsLink']
+            google_review_widget = f"""
+            <div class="col-span-full flex justify-center mt-12">
+                <a href="{link}" target="_blank" rel="noopener" class="inline-flex items-center gap-4 bg-white border border-slate-200 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all group w-full max-w-md">
+                    <div class="w-8 h-8 flex-shrink-0">
+                        <svg viewBox="0 0 48 48" class="w-full h-full"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"></path><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"></path><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"></path><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"></path><path fill="none" d="M0 0h48v48H0z"></path></svg>
+                    </div>
+                    <div class="text-left">
+                        <div class="flex items-center gap-1 text-yellow-400 text-xs mb-0.5">
+                            ★★★★★
+                        </div>
+                        <p class="text-slate-900 font-bold text-sm group-hover:text-primary transition-colors">See all 5-Star Google Reviews</p>
+                    </div>
+                    <svg class="w-4 h-4 text-slate-300 group-hover:text-primary transition-colors ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7"></path></svg>
+                </a>
+            </div>
+            """
+
         html += f"""
         <section class="py-20 bg-white">
             <div class="container mx-auto px-4">
                  <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">What Your Neighbors Say</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {test_cards}
+                    {google_review_widget}
                 </div>
             </div>
         </section>
