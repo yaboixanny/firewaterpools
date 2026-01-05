@@ -295,7 +295,7 @@
             "alt": "Residential pool in Sebastian, Florida"
           }
         },
-        "localIntro": "Sebastian offers the best of Florida living—close to the water, away from the crowds, and full of character. Whether you live near the Sebastian Inlet, along the Indian River, or in one of the established neighborhoods inland, your pool deserves care that matches the quality of life here.\n\nWe've been serving Sebastian pool owners for years, and we understand what makes this community unique. Many homes here have older pools that need experienced technicians who know vintage equipment. Others have newer builds with modern automation. We handle both with equal expertise.\n\nAs a Sebastian pool owner, you face the same Florida challenges—heat, humidity, afternoon storms—plus the salt air that comes with living near the coast. Our maintenance programs account for these local conditions to keep your pool clear and your equipment running longer.",
+        "localIntro": "Sebastian offers the best of Florida living—close to the water, away from the crowds, and full of character. Whether you live near the Sebastian Inlet, along the Indian River, or in one of the established neighborhoods inland, your pool deserves care that matches the quality of life here.\n\nLiving near the Indian River Lagoon and Sebastian Inlet means salt air can corrode pool equipment faster than inland. We specialize in maintaining and installing salt-resistant pumps and protective equipment coatings to extend the life of your pool system in this coastal environment.\n\nWe've been serving Sebastian pool owners for years, and we understand what makes this community unique. Many homes here have older pools that need experienced technicians who know vintage equipment. Others have newer builds with modern automation. We handle both with equal expertise.",
         "servicesInArea": {
           "h2": "Pool Services in Sebastian, FL",
           "intro": "As a trusted Sebastian pool service company, we provide complete year-round care for residential swimming pools — from weekly cleaning to equipment repairs and full system upgrades. Whether you live in Sebastian, Roseland, Wabasso, or nearby, our licensed technicians keep your pool clean, safe, and crystal-clear so you can enjoy it without the hassle.",
@@ -346,7 +346,11 @@
         },
         "neighborhoodsServed": {
           "h2": "Sebastian Neighborhoods We Serve",
-          "content": "We provide pool service throughout Sebastian, including:",
+          "content": "We provide reliable pool service throughout the entire Sebastian area, including these communities and zip codes:",
+          "zipCodes": [
+            "32958",
+            "32976"
+          ],
           "neighborhoods": [
             "Roseland",
             "Sebastian Highlands",
@@ -357,6 +361,7 @@
             "Whispering Palms",
             "Pelican Island"
           ],
+          "mapEmbed": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d70297.13159755952!2d-80.5217065201308!3d27.792433340060814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88de6872ae1398fb%3A0x177a6be767162472!2sSebastian%2C%20FL%2C%20USA!5e1!3m2!1sen!2sca!4v1767619125311!5m2!1sen!2sca\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
           "closingNote": "Don't see your neighborhood? We likely service it—contact us to confirm."
         },
         "testimonials": [

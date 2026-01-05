@@ -895,13 +895,19 @@ def generate_location_content(content_data, page_type='location'):
             </div>
             """
             
+        zip_html = ""
+        if ns.get('zipCodes'):
+            zip_tags = " ".join([f'<span class="text-sm font-semibold text-primary bg-blue-100 px-3 py-1 rounded-full text-slate-600">{z}</span>' for z in ns['zipCodes']])
+            zip_html = f'<div class="flex flex-wrap justify-center gap-2 mb-4">{zip_tags}</div>'
+
         html += f"""
         <section class="py-20 bg-white">
             <div class="container mx-auto px-4 max-w-4xl">
                 <div class="bg-blue-50 rounded-2xl p-8 md:p-12">
                     <div class="text-center mb-10">
                         <h2 class="text-3xl font-bold text-slate-900 mb-4">{ns.get('h2', 'Neighborhoods We Serve')}</h2>
-                        <p class="text-lg text-slate-600">{ns.get('content', '')}</p>
+                        <p class="text-lg text-slate-600 mb-4">{ns.get('content', '')}</p>
+                        {zip_html}
                     </div>
                     {neighborhoods_html}
                     {map_html}
