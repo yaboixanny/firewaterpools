@@ -296,6 +296,13 @@
           }
         },
         "localIntro": "Sebastian offers the best of Florida living—close to the water, away from the crowds, and full of character. Whether you live near the Sebastian Inlet, along the Indian River, or in one of the established neighborhoods inland, your pool deserves care that matches the quality of life here.\n\nLiving near the Indian River Lagoon and Sebastian Inlet means salt air can corrode pool equipment faster than inland. We specialize in maintaining and installing salt-resistant pumps and protective equipment coatings to extend the life of your pool system in this coastal environment.\n\nWe've been serving Sebastian pool owners for years, and we understand what makes this community unique. Many homes here have older pools that need experienced technicians who know vintage equipment. Others have newer builds with modern automation. We handle both with equal expertise.",
+        "localOwner": {
+          "h2": "A Personal Note from Kevin",
+          "name": "Kevin",
+          "image": "/images/kevin-new.jpg",
+          "signature": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Signature_sample.svg",
+          "bio": "Hi, I'm Kevin, the owner of Firewater Pools. I started this company with a simple mission: to provide pool service that Sebastian homeowners can actually rely on. After years of hearing about 'pool guys' who never showed up or skipped steps, I knew there was a better way. I built this business on transparency, communication, and genuine craftsmanship. When you hire us, you're getting a dedicated partner who cares about your pool as much as you do."
+        },
         "servicesInArea": {
           "h2": "Pool Services in Sebastian, FL",
           "intro": "As a trusted Sebastian pool service company, we provide complete year-round care for residential swimming pools — from weekly cleaning to equipment repairs and full system upgrades. Whether you live in Sebastian, Roseland, Wabasso, or nearby, our licensed technicians keep your pool clean, safe, and crystal-clear so you can enjoy it without the hassle.",
@@ -378,6 +385,7 @@
             "rating": 5
           }
         ],
+        "googleReviewsLink": "https://maps.app.goo.gl/M8XDmAcEhL9bvTt29",
         "faq": {
           "h2": "Pool Service FAQs for Sebastian Residents",
           "questions": [
@@ -387,7 +395,7 @@
             },
             {
               "question": "How much does pool service cost in Sebastian?",
-              "answer": "Pool service in Sebastian typically ranges from $120-200/month for weekly service depending on pool size and condition. We provide free quotes so you know exactly what to expect."
+              "answer": "Pool service in Sebastian typically ranges from $150-350/month for weekly service depending on pool size and condition. We provide free quotes so you know exactly what to expect."
             },
             {
               "question": "Do you work on older Sebastian pools with original equipment?",
