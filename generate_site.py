@@ -774,10 +774,10 @@ def generate_location_content(content_data, page_type='location'):
         <section class="py-20 bg-slate-50 border-y border-slate-100">
             <div class="container mx-auto px-4 max-w-4xl">
                 <div class="flex flex-col md:flex-row gap-12 items-center">
-                    <div class="md:w-1/3">
+                    <div class="md:w-1/2 text-center">
                         <img src="{owner.get('image', '/images/kevin-new.jpg')}" alt="{owner.get('name', 'Kevin')}" class="rounded-2xl shadow-xl w-full object-cover">
                     </div>
-                    <div class="md:w-2/3 text-left">
+                    <div class="md:w-1/2 text-left">
                         <h2 class="text-3xl font-bold text-slate-900 mb-6">{owner.get('h2', 'Meet the Owner')}</h2>
                         <div class="w-16 h-1 bg-primary rounded-full mb-6"></div>
                         <p class="text-lg text-slate-600 mb-6 leading-relaxed italic">{owner.get('quote', '')}</p>
