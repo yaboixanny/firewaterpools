@@ -772,17 +772,17 @@ def generate_location_content(content_data, page_type='location'):
         owner = content_data['localOwner']
         html += f"""
         <section class="py-20 bg-slate-50 border-y border-slate-100">
-            <div class="container mx-auto px-4 max-w-4xl">
-                <div class="flex flex-col md:flex-row gap-12 items-center">
-                    <div class="md:w-1/2 text-center">
-                        <img src="{owner.get('image', '/images/kevin-new.jpg')}" alt="{owner.get('name', 'Kevin')}" class="rounded-2xl shadow-xl w-full object-cover">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="flex flex-col md:flex-row gap-16 items-center">
+                    <div class="md:w-3/5 text-center">
+                        <img src="{owner.get('image', '/images/kevin-new.jpg')}" alt="{owner.get('name', 'Kevin')}" class="rounded-2xl shadow-2xl w-full object-cover">
                     </div>
-                    <div class="md:w-1/2 text-left">
-                        <h2 class="text-3xl font-bold text-slate-900 mb-6">{owner.get('h2', 'Meet the Owner')}</h2>
-                        <div class="w-16 h-1 bg-primary rounded-full mb-6"></div>
-                        <p class="text-lg text-slate-600 mb-6 leading-relaxed italic">{owner.get('quote', '')}</p>
-                        <p class="text-slate-600 leading-relaxed text-lg">{owner.get('bio', '')}</p>
-                        {f'<img src="{owner["signature"]}" alt="Signature" class="h-12 opacity-70 mt-6">' if 'signature' in owner else ''}
+                    <div class="md:w-2/5 text-left">
+                        <h2 class="text-4xl font-bold text-slate-900 mb-6 leading-tight">{owner.get('h2', 'Meet the Owner')}</h2>
+                        <div class="w-20 h-1 bg-primary rounded-full mb-8"></div>
+                        <p class="text-xl text-slate-600 mb-8 leading-relaxed italic">{owner.get('quote', '')}</p>
+                        <p class="text-slate-700 leading-relaxed text-lg">{owner.get('bio', '')}</p>
+                        {f'<img src="{owner["signature"]}" alt="Signature" class="h-12 opacity-70 mt-8">' if 'signature' in owner else ''}
                     </div>
                 </div>
             </div>
