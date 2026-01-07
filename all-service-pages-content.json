@@ -1147,26 +1147,32 @@
         ]
       },
       "serviceOptions": {
-        "h2": "Commercial Service Plans",
-        "intro": "Flexible schedules to meet your property's needs and budget.",
+        "h2": "Commercial Pool Service Plans in Vero Beach & Indian River County",
+        "intro": "We provide reliable, Health Department-compliant pool maintenance for commercial properties. Choose a schedule that fits your bather load and budget.",
         "options": [
           {
             "name": "Daily Service",
-            "frequency": "7 days/week",
-            "bestFor": "Hotels, high-traffic community pools"
+            "frequency": "7 Days / Week",
+            "bestFor": "Hotels, resorts, and high-traffic community pools.",
+            "description": "Ensures maximum guest safety and strict adherence to daily chemical log requirements. We keep your water crystal clear for guests every single day.",
+            "buttonText": "Request Daily Service Quote"
           },
           {
             "name": "Multi-Weekly Service",
-            "frequency": "3-5 days/week",
-            "bestFor": "Condos, fitness centers, mid-traffic pools"
+            "frequency": "3–5 Days / Week",
+            "bestFor": "Condos (COAs), apartment complexes, fitness centers, and mid-traffic pools.",
+            "description": "The perfect balance for pools that see heavy weekend use. We maintain consistent sanitation levels to prevent algae spikes and closures.",
+            "buttonText": "Request Multi-Weekly Quote"
           },
           {
-            "name": "Standard Service",
-            "frequency": "2-3 days/week",
-            "bestFor": "Smaller HOAs, low-traffic amenity pools"
+            "name": "Standard HOA Service",
+            "frequency": "2–3 Days / Week",
+            "bestFor": "Smaller Homeowners Associations (HOAs) and low-traffic amenity pools.",
+            "description": "A cost-effective solution for maintaining compliance and aesthetics without paying for daily visits.",
+            "buttonText": "Request Standard Quote"
           }
         ],
-        "pricingNote": "Commercial pricing based on pool size, bather load, and service frequency. Contact us for a property assessment and quote."
+        "pricingNote": "Commercial pricing is customized based on total gallonage, bather load, and equipment condition. Contact us today for a free on-site property assessment and compliance check."
       },
       "localProof": {
         "h2": "Trusted by Vero Beach Properties",

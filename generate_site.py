@@ -403,13 +403,17 @@ def generate_detailed_service_content(content_data):
         for opt in options:
             btn_html = ""
             if not hide_buttons:
-                btn_html = f'<a href="/free-estimate/" class="block w-full py-3 px-6 bg-slate-100 hover:bg-primary hover:text-white text-slate-700 font-bold rounded-lg text-center transition-colors">Get Quote</a>'
+                btn_text = opt.get('buttonText', 'Get Quote')
+                btn_html = f'<a href="/free-estimate/" class="block w-full py-3 px-6 bg-slate-100 hover:bg-primary hover:text-white text-slate-700 font-bold rounded-lg text-center transition-colors">{btn_text}</a>'
+            
+            description_html = f'<p class="text-slate-500 text-sm mb-6 leading-relaxed italic">{opt["description"]}</p>' if 'description' in opt else ''
             
             options_cards += f"""
             <div class="bg-white p-8 rounded-xl shadow-md border border-slate-100 hover:shadow-xl transition-all hover:border-primary group">
                 <h3 class="text-2xl font-bold text-slate-900 mb-2">{opt['name']}</h3>
                 <div class="text-primary font-semibold text-lg mb-4 bg-blue-50 inline-block px-3 py-1 rounded-full">{opt['frequency']}</div>
-                <p class="text-slate-600 mb-6">Best for: <span class="font-medium text-slate-800">{opt['bestFor']}</span></p>
+                <p class="text-slate-600 mb-4">Best for: <span class="font-medium text-slate-800">{opt['bestFor']}</span></p>
+                {description_html}
                 {btn_html}
             </div>
             """
