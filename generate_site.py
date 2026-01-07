@@ -760,8 +760,6 @@ def generate_about_content(content_data):
                 <h2 class="text-3xl md:text-5xl font-bold mb-8">{cta.get('h2', '')}</h2>
                 <p class="text-xl text-white/90 mb-12 leading-relaxed">{cta.get('content', '')}</p>
                 
-                {f'<div class="text-2xl font-handwriting font-bold mb-12 transform -rotate-2 opacity-90">{cta["personalSignoff"]}</div>' if 'personalSignoff' in cta else ''}
-                
                 <a href="/free-estimate/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary text-lg font-bold rounded-lg hover:bg-secondary hover:text-white transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
                     {cta.get('buttonText', 'Contact Us')}
                 </a>
@@ -808,7 +806,6 @@ def generate_location_content(content_data, page_type='location'):
                         <div class="w-20 h-1 bg-primary rounded-full mb-8"></div>
                         <p class="text-xl text-slate-600 mb-8 leading-relaxed italic">{owner.get('quote', '')}</p>
                         <p class="text-slate-700 leading-relaxed text-lg">{owner.get('bio', '')}</p>
-                        {f'<img src="{owner["signature"]}" alt="Signature" class="h-12 opacity-70 mt-8">' if 'signature' in owner else ''}
                     </div>
                 </div>
             </div>
@@ -1304,7 +1301,6 @@ def generate_content_for_page(page_type, data, extra_data={}):
                          <p class="text-lg text-slate-600 mb-8 leading-relaxed">
                             When you hire us, you're not just getting a "pool guy"—you're getting a dedicated partner who cares about the safety and beauty of your backyard oasis as much as you do.
                         </p>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Signature_sample.svg" alt="Kevin's Signature" class="h-16 opacity-70 mb-8">
                         <div>
                             <a href="tel:{PHONE.replace('-', '')}" class="inline-flex items-center justify-center px-8 py-4 bg-primary text-white text-lg font-bold rounded-lg hover:bg-secondary transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
                                 Call Kevin
