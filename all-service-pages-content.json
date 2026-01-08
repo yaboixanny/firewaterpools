@@ -216,31 +216,38 @@
         ]
       },
       "serviceOptions": {
-        "h2": "Pool Maintenance Plans",
-        "intro": "We offer flexible plans based on your pool's needs.",
+        "h2": "Pool Maintenance Plans in Vero Beach, FL",
+        "intro": "We offer flexible pool maintenance plans for Vero Beach homeowners, designed around your pool size, equipment, and how often your pool is used. Whether you live here year-round or seasonally, we make it easy to keep your pool clean, balanced, and swim-ready.",
         "options": [
           {
-            "name": "Full-Service Weekly",
+            "name": "Full-Service Weekly Pool Maintenance",
             "frequency": "Once per week",
-            "bestFor": "Complete hands-off pool care"
+            "bestFor": "Homeowners who want complete, hands-off pool care",
+            "description": "Our most popular option for weekly pool maintenance in Vero Beach, this plan includes:\n- Skimming, brushing, and vacuuming\n- Water chemistry testing and chemical balancing\n- Equipment inspection (pump, filter, heater)\n- Basket and filter cleaning\n- Visual leak and issue checks\n👉 Ideal for busy families and full-time residents.",
+            "buttonText": "Get a Free Quote"
           },
           {
-            "name": "Chemical-Only Service",
+            "name": "Chemical-Only Pool Service",
             "frequency": "Weekly",
-            "bestFor": "Homeowners who handle their own cleaning"
+            "bestFor": "Homeowners who prefer to handle their own cleaning",
+            "description": "This plan focuses on professional water testing and chemical balancing to keep your pool safe and algae-free while you manage the physical cleaning.\n👉 A cost-effective option for experienced pool owners in Vero Beach.",
+            "buttonText": "Get a Free Quote"
           },
           {
-            "name": "Snowbird / Seasonal",
+            "name": "Snowbird & Seasonal Pool Maintenance",
             "frequency": "Customized",
-            "bestFor": "Part-time Vero Beach residents"
+            "bestFor": "Seasonal and part-time Vero Beach residents",
+            "description": "Designed for snowbirds and vacation homeowners, this plan ensures your pool stays protected and properly maintained while you’re away — with flexible scheduling based on arrival and departure dates.\n👉 Perfect for winter residents and second homes in Indian River County.",
+            "buttonText": "Get a Free Quote"
           }
         ],
-        "pricingNote": "Pricing depends on pool size, equipment, and service level. Contact us for a free quote."
+        "pricingNote": "Pool maintenance pricing varies based on pool size, equipment, service level, and condition. We provide free, no-obligation quotes for all Vero Beach pool maintenance services."
       },
       "localProof": {
         "h2": "Trusted by Vero Beach Pool Owners",
         "content": "From beachside estates on Ocean Drive to family homes in Timber Ridge, we maintain pools across Indian River County. Our technicians know the local water conditions and how Florida's climate affects your pool chemistry."
       },
+      "googleReviewsLink": "https://maps.app.goo.gl/MDcv67f5JfJ2QiNv6",
       "testimonials": [
         {
           "quote": "We travel a lot and needed someone we could trust. They send photos after every visit and our pool is always perfect when we get home.",

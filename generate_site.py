@@ -406,7 +406,8 @@ def generate_detailed_service_content(content_data):
                 btn_text = opt.get('buttonText', 'Get Quote')
                 btn_html = f'<a href="/free-estimate/" class="block w-full py-3 px-6 bg-slate-100 hover:bg-primary hover:text-white text-slate-700 font-bold rounded-lg text-center transition-colors">{btn_text}</a>'
             
-            description_html = f'<p class="text-slate-500 text-sm mb-6 leading-relaxed italic">{opt["description"]}</p>' if 'description' in opt else ''
+            desc_text = opt["description"].replace("\n", "<br>") if 'description' in opt else ''
+            description_html = f'<p class="text-slate-500 text-sm mb-6 leading-relaxed italic">{desc_text}</p>' if desc_text else ''
             
             options_cards += f"""
             <div class="bg-white p-8 rounded-xl shadow-md border border-slate-100 hover:shadow-xl transition-all hover:border-primary group">
